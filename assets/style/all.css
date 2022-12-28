@@ -14135,6 +14135,32 @@ input::placeholder, textarea::placeholder {
     transition: all 0.2s ease;
     opacity: 0; }
 
+.scrollbar-dark {
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch; }
+  .scrollbar-dark::-webkit-scrollbar-track {
+    background-color: #1F89CD;
+    border-radius: 10px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    opacity: 0; }
+  .scrollbar-dark::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #1379BB;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    opacity: 0; }
+  .scrollbar-dark::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #1379BB;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    opacity: 0; }
+
 .scrollx-none {
   overflow-x: hidden; }
 
@@ -15338,7 +15364,8 @@ body {
 .box-list-action {
   -webkit-box-flex: 0;
       -ms-flex: 0 0;
-          flex: 0 0; }
+          flex: 0 0;
+  padding: 0 32px; }
 
 /*--------------------視窗開始------------------*/
 .offcanvas-backdrop.show {

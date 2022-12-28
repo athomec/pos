@@ -15035,8 +15035,7 @@ body {
     border-radius: 24px 0 0 24px;
     background: #fff;
     color: #1F89CD;
-    position: relative;
-    pointer-events: none; }
+    position: relative; }
     .nav-link.active:before, .nav-link.active:after {
       content: "";
       display: block;

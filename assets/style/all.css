@@ -14118,28 +14118,22 @@ input::placeholder, textarea::placeholder {
     background-color: #f5f5f5;
     border-radius: 10px;
     -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
+    transition: all 0.2s ease;
+    opacity: 0; }
   .scrollbar::-webkit-scrollbar {
     width: 4px;
     height: 4px;
     border-radius: 10px;
     background-color: #d6d6d6;
     -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
+    transition: all 0.2s ease;
+    opacity: 0; }
   .scrollbar::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #d6d6d6;
     -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
-
-.scrollbar.hide::-webkit-scrollbar-track {
-  opacity: 0; }
-
-.scrollbar.hide::-webkit-scrollbar {
-  opacity: 0; }
-
-.scrollbar.hide::-webkit-scrollbar-thumb {
-  opacity: 0; }
+    transition: all 0.2s ease;
+    opacity: 0; }
 
 .scrollx-none {
   overflow-x: hidden; }

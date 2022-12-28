@@ -15352,6 +15352,11 @@ body {
     background: #FF9130;
     border: 2px solid #fff;
     pointer-events: none; }
+    .box-list-item.active:before {
+      content: "已選擇";
+      font-size: 0.8rem;
+      padding-left: 16px;
+      background: url("../images/ic-check.svg") no-repeat left center; }
   .box-list-item.disable {
     background: #1379BB;
     color: #fff;
@@ -15849,6 +15854,9 @@ body {
         left: 0;
         top: 0;
         pointer-events: none; }
+      .order-card-item.active .order-card-tag {
+        background: #1F89CD;
+        opacity: 0.6; }
   .order-card-header {
     display: -webkit-box;
     display: -ms-flexbox;

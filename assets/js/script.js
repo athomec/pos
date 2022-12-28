@@ -53,7 +53,12 @@ $(function () {
   });
   $(".js-search-btn").click(function () {
     $(".js-search-dropdown").removeClass("active");
-  }); //----------------gotop功能-----------------
+  }); //----------------APP模擬卷軸功能-----------------
+
+  /*$(".scrollbar").scroll(function() {
+  	$(this).addClass("hide");
+    });*/
+  //----------------gotop功能-----------------
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {

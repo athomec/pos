@@ -29,8 +29,8 @@
 			</button>
 			<h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">選擇桌號</h4>
 		</div>
-		<div class="offcanvas-body d-flex flex-column">
-			<div class="box-list-wrapper scrollx-none">
+		<div class="offcanvas-body d-flex flex-column px-0">
+			<div class="box-list-wrapper scrollx-none scrollbar">
 				<h5 class="d-flex font-sm font-light">
 					<img src="./assets/images/ic-stairs.svg" alt="1樓" class="me-2"> 1 樓</h5>
 				<div class="container px-0">
@@ -149,6 +149,48 @@
 								</p>
 							</button>
 						</li>
+						<li class="col-4">
+							<button class="btn box-list-item" data-bs-toggle="pill">
+								<p class="box-list-number">
+									B07
+								</p>
+							</button>
+						</li>
+						<li class="col-4">
+							<button class="btn box-list-item" data-bs-toggle="pill">
+								<p class="box-list-number">
+									B08
+								</p>
+							</button>
+						</li>
+						<li class="col-4">
+							<button class="btn box-list-item" data-bs-toggle="pill">
+								<p class="box-list-number">
+									B09
+								</p>
+							</button>
+						</li>
+						<li class="col-4">
+							<button class="btn box-list-item" data-bs-toggle="pill">
+								<p class="box-list-number">
+									B10
+								</p>
+							</button>
+						</li>
+						<li class="col-4">
+							<button class="btn box-list-item" data-bs-toggle="pill">
+								<p class="box-list-number">
+									B11
+								</p>
+							</button>
+						</li>
+						<li class="col-4">
+							<button class="btn box-list-item" data-bs-toggle="pill">
+								<p class="box-list-number">
+									B12
+								</p>
+							</button>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -166,12 +208,37 @@
 			<h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">選擇餐點</h4>
 		</div>
 		<div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
-			<div class="radio-list-wrapper">
+			<div class="radio-list-wrapper scrollbar">
 				<h5 class="mb-1">雙濃起司炸魚番薯披薩</h5>
 				<p class="font-bold mb-3">
 					<span class="d-block mb-1">NT$289</span>
 					<span class="d-block gray700 font-xxs">披薩 1 份，指定副食 1 份</span>
 				</p>
+				<div class="bg-white rounded p-3 mb-3">
+					<h6 class="d-flex justify-content-between primary-color mb-3">
+						餅皮選擇<p class="font-xxs gray600">最多選擇 1 項</p>
+					</h6>
+					<div class="radio-list">
+						<div class="form-check mb-3">
+							<input class="form-check-input" type="radio" name="item1" id="item1-1" checked>
+							<label class="form-check-label" for="item1-1">
+								<p>鬆厚餅皮</p><span>免費</span>
+							</label>
+						</div>
+						<div class="form-check mb-3">
+							<input class="form-check-input" type="radio" name="item1" id="item1-2" disabled>
+							<label class="form-check-label" for="item1-2">
+								<p>薄脆餅皮</p><span>售完</span>
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="item1" id="item1-3">
+							<label class="form-check-label" for="item1-3">
+								<p>芝心餅皮</p><span>+$30</span>
+							</label>
+						</div>
+					</div>
+				</div>
 				<div class="bg-white rounded p-3 mb-3">
 					<h6 class="d-flex justify-content-between primary-color mb-3">
 						餅皮選擇<p class="font-xxs gray600">最多選擇 1 項</p>
@@ -397,7 +464,7 @@
 	</div>
 </div>
 
-	<ul class="order-card nav nav-pills pt-2">
+	<ul class="order-card nav nav-pills pt-2 scrollbar">
 		<li class="order-card-wrapper">
 				<a href="#" class="order-card-item js-slidetoleft active" data-bs-toggle="pill">
 					<div class="order-card-header">
@@ -597,7 +664,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="order-list-wrapper">
+				<div class="order-list-wrapper scrollbar">
 					<ul class="order-list">
 						<li class="order-list-item js-slidetoleft">
 							<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img"
@@ -827,6 +894,7 @@
 	<script src="assets/js/slidetounlock.js"></script>
 	<script src="assets/js/bootstrap.bundle.js"></script>
 	<script src="assets/js/hammer.min.js"></script>
+	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 	<script src="assets/js/script.js"></script>
 </body>
 

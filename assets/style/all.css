@@ -14116,18 +14116,36 @@ input::placeholder, textarea::placeholder {
   -webkit-overflow-scrolling: touch; }
   .scrollbar::-webkit-scrollbar-track {
     background-color: #f5f5f5;
-    border-radius: 10px; }
+    border-radius: 10px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
   .scrollbar::-webkit-scrollbar {
     width: 4px;
     height: 4px;
     border-radius: 10px;
-    background-color: #ccc; }
+    background-color: #d6d6d6;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
   .scrollbar::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #ccc; }
+    background-color: #d6d6d6;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+
+.scrollbar.hide::-webkit-scrollbar-track {
+  opacity: 0; }
+
+.scrollbar.hide::-webkit-scrollbar {
+  opacity: 0; }
+
+.scrollbar.hide::-webkit-scrollbar-thumb {
+  opacity: 0; }
 
 .scrollx-none {
   overflow-x: hidden; }
+
+.scrolly-none {
+  overflow-y: hidden; }
 
 /*---------------------標題樣式---------------------*/
 .item_text {
@@ -15286,7 +15304,8 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
-  overflow-y: auto; }
+  overflow-y: auto;
+  padding: 0 32px; }
 
 .box-list-item {
   border-radius: 5px;
@@ -15801,7 +15820,7 @@ body {
       .order-card-item.active:before {
         content: " ";
         display: block;
-        width: 100%;
+        width: calc(100% + 1px);
         height: 100%;
         border: 1px solid #FFA42D;
         position: absolute;

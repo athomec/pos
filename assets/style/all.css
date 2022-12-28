@@ -15531,8 +15531,7 @@ body {
     .side-tab-item.active {
       background: #1F89CD;
       color: #fff;
-      border: 1px solid #1F89CD;
-      pointer-events: none; }
+      border: 1px solid #1F89CD; }
       .side-tab-item.active:after {
         background: #1F89CD;
         right: -6px; }
@@ -15930,7 +15929,9 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: calc(100% + 2px); }
+    height: calc(100% + 2px);
+    -webkit-box-shadow: 0 0 9px #e0e0e0;
+            box-shadow: 0 0 9px #e0e0e0; }
 
 /*@preserve
  * Tempus Dominus Bootstrap4 v5.1.2 (https://tempusdominus.github.io/bootstrap-4/)

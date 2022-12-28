@@ -39,6 +39,9 @@ $(function () {
         left: lastPosX + "px"
       }, 100);
     }
+  });
+  $(".js-box-list-wrapper").find("button").click(function () {
+    $(this).toggleClass("active");
   }); //----------------列數切換-----------------
 
   $(".js-grid3").click(function () {

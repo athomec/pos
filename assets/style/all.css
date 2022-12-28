@@ -15348,14 +15348,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .box-list-item:hover {
+    background: #fff;
+    color: #1F89CD; }
   .box-list-item.active {
     background: #FF9130;
     border: 2px solid #fff;
-    pointer-events: none; }
+    color: #fff; }
     .box-list-item.active:before {
       content: "已選擇";
       font-size: 0.8rem;
       padding-left: 16px;
+      color: #fff !important;
       background: url("../images/ic-check.svg") no-repeat left center; }
   .box-list-item.disable {
     background: #1379BB;
@@ -15597,7 +15601,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-right: 12px;
+    margin-right: 16px;
     -webkit-box-shadow: 0 0 9px #525252;
             box-shadow: 0 0 9px #525252;
     border: 0 !important;

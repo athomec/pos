@@ -14150,13 +14150,13 @@ input::placeholder, textarea::placeholder {
     width: 4px;
     height: 4px;
     border-radius: 10px;
-    background-color: #1379BB;
+    background-color: #135988;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     opacity: 0; }
   .scrollbar-dark::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #1379BB;
+    background-color: #135988;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     opacity: 0; }
@@ -15402,7 +15402,7 @@ body {
         position: absolute;
         width: 24px;
         height: 24px;
-        background: url("../images/fillet-light.svg"); }
+        background: url("../images/fillet-gray.svg"); }
       .offcanvas-bottom .offcanvas-header-close::before {
         bottom: -1px;
         left: -24px; }

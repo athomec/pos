@@ -15063,6 +15063,57 @@ body {
     .select-list-wrapper label span {
       padding-left: 8px; }
 
+.modal-content {
+  background: #1F89CD;
+  border-radius: 24px;
+  overflow: hidden; }
+
+.modal-header {
+  border: 0;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative; }
+  .modal-header button {
+    position: absolute;
+    right: 10px; }
+    .modal-header button:focus, .modal-header button:active {
+      border: none !important; }
+
+.modal-body {
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  font-size: 1.13rem;
+  min-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.modal-footer {
+  background: #fff;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.modal-action {
+  border-radius: 5px;
+  letter-spacing: 2px;
+  max-width: 200px; }
+
 .side-tab {
   display: -webkit-box;
   display: -ms-flexbox;

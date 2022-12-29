@@ -21,6 +21,28 @@
 
 <body>
 	<div class="backdrop js-backdrop"></div>
+	<!--訊息視窗開始-->
+	<div class="modal fade" id="message" data-bs-keyboard="false" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title fs-5 font-smd font-light" id="staticBackdropLabel">送出訂單</h2>
+					<button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+						<img src="./assets/images/ic-close.svg" alt="關閉">
+					</button>
+				</div>
+				<div class="modal-body p-3">
+					<p class="text-center">
+						已成功送出訂單！
+					</p>
+
+				</div>
+				<div class="modal-footer pt-0 px-3">
+					<button type="button" class="modal-action btn btn-dark-gray700 py-2 w-100" data-bs-dismiss="modal">關閉</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!--桌號視窗開始-->
 	<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="table-list"
 		aria-labelledby="offcanvasRightLabel">
@@ -381,7 +403,8 @@
 								<div class="slidetounlock-item">
 									<div
 										class="btn btn-dark-primary-color slidetounlock-slider js-slidetounlock-slider">
-										<img src="./assets/images/ic-arrow-go.svg"></div>
+										<img src="./assets/images/ic-arrow-go.svg">
+									</div>
 									<span class="js-slidetounlock-txt">右滑以結帳</span>
 								</div>
 							</div>

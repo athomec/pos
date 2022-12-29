@@ -39,7 +39,8 @@ $(function () {
         left: lastPosX + "px"
       }, 100);
     }
-  });
+  }); //---------------------桌號設定------------------------
+
   $(".js-box-list-wrapper").find("button").click(function () {
     $(this).toggleClass("active");
   }); //----------------列數切換-----------------
@@ -51,35 +52,24 @@ $(function () {
     $(".js-menu-card").find("li").removeClass("col-4").addClass("col-3");
   }); //----------------搜尋按鈕-----------------
 
+  $(".js-backdrop").click(function () {
+    $(".js-search-dropdown").removeClass("active");
+    $(".js-backdrop").removeClass("show");
+  });
   $(".js-search-input").click(function () {
     $(".js-search-dropdown").toggleClass("active");
+    $(".js-backdrop").toggleClass("show");
   });
   $(".js-search-btn").click(function () {
     $(".js-search-dropdown").removeClass("active");
-  }); //----------------gotop功能-----------------
-
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      //若目前的位置距離網頁頂端>100px
-      $('.gotop').fadeIn('fast');
-    } else {
-      $('.gotop').stop().fadeOut('fast');
-    }
-
-    var index = 0; //各單元區塊順序
-
-    var st = $(window).scrollTop(); //現在捲軸位置
-
-    var wh = $(window).height(); //視窗高度
-  }); //RESIZE();
-
-  /*$(window).resize(function () {
-  	RESIZE();
+    $(".js-backdrop").removeClass("show");
+  });
+  /*$(".scrollbar").scroll(function () {
+  	$(this).addClass("show");
+  	var stopListener = $(".scrollbar").mouseup(function () { // listen to mouse up
+  		$(this).removeClass("show");
+  		stopListner(); // Stop listening to mouse up after heard for the first time 
+  	});
   });*/
-
-  function RESIZE() {
-    WINDOWH = $(window).height();
-    WINDOW = $(window).width();
-  }
 }); //JS尾端
 //# sourceMappingURL=script.js.map

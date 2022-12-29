@@ -15443,7 +15443,7 @@ body {
     position: relative; }
     .order-card-item.active {
       border: 1px solid #FFA42D;
-      border-left: 5px solid #FFA42D; }
+      border-left: 6px solid #FFA42D; }
       .order-card-item.active:before {
         content: " ";
         display: block;
@@ -15452,7 +15452,7 @@ body {
         border: 1px solid #FFA42D;
         position: absolute;
         border-radius: 0 5px 5px 0;
-        left: 0;
+        left: -1px;
         top: 0;
         pointer-events: none; }
       .order-card-item.active .order-card-tag {

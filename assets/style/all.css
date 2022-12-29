@@ -13678,7 +13678,7 @@ input::placeholder, textarea::placeholder {
   position: relative;
   -webkit-overflow-scrolling: touch; }
   .scrollbar::-webkit-scrollbar-track {
-    background-color: #fff;
+    background-color: #f5f5f5;
     border-radius: 10px;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -13687,25 +13687,16 @@ input::placeholder, textarea::placeholder {
     width: 4px;
     height: 4px;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #d6d6d6;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     opacity: 0; }
   .scrollbar::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #d6d6d6;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     opacity: 0; }
-
-.scrollbar.show::-webkit-scrollbar-track {
-  background-color: #f5f5f5; }
-
-.scrollbar.show::-webkit-scrollbar {
-  background-color: #d6d6d6; }
-
-.scrollbar.show::-webkit-scrollbar-thumb {
-  background-color: #d6d6d6; }
 
 .scrollbar-dark {
   width: 100%;

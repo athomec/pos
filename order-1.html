@@ -51,7 +51,7 @@
 			<button type="button" class="btn" data-bs-dismiss="offcanvas">
 				<img src="./assets/images/ic-close.svg" alt="關閉">
 			</button>
-			<h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">選擇桌號</h4>
+			<h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">請選擇桌號</h4>
 		</div>
 		<div class="offcanvas-body d-flex flex-column px-0">
 			<div class="box-list-wrapper scrollx-none scrollbar-dark js-box-list-wrapper">
@@ -221,7 +221,55 @@
 				</div>
 			</div>
 			<div class="box-list-action mt-3">
-				<button class="btn btn-lg btn-dark-gray900 w-100" data-bs-dismiss="offcanvas">確認</button>
+				<button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas">確認</button>
+			</div>
+		</div>
+	</div>
+	<!--用餐方式視窗開始-->
+	<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="dine"
+		aria-labelledby="offcanvasRightLabel">
+		<div class="offcanvas-header">
+			<button type="button" class="btn" data-bs-dismiss="offcanvas">
+				<img src="./assets/images/ic-close.svg" alt="關閉">
+			</button>
+			<h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">請選擇用餐方式</h4>
+		</div>
+		<div class="offcanvas-body d-flex flex-column px-0">
+			<div class="box-list-wrapper scrollx-none scrollbar-dark">
+				<div class="container px-0">
+					<ul class="row box-list g-3 mb-5 nav nav-pills" data-con="text" role="tablist">
+						<li class="col-12">
+							<button class="btn box-list-item active" data-bs-toggle="pill" role="tab">
+									內用
+							</button>
+						</li>
+						<li class="col-12">
+							<button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+									外帶
+							</button>
+						</li>
+						<li class="col-12">
+							<button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+									外送
+							</button>
+						</li>
+						<li class="col-12">
+							<button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+									Foodpanda 外送
+									<img src="./assets/images/logo-foodpanda.svg" alt="foodpanda">
+							</button>
+						</li>
+						<li class="col-12">
+							<button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+								Uber Eats 外送
+								<img src="./assets/images/logo-ubereat.svg" alt="ubereat">
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box-list-action mt-3">
+				<button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas">確認</button>
 			</div>
 		</div>
 	</div>
@@ -231,7 +279,7 @@
 			<button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
 				<img src="./assets/images/ic-close.svg" alt="關閉">
 			</button>
-			<h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">選擇餐點</h4>
+			<h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">請選擇餐點</h4>
 		</div>
 		<div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
 			<div class="select-list-wrapper scrollbar">
@@ -593,25 +641,31 @@
 			</ul>
 		</div>
 	</header>
-<ul class="top-nav mb-2">
-	<li class="top-nav-item">
-		<div class="switch">
-			<input id="yes" name="check" type="radio" checked>
-			<label for="yes">未結</label>
-			<input id="no" name="check" type="radio">
-			<label for="no">已結</label>
-			<span class="switch-button"></span>
-		</div>
-	</li>
-	<li class="top-nav-item">
-		<div class="switch">
-			<input id="in" name="take" type="radio" checked>
-			<label for="in">內用</label>
-			<input id="out" name="take" type="radio">
-			<label for="out">外帶</label>
-			<span class="switch-button"></span>
-		</div>
-	</li>
+<ul class="top-nav mb-2" data-con="filter">
+	  <li class="top-nav-item form-check form-check-inline">
+		<input class="form-check-input" type="checkbox" id="unpaid" value="未結" checked>
+		<label class="form-check-label" for="unpaid">未結</label>
+	  </li>
+	  <li class="top-nav-item form-check form-check-inline">
+		<input class="form-check-input" type="checkbox" id="paid" value="已結">
+		<label class="form-check-label" for="paid">已結</label>
+	  </li>
+	  <li class="top-nav-item form-check form-check-inline">
+		<input class="form-check-input" type="checkbox" id="dine-in" value="內用">
+		<label class="form-check-label" for="dine-in">內用</label>
+	  </li>
+	  <li class="top-nav-item form-check form-check-inline">
+		<input class="form-check-input" type="checkbox" id="takeout" value="外帶">
+		<label class="form-check-label" for="takeout">外帶</label>
+	  </li>
+	  <li class="top-nav-item form-check form-check-inline">
+		<input class="form-check-input" type="checkbox" id="canceled" value="已取消">
+		<label class="form-check-label" for="canceled">已取消</label>
+	  </li>
+	  <li class="top-nav-item form-check form-check-inline">
+		<input class="form-check-input" type="checkbox" id="returned" value="已退貨">
+		<label class="form-check-label" for="returned">已退貨</label>
+		</li>
 </ul>
 
 <div class="menu-card-info d-flex justify-content-between">
@@ -621,7 +675,7 @@
 	</div>
 </div>
 
-	<ul class="order-card nav nav-pills pt-2 scrollbar">
+	<ul class="order-card nav nav-pills pt-1 scrollbar">
 		<li class="order-card-wrapper">
 				<a href="#" class="order-card-item js-slidetoleft active" data-bs-toggle="pill">
 					<div class="order-card-header">
@@ -642,9 +696,20 @@
 							<div class="badge bg-danger-color">折100</div>
 						</div>
 					</div>
-					<button class="order-card-remove btn btn-dark-danger-color rounded-0">
-						移除
-					</button>
+					<div class="order-card-function">
+						<button class="btn btn-dark-alert-light-color" data-bs-trigger="focus" data-bs-container="body" data-bs-html="true" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="<ul><li><a href='#'>補印發票</a></li><li><a href='#'>補印收據</a></li><li><a href='#'>補印標籤貼</a></li>">
+							補印
+						</button>
+						<button class="btn btn-dark-primary-color rounded-0">
+							退貨
+						</button>
+						<button class="btn btn-dark-gray600 rounded-0">
+							取消
+						</button>
+						<button class="btn btn-dark-danger-color">
+							移除
+						</button>
+					</div>
 				</a>
 		</li>
 		<li class="order-card-wrapper">
@@ -667,9 +732,20 @@
 							<div class="badge bg-danger-color">折100</div>
 						</div>
 					</div>
-					<button class="order-card-remove btn btn-dark-danger-color rounded-0">
-						移除
-					</button>
+					<div class="order-card-function">
+						<button class="btn btn-dark-alert-light-color" data-bs-trigger="focus" data-bs-container="body" data-bs-html="true" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="<ul><li><a href='#'>補印發票</a></li><li><a href='#'>補印收據</a></li><li><a href='#'>補印標籤貼</a></li>">
+							補印
+						</button>
+						<button class="btn btn-dark-primary-color rounded-0">
+							退貨
+						</button>
+						<button class="btn btn-dark-gray600 rounded-0">
+							取消
+						</button>
+						<button class="btn btn-dark-danger-color">
+							移除
+						</button>
+					</div>
 				</a>
 		</li>
 		<li class="order-card-wrapper">
@@ -690,9 +766,22 @@
 						<p class="primary-color">$3,380</p>
 					</div>
 				</div>
-				<button class="order-card-remove btn btn-dark-danger-color rounded-0">
-					移除
-				</button>
+				<div class="order-card-function">
+					<button class="btn btn-dark-alert-light-color" data-bs-trigger="focus" data-bs-container="body" data-bs-html="true"
+						data-bs-toggle="popover" data-bs-placement="bottom"
+						data-bs-content="<ul><li><a href='#'>補印發票</a></li><li><a href='#'>補印收據</a></li><li><a href='#'>補印標籤貼</a></li>">
+						補印
+					</button>
+					<button class="btn btn-dark-primary-color rounded-0">
+						退貨
+					</button>
+					<button class="btn btn-dark-gray600 rounded-0">
+						取消
+					</button>
+					<button class="btn btn-dark-danger-color">
+						移除
+					</button>
+				</div>
 			</a>
 		</li>
 		<li class="order-card-wrapper">
@@ -715,9 +804,22 @@
 						<div class="badge bg-danger-color">折100</div>
 					</div>
 				</div>
-				<button class="order-card-remove btn btn-dark-danger-color rounded-0">
-					移除
-				</button>
+				<div class="order-card-function">
+					<button class="btn btn-dark-alert-light-color" data-bs-trigger="focus" data-bs-container="body" data-bs-html="true"
+						data-bs-toggle="popover" data-bs-placement="bottom"
+						data-bs-content="<ul><li><a href='#'>補印發票</a></li><li><a href='#'>補印收據</a></li><li><a href='#'>補印標籤貼</a></li>">
+						補印
+					</button>
+					<button class="btn btn-dark-primary-color rounded-0">
+						退貨
+					</button>
+					<button class="btn btn-dark-gray600 rounded-0">
+						取消
+					</button>
+					<button class="btn btn-dark-danger-color">
+						移除
+					</button>
+				</div>
 			</a>
 		</li>
 		<li class="order-card-wrapper">
@@ -738,9 +840,22 @@
 						<p class="primary-color">$3,380</p>
 					</div>
 				</div>
-				<button class="order-card-remove btn btn-dark-danger-color rounded-0">
-					移除
-				</button>
+				<div class="order-card-function">
+					<button class="btn btn-dark-alert-light-color" data-bs-trigger="focus" data-bs-container="body" data-bs-html="true"
+						data-bs-toggle="popover" data-bs-placement="bottom"
+						data-bs-content="<ul><li><a href='#'>補印發票</a></li><li><a href='#'>補印收據</a></li><li><a href='#'>補印標籤貼</a></li>">
+						補印
+					</button>
+					<button class="btn btn-dark-primary-color rounded-0">
+						退貨
+					</button>
+					<button class="btn btn-dark-gray600 rounded-0">
+						取消
+					</button>
+					<button class="btn btn-dark-danger-color">
+						移除
+					</button>
+				</div>
 			</a>
 		</li>
 		<li class="order-card-wrapper">
@@ -761,9 +876,22 @@
 						<p class="primary-color">$3,380</p>
 					</div>
 				</div>
-				<button class="order-card-remove btn btn-dark-danger-color rounded-0">
-					移除
-				</button>
+				<div class="order-card-function">
+					<button class="btn btn-dark-alert-light-color" data-bs-trigger="focus" data-bs-container="body" data-bs-html="true"
+						data-bs-toggle="popover" data-bs-placement="bottom"
+						data-bs-content="<ul><li><a href='#'>補印發票</a></li><li><a href='#'>補印收據</a></li><li><a href='#'>補印標籤貼</a></li>">
+						補印
+					</button>
+					<button class="btn btn-dark-primary-color rounded-0">
+						退貨
+					</button>
+					<button class="btn btn-dark-gray600 rounded-0">
+						取消
+					</button>
+					<button class="btn btn-dark-danger-color">
+						移除
+					</button>
+				</div>
 			</a>
 		</li>
 		<li class="order-card-wrapper">
@@ -786,9 +914,22 @@
 						<div class="badge bg-danger-color">折100</div>
 					</div>
 				</div>
-				<button class="order-card-remove btn btn-dark-danger-color rounded-0">
-					移除
-				</button>
+				<div class="order-card-function">
+					<button class="btn btn-dark-alert-light-color" data-bs-trigger="focus" data-bs-container="body" data-bs-html="true"
+						data-bs-toggle="popover" data-bs-placement="bottom"
+						data-bs-content="<ul><li><a href='#'>補印發票</a></li><li><a href='#'>補印收據</a></li><li><a href='#'>補印標籤貼</a></li>">
+						補印
+					</button>
+					<button class="btn btn-dark-primary-color rounded-0">
+						退貨
+					</button>
+					<button class="btn btn-dark-gray600 rounded-0">
+						取消
+					</button>
+					<button class="btn btn-dark-danger-color">
+						移除
+					</button>
+				</div>
 			</a>
 		</li>
 	</ul>
@@ -796,29 +937,12 @@
 	<!--清單區塊開始-->
 	<div class="sidelist bg-gray100">
 		<div class="sidelist-header">
-			<div class="d-flex justify-content-between align-items-center mb-3">
+			<div class="d-flex justify-content-between align-items-center">
 				<p class="primary-color font-heavy"># 907653</p>
 				<button class="btn btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#table-list">
 					<img src="./assets/images/ic-table.svg" alt="桌號" class="me-1">桌號 A01
 				</button>
 			</div>
-			<ul class="nav sidelist-nav nav-pills scrollbar scrolly-none">
-				<li class="sidelist-nav-item nav-item">
-					<button class="btn sidelist-nav-link active" data-bs-toggle="pill">
-						<p>內用</p>
-					</button>
-				</li>
-				<li class="sidelist-nav-item">
-					<button class="btn sidelist-nav-link" data-bs-toggle="pill">
-						<p>外帶</p>
-					</button>
-				</li>
-				<li class="sidelist-nav-item">
-					<button class="btn sidelist-nav-link" data-bs-toggle="pill">
-						<p>外送</p>
-					</button>
-				</li>
-			</ul>
 		</div>
 		<div class="order-list-wrapper scrollbar">
 			<ul class="order-list">

@@ -10,7 +10,7 @@ $(function () {
   var mailList = $('.js-slidetoleft').each(function () {
     var hammer = new Hammer(this);
     var direction;
-    var minX = -278; //右側按鈕寬度
+    var minX = -275; //右側按鈕寬度
 
     var maxX = 0;
     var buying = false;
@@ -60,6 +60,11 @@ $(function () {
         }
       });
     }
+
+    hammer.on('tap', function (e) {
+      var listItem = $(e.target).parents('.js-slidetoleft');
+      resetOtherItems(listItem);
+    });
   }); //---------------------桌號設定------------------------
 
   $(".js-box-list-wrapper").find("button").click(function () {

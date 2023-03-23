@@ -15247,7 +15247,7 @@ body {
             align-items: center;
     font-size: 1.2rem;
     color: #fff;
-    width: 200%;
+    width: 250%;
     -webkit-text-size-adjust: none; }
   .slidetounlock-slider {
     width: 85px;
@@ -15261,13 +15261,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-right: 16px;
     -webkit-box-shadow: 0 0 9px #525252;
             box-shadow: 0 0 9px #525252;
     border: 0 !important;
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease; }
+  .slidetounlock-txt {
+    padding-left: 16px; }
 
 .btn-dropdown {
   border-radius: 80px;

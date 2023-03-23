@@ -40,32 +40,61 @@ $(function () {
       listItem.animate({
         left: lastPosX + "px"
       }, 100);
+      listItem.addClass('active');
+      resetOtherItems(listItem);
     }
 
     hammer.on('panstart', function (e) {
-      // 當滑動開始時，呼叫函式來將其他元素移回原來位置
+      listItem = $(e.target).parents('.js-slidetoleft');
+      listItem.addClass('active');
       resetOtherItems(listItem);
     });
 
     function resetOtherItems(activeItem) {
-      // 遍歷所有 .js-slidetoleft 元素
-      $('.js-slidetoleft').each(function () {
+      $('.js-slidetoleft').not(activeItem).each(function () {
         var item = $(this);
-
-        if (item[0] !== activeItem[0]) {
-          // 如果元素不是當前滑動的元素，則將其移回原來位置
-          item.animate({
-            left: "0px"
-          }, 100);
-        }
+        item.animate({
+          left: "0px"
+        }, 100);
+        item.removeClass('active');
       });
     }
 
     hammer.on('tap', function (e) {
       var listItem = $(e.target).parents('.js-slidetoleft');
+      listItem.addClass('active');
       resetOtherItems(listItem);
     });
-  }); //---------------------桌號設定------------------------
+  }); //---------------------捲軸設定------------------------
+
+  var scrollbar = document.querySelector('.scrollbar');
+  var content = document.querySelector('.scroll-content');
+  var isScrolling = false;
+
+  var toggleScrollbarVisibility = function toggleScrollbarVisibility() {
+    if (isScrolling) {
+      scrollbar.classList.remove('active');
+    } else {
+      scrollbar.classList.add('active');
+    }
+  };
+
+  content.addEventListener('scroll', handleScroll);
+  var hammer = new Hammer(content);
+  hammer.on('panmove', function () {
+    isScrolling = true;
+    toggleScrollbarVisibility();
+  });
+  scrollbar.addEventListener('wheel', function () {
+    handleScroll();
+  });
+
+  var handleScroll = function handleScroll() {
+    isScrolling = true;
+    toggleScrollbarVisibility();
+  };
+
+  content.addEventListener('scroll', handleScroll); //---------------------桌號設定------------------------
 
   $(".js-box-list-wrapper").find("button").click(function () {
     $(this).toggleClass("active");
@@ -90,12 +119,5 @@ $(function () {
     $(".js-search-dropdown").removeClass("active");
     $(".js-backdrop").removeClass("show");
   });
-  /*$(".scrollbar").scroll(function () {
-  	$(this).addClass("show");
-  	var stopListener = $(".scrollbar").mouseup(function () { // listen to mouse up
-  		$(this).removeClass("show");
-  		stopListner(); // Stop listening to mouse up after heard for the first time 
-  	});
-  });*/
 }); //JS尾端
 //# sourceMappingURL=script.js.map

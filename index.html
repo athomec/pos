@@ -814,8 +814,8 @@
 <div class="sidelist bg-gray100">
 	<div class="sidelist-header">
 		<div class="d-flex justify-content-between align-items-center">
-			<p class="primary-color font-heavy"></p>
-			<button class="btn btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#dine">
+			<div class="d-flex ms-auto">
+			<button class="btn btn-dropdown me-2" data-bs-toggle="offcanvas" data-bs-target="#dine">
 				<img src="./assets/images/ic-dine-in.svg" alt="內用" class="me-1">內用
 			</button>
 			<!--外帶：圖ic-takeout.svg-->
@@ -824,10 +824,11 @@
 			<button class="btn btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#table-list">
 				<img src="./assets/images/ic-table.svg" alt="桌號" class="me-1">桌號 A01
 			</button>
+			</div>
 		</div>
 	</div>
 	<div class="order-list-wrapper scrollbar">
-		<ul class="order-list">
+		<ul class="order-list scroll-content">
 			<li class="order-list-item js-slidetoleft">
 				<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img"
 					data-bs-toggle="offcanvas" data-bs-target="#order-list">

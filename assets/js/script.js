@@ -5,7 +5,7 @@ $(function () {
   var WINDOW = $(window).width(); //視窗寬度
 
   var WINDOWH = $(window).height(); //視窗高度
-  //---------------------左滑刪除設定------------------------
+  //---------------------訂單左滑刪除設定------------------------
 
   var mailList = $('.js-slidetoleft').each(function () {
     var hammer = new Hammer(this);
@@ -65,10 +65,72 @@ $(function () {
       listItem.addClass('active');
       resetOtherItems(listItem);
     });
+  }); //---------------------點餐左滑刪除設定------------------------
+
+  var mailList = $('.js-slidedelete').each(function () {
+    var hammer = new Hammer(this);
+    var direction;
+    var minX = -88; //右側按鈕寬度
+
+    var maxX = 0;
+    var buying = false;
+    var lastPosX;
+    var listItem;
+    hammer.on('panleft panright panend', function (e) {
+      e.preventDefault();
+      listItem = $(e.target).parents('.js-slidedelete');
+      var positionX = e.deltaX;
+      positionX = positionX + lastPosX;
+
+      if (e.type == 'panleft' && positionX >= -90 && positionX <= 0) {
+        direction = e.type;
+        listItem.css('left', positionX);
+      } else if (e.type == 'panright' && positionX <= 30 && positionX >= -50) {
+        direction = e.type;
+        listItem.css('left', positionX);
+      } else if (e.type == 'panend') {
+        snap(direction, listItem);
+      }
+    });
+
+    function snap(direction, listItem) {
+      lastPosX = direction == 'panleft' ? minX : maxX;
+      buying = lastPosX == minX ? true : false;
+      console.log(buying);
+      listItem.animate({
+        left: lastPosX + "px"
+      }, 100);
+      listItem.addClass('active');
+      resetOtherItems(listItem);
+    }
+
+    hammer.on('panstart', function (e) {
+      listItem = $(e.target).parents('.js-slidedelete');
+      listItem.addClass('active');
+      resetOtherItems(listItem);
+    });
+
+    function resetOtherItems(activeItem) {
+      $('.js-slidedelete').not(activeItem).each(function () {
+        var item = $(this);
+        item.animate({
+          left: "0px"
+        }, 100);
+        item.removeClass('active');
+      });
+    }
+
+    hammer.on('tap', function (e) {
+      var listItem = $(e.target).parents('.js-slidedelete');
+      listItem.addClass('active');
+      resetOtherItems(listItem);
+    });
   }); //---------------------捲軸設定------------------------
 
   var scrollbar = document.querySelector('.scrollbar');
   var content = document.querySelector('.scroll-content');
+  console.log(scrollbar);
+  console.log(content);
   var isScrolling = false;
 
   var toggleScrollbarVisibility = function toggleScrollbarVisibility() {
@@ -79,22 +141,30 @@ $(function () {
     }
   };
 
-  content.addEventListener('scroll', handleScroll);
-  var hammer = new Hammer(content);
-  hammer.on('panmove', function () {
-    isScrolling = true;
-    toggleScrollbarVisibility();
-  });
-  scrollbar.addEventListener('wheel', function () {
-    handleScroll();
-  });
+  var lastScrollTop = 0;
 
-  var handleScroll = function handleScroll() {
-    isScrolling = true;
-    toggleScrollbarVisibility();
+  var handlePanMove = function handlePanMove() {
+    console.log('panmove');
+
+    if (content.scrollTop !== lastScrollTop) {
+      isScrolling = true;
+      toggleScrollbarVisibility();
+    }
+
+    lastScrollTop = content.scrollTop;
   };
 
-  content.addEventListener('scroll', handleScroll); //---------------------桌號設定------------------------
+  var handlePanEnd = function handlePanEnd() {
+    console.log('panend');
+    isScrolling = false;
+  };
+
+  var hammer = new Hammer(content);
+  hammer.get('pan').set({
+    direction: Hammer.DIRECTION_ALL
+  });
+  hammer.on('panmove', handlePanMove);
+  hammer.on('panend', handlePanEnd); //---------------------桌號設定------------------------
 
   $(".js-box-list-wrapper").find("button").click(function () {
     $(this).toggleClass("active");

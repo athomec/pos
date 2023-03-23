@@ -24,39 +24,5 @@ $(function () {
       }
     }
   });
-  /*
-  $('.js-slidetounlock-slider')[0].addEventListener('touchmove', function(event) {
-      event.preventDefault();
-      var el = event.target;
-      var touch = event.touches[0];
-      curX = touch.pageX - this.offsetLeft - 73;
-      if(curX <= 0) return;
-      if(curX > 150){
-      	$('.slidetounlock').fadeOut(200);
-      }
-     	el.style.webkitTransform = 'translateX(' + curX + 'px)'; 
-  }, false);
-  
-  $('.js-slidetounlock-slider')[0].addEventListener('touchend', function(event) {	
-      this.style.webkitTransition = '-webkit-transform 0.3s ease-in';
-      this.addEventListener( 'webkitTransitionEnd', function( event ) { this.style.webkitTransition = 'none'; }, false );
-      this.style.webkitTransform = 'translateX(0px)';
-  }, false);
-  */
-
-  $('.js-slidetounlock-slider')[0].addEventListener('touchmove', function (event) {
-    event.preventDefault();
-    var el = event.target;
-    var touch = event.touches[0];
-    var dpr = window.devicePixelRatio || 1;
-    curX = (touch.pageX - this.offsetLeft - 73) / dpr;
-    if (curX <= 0) return;
-
-    if (curX > 150) {
-      $('.slidetounlock').fadeOut(200);
-    }
-
-    el.style.webkitTransform = 'translateX(' + curX + 'px)';
-  }, false);
 });
 //# sourceMappingURL=slidetounlock.js.map

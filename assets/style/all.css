@@ -15304,9 +15304,10 @@ body {
     background-position: right center;
     background-color: #06BB64 !important; }
   .btn-dropdown[data-con="disabled"] {
-    background-image: none;
+    background: none;
+    border: 0 !important;
     pointer-events: none;
-    padding-right: 16px; }
+    padding-right: 0; }
   .btn-dropdown img {
     width: 25px; }
 

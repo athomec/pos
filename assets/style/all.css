@@ -15247,7 +15247,6 @@ body {
             align-items: center;
     font-size: 1.2rem;
     color: #fff;
-    width: 250%;
     -webkit-text-size-adjust: none; }
   .slidetounlock-slider {
     width: 85px;
@@ -15264,9 +15263,9 @@ body {
     -webkit-box-shadow: 0 0 9px #525252;
             box-shadow: 0 0 9px #525252;
     border: 0 !important;
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
+    -webkit-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease; }
   .slidetounlock-txt {
     padding-left: 16px; }
 

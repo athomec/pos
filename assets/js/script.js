@@ -125,46 +125,7 @@ $(function () {
       listItem.addClass('active');
       resetOtherItems(listItem);
     });
-  }); //---------------------捲軸設定------------------------
-
-  var scrollbar = document.querySelector('.scrollbar');
-  var content = document.querySelector('.scroll-content');
-  console.log(scrollbar);
-  console.log(content);
-  var isScrolling = false;
-
-  var toggleScrollbarVisibility = function toggleScrollbarVisibility() {
-    if (isScrolling) {
-      scrollbar.classList.remove('active');
-    } else {
-      scrollbar.classList.add('active');
-    }
-  };
-
-  var lastScrollTop = 0;
-
-  var handlePanMove = function handlePanMove() {
-    console.log('panmove');
-
-    if (content.scrollTop !== lastScrollTop) {
-      isScrolling = true;
-      toggleScrollbarVisibility();
-    }
-
-    lastScrollTop = content.scrollTop;
-  };
-
-  var handlePanEnd = function handlePanEnd() {
-    console.log('panend');
-    isScrolling = false;
-  };
-
-  var hammer = new Hammer(content);
-  hammer.get('pan').set({
-    direction: Hammer.DIRECTION_ALL
-  });
-  hammer.on('panmove', handlePanMove);
-  hammer.on('panend', handlePanEnd); //---------------------桌號設定------------------------
+  }); //---------------------桌號設定------------------------
 
   $(".js-box-list-wrapper").find("button").click(function () {
     $(this).toggleClass("active");

@@ -1,7 +1,7 @@
 "use strict";
 
 $(function () {
-  $(".slidetounlock-slider").draggable({
+  $(".js-slidetounlock-slider").draggable({
     axis: 'x',
     containment: 'parent',
     drag: function drag(event, ui) {
@@ -24,46 +24,25 @@ $(function () {
       }
     }
   });
-  /*
-  $('.slidetounlock-slider')[0].addEventListener('touchmove', function(event) {
-      event.preventDefault();
-      var el = event.target;
-      var touch = event.touches[0];
-      curX = touch.pageX - this.offsetLeft - 73;
-      if(curX <= 0) return;
-      if(curX > 150){
-      	$('.slidetounlock').fadeOut(200);
-      }
-     	el.style.webkitTransform = 'translateX(' + curX + 'px)'; 
-  }, false);
-  
-  $('.slidetounlock-slider')[0].addEventListener('touchend', function(event) {	
-      this.style.webkitTransition = '-webkit-transform 0.3s ease-in';
-      this.addEventListener( 'webkitTransitionEnd', function( event ) { this.style.webkitTransition = 'none'; }, false );
-      this.style.webkitTransform = 'translateX(0px)';
-  }, false);*/
-
-  var myElement = document.getElementById('slidetounlock-slider');
-  var hammertime = new Hammer(myElement);
-  hammertime.on('pan', function (ev) {
-    ev.preventDefault();
-    var el = ev.target;
-    var curX = ev.deltaX - 73;
+  $('.js-slidetounlock-slider')[0].addEventListener('touchmove', function (event) {
+    event.preventDefault();
+    var el = event.target;
+    var touch = event.touches[0];
+    curX = touch.pageX - this.offsetLeft - 73;
     if (curX <= 0) return;
 
     if (curX > 150) {
       $('.slidetounlock').fadeOut(200);
     }
 
-    el.style.transform = 'translateX(' + curX + 'px)';
-  });
-  hammertime.on('panend', function (ev) {
-    var el = ev.target;
-    el.style.transition = 'transform 0.3s ease-in';
-    el.addEventListener('transitionend', function () {
-      el.style.transition = 'none';
+    el.style.webkitTransform = 'translateX(' + curX + 'px)';
+  }, false);
+  $('.js-slidetounlock-slider')[0].addEventListener('touchend', function (event) {
+    this.style.webkitTransition = '-webkit-transform 0.3s ease-in';
+    this.addEventListener('webkitTransitionEnd', function (event) {
+      this.style.webkitTransition = 'none';
     }, false);
-    el.style.transform = 'translateX(0px)';
-  });
+    this.style.webkitTransform = 'translateX(0px)';
+  }, false);
 });
 //# sourceMappingURL=slidetounlock.js.map

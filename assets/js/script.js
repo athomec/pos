@@ -149,6 +149,10 @@ $(function () {
   $(".js-search-btn").click(function () {
     $(".js-search-dropdown").removeClass("active");
     $(".js-backdrop").removeClass("show");
+  }); //----------------搜尋按鈕-----------------
+
+  $('[data-bs-target="#checkout"]').click(function () {
+    $(".side-tab").find("li").eq(0).find(".side-tab-item").click();
   });
 }); //JS尾端
 //# sourceMappingURL=script.js.map

@@ -15296,6 +15296,8 @@ body {
     background-repeat: no-repeat;
     background-position: right center;
     background-color: #F72A81 !important; }
+    .btn-dropdown[data-con="foodpanda"][data-status="disabled"] {
+      color: #F72A81 !important; }
   .btn-dropdown[data-con="ubereat"] {
     color: #fff !important;
     font-weight: 400;
@@ -15303,11 +15305,13 @@ body {
     background-repeat: no-repeat;
     background-position: right center;
     background-color: #06BB64 !important; }
-  .btn-dropdown[data-con="disabled"] {
-    background: none;
+    .btn-dropdown[data-con="ubereat"][data-status="disabled"] {
+      color: #06BB64 !important; }
+  .btn-dropdown[data-status="disabled"] {
+    background: none !important;
     border: 0 !important;
-    pointer-events: none;
-    padding-right: 0; }
+    pointer-events: none !important;
+    padding-right: 0 !important; }
   .btn-dropdown img {
     width: 25px; }
 

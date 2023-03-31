@@ -20,6 +20,9 @@
 </head>
 
 <body>
+	<div id="loading" class="bg-white rounded-lg" style="display:none;">
+		<img src="./assets/images/loading.gif" alt="loading">
+	</div>
 	<div class="backdrop js-backdrop"></div>
 	<!--訊息視窗開始-->
 	<div class="modal fade" id="message" data-bs-keyboard="false" tabindex="-1">
@@ -1028,7 +1031,8 @@
 			</li>
 		</ul>
 		<div class="price-card-action mt-2">
-			<button class="btn btn-lg btn-dark-alert-color W-100" data-bs-toggle="modal" data-bs-target="#message">送單</button>
+			<button class="btn btn-lg btn-dark-gray600 W-100 flex-shrink-0 me-3" style="width: 46px;"><img src="./assets/images/ic-trash.svg" alt="清空"></button>
+			<button class="btn btn-lg btn-dark-alert-color W-100 me-3" data-bs-toggle="modal" data-bs-target="#message">送單</button>
 			<button class="btn btn-lg btn-dark-primary-color" data-bs-toggle="offcanvas"
 				data-bs-target="#checkout">結帳</button>
 		</div>
@@ -1040,13 +1044,26 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src='assets/js/jquery-ui.min.js'></script>
 	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="assets/js/jquery.blockUI.js"></script>
 	<script src="assets/js/hammer.min.js"></script>
 	<script src="assets/js/slidetounlock.js"></script>
 	<script src="assets/js/bootstrap.bundle.js"></script>
 	<script src="assets/js/script.js"></script>
-	<script>
+	<script type="text/javascript">
+		//popover功能開啟
 		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+		//loading畫面
+		$(document).ajaxStop($.unblockUI);
+		function test() {
+			$.ajax({ url: 'wait.php', cache: false });
+		}
+		$(document).ready(function () {
+			$('.js-done-btn').click(function () {
+				$.blockUI({ message: $('#loading') });
+				test();
+			});
+		});
 	</script>
 </body>
 

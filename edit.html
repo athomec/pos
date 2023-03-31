@@ -20,6 +20,9 @@
 </head>
 
 <body>
+	<div id="loading" class="bg-white rounded-lg" style="display:none;">
+		<img src="./assets/images/loading.gif" alt="loading">
+	</div>
 	<div class="backdrop js-backdrop"></div>
 	<!--訊息視窗開始-->
 	<div class="modal fade" id="message" data-bs-keyboard="false" tabindex="-1">
@@ -1025,7 +1028,7 @@
 		</ul>
 		<div class="price-card-action mt-2">
 			<button class="btn btn-lg btn-dark-gray700 W-100" onclick="window.location.href='order.html'">取消</button>
-			<button class="btn btn-lg btn-dark-primary-color" onclick="window.location.href='order.html'">完成</button>
+			<button class="btn btn-lg btn-dark-primary-color js-done-btn" onclick="window.location.href='order.html'">完成</button>
 		</div>
 	</div>
 </div>
@@ -1035,13 +1038,26 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src='assets/js/jquery-ui.min.js'></script>
 	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="assets/js/jquery.blockUI.js"></script>
 	<script src="assets/js/hammer.min.js"></script>
 	<script src="assets/js/slidetounlock.js"></script>
 	<script src="assets/js/bootstrap.bundle.js"></script>
 	<script src="assets/js/script.js"></script>
-	<script>
+	<script type="text/javascript">
+		//popover功能開啟
 		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+		//loading畫面
+		$(document).ajaxStop($.unblockUI);
+		function test() {
+			$.ajax({ url: 'wait.php', cache: false });
+		}
+		$(document).ready(function () {
+			$('.js-done-btn').click(function () {
+				$.blockUI({ message: $('#loading') });
+				test();
+			});
+		});
 	</script>
 </body>
 

@@ -15469,7 +15469,8 @@ body {
         -ms-flex: 0 0;
             flex: 0 0; }
     .menu-card-pic img {
-      border-radius: 5px; }
+      border-radius: 5px;
+      width: 100%; }
   .menu-card-info {
     -webkit-box-flex: 0;
         -ms-flex: 0 0;

@@ -10285,7 +10285,11 @@ body {
   font-family: "Noto Sans TC", "Microsoft JhengHei", "sans-serif";
   line-height: 1.5;
   letter-spacing: 0.5px;
-  color: #292929; }
+  color: #292929;
+  /*避免在觸控時文字被選取*/
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none; }
 
 .clear {
   clear: both;

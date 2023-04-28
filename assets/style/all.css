@@ -15378,8 +15378,8 @@ body {
           -webkit-transition: all 0.2s ease;
           -o-transition: all 0.2s ease;
           transition: all 0.2s ease; }
-          .checkout-coupon-list-select:active button, .checkout-coupon-list-select.active button {
-            display: block; }
+        .checkout-coupon-list-select.active button {
+          display: block; }
       .checkout-coupon-list-btn {
         height: 44px;
         font-size: 1rem;

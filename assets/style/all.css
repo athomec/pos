@@ -15193,6 +15193,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .modal-footer > * {
+    width: 130px;
+    margin: 0;
+    -ms-flex-negative: 1;
+        flex-shrink: 1; }
 
 .modal-action {
   border-radius: 5px;

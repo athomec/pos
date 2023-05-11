@@ -40,9 +40,9 @@
 					</p>
 
 				</div>
-				<div class="modal-footer pt-0 px-3">
-					<button type="button" class="modal-action btn btn-dark-gray700 py-2 w-100"
-						data-bs-dismiss="modal">關閉</button>
+				<div class="modal-footer pt-0 pb-3 px-3 px-sm-5">
+					<button type="button" class="modal-action btn btn-dark-gray700 py-2 me-3" data-bs-dismiss="modal">取消</button>
+					<button type="button" class="modal-action btn btn-dark-alert-color py-2" data-bs-dismiss="modal">確認</button>
 				</div>
 			</div>
 		</div>
@@ -365,7 +365,7 @@
 					</div>
 				</div>
 				<div class="price-card-action mt-2">
-					<button class="btn btn-lg btn-dark-gray700 W-100" data-bs-dismiss="offcanvas">取消</button>
+					<button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
 					<button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas">確認</button>
 				</div>
 			</div>
@@ -995,7 +995,8 @@
 			</li>
 		</ul>
 		<div class="price-card-action mt-2">
-			<button class="btn btn-lg btn-dark-gray600 W-100 flex-shrink-0 me-3" style="width: 46px;"><img src="./assets/images/ic-trash.svg" alt="清空"></button>
+			<button class="btn btn-lg btn-dark-gray600 W-100 flex-shrink-0 me-3" style="width: 46px;" data-bs-toggle="modal"
+				data-bs-target="#message"><img src="./assets/images/ic-trash.svg" alt="清空"></button>
 			<button class="btn btn-lg btn-dark-primary-color flex-shrink-1" data-bs-toggle="offcanvas"
 				data-bs-target="#checkout">結帳</button>
 		</div>

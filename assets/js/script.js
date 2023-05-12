@@ -3,45 +3,16 @@ $(function () {//JS開頭
 	var WINDOW = $(window).width();//視窗寬度
 	var WINDOWH = $(window).height();//視窗高度
 
-	//---------------------訂單左滑刪除設定------------------------
+	//---------------------訂單點擊出現選單設定------------------------
 	var mailList = $('.js-slidetoleft').each(function () {
+		var listItem = $(this);
 		var hammer = new Hammer(this);
-		var direction;
-		var minX = -275//右側按鈕寬度
+		var minX = -275; // 右側按鈕寬度
 		var maxX = 0;
-		var buying = false;
 		var lastPosX;
-		var listItem;
 
-		hammer.on('panleft panright panend', function (e) {
-			e.preventDefault();
-			listItem = $(e.target).parents('.js-slidetoleft');
-			var positionX = e.deltaX;
-			positionX = positionX + lastPosX;
-			if (e.type == 'panleft' && positionX >= -90 && positionX <= 0) {
-				direction = e.type;
-				listItem.css('left', positionX);
-			} else if (e.type == 'panright' && positionX <= 30 && positionX >= -50) {
-				direction = e.type;
-				listItem.css('left', positionX);
-			} else if (e.type == 'panend') {
-				snap(direction, listItem);
-			}
-		});
-
-		function snap(direction, listItem) {
-			lastPosX = direction == 'panleft' ? minX : maxX;
-			buying = lastPosX == minX ? true : false;
-			console.log(buying);
-			listItem.animate({
-				left: lastPosX + "px"
-			}, 100);
-			listItem.addClass('active');
-			resetOtherItems(listItem);
-		}
-
-		hammer.on('panstart', function (e) {
-			listItem = $(e.target).parents('.js-slidetoleft');
+		hammer.on('tap', function (e) {
+			listItem.animate({ left: maxX + "px" }, 100);
 			listItem.addClass('active');
 			resetOtherItems(listItem);
 		});
@@ -53,12 +24,6 @@ $(function () {//JS開頭
 				item.removeClass('active');
 			});
 		}
-
-		hammer.on('tap', function (e) {
-			var listItem = $(e.target).parents('.js-slidetoleft');
-			listItem.addClass('active');
-			resetOtherItems(listItem);
-		});
 	});
 	//---------------------優惠按鈕設定---------------------------
 	$('.js-checkout-coupon-toggler').click(function () {

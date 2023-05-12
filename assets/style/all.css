@@ -15845,7 +15845,6 @@ body {
     left: 100px; }
 
 .order-card {
-  overflow-x: hidden !important;
   height: calc(100vh - 232px);
   padding-right: 8px; }
   .order-card-wrapper {
@@ -15867,6 +15866,7 @@ body {
     transition: all 0.2s ease;
     position: relative; }
     .order-card-item.active {
+      width: calc(100% - 275px);
       border: 1px solid #FFA42D;
       border-left: 6px solid #FFA42D; }
       .order-card-item.active:before {
@@ -15912,7 +15912,7 @@ body {
     font-size: 0.9rem; }
     .order-card-info li {
       border-right: 1px solid #ccc;
-      padding: 0 24px; }
+      padding: 0 16px; }
       .order-card-info li:last-child {
         border-right: 0; }
   .order-card-price {

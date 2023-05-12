@@ -15857,7 +15857,8 @@ body {
         flex-wrap: nowrap;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
-            align-items: stretch; }
+            align-items: stretch;
+    overflow: hidden; }
   .order-card-item {
     width: 100%;
     display: block;
@@ -16042,9 +16043,9 @@ body {
   border: 2px solid #1F89CD;
   -webkit-box-shadow: none !important;
           box-shadow: none !important; }
-  .top-nav[data-con="filter"] .form-check-input:checked {
+  .top-nav[data-con="filter"] .form-check-input.active {
     border: 0; }
-    .top-nav[data-con="filter"] .form-check-input:checked:after {
+    .top-nav[data-con="filter"] .form-check-input.active:after {
       content: "";
       width: 8px;
       height: 8px;
@@ -16067,7 +16068,7 @@ body {
   border: 1px solid #e0e0e0;
   font-weight: 500; }
 
-.top-nav[data-con="filter"] .form-check-input:checked ~ .form-check-label {
+.top-nav[data-con="filter"] .form-check-input.active ~ .form-check-label {
   background: #1F89CD;
   color: #fff;
   font-weight: 400; }

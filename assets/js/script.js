@@ -44,6 +44,10 @@ $(function () {//JS開頭
 		$('.js-checkout-coupon-toggler p').html('取消優惠');
 		$('.js-checkout-coupon-list').removeClass('active');
 	})
+	//---------------------filter按鈕設定------------------------
+	$('.js-filter input').click(function () {
+		$(this).toggleClass('active');
+	})
 	//---------------------點餐左滑刪除設定------------------------
 	var mailList = $('.js-slidedelete').each(function () {
 		var hammer = new Hammer(this);

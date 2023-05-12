@@ -15973,7 +15973,8 @@ body {
       height: 100%;
       position: relative;
       width: 60px;
-      padding: 0; }
+      padding: 0;
+      border-radius: 0; }
       .order-card-function button:first-child {
         border-top-left-radius: 5px !important;
         border-bottom-left-radius: 5px !important;

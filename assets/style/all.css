@@ -15849,7 +15849,15 @@ body {
   padding-right: 8px; }
   .order-card-wrapper {
     width: 100%;
-    margin-bottom: 16px; }
+    margin-bottom: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
   .order-card-item {
     width: 100%;
     display: block;
@@ -15864,9 +15872,12 @@ body {
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    position: relative; }
+    position: relative;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
     .order-card-item.active {
-      width: calc(100% - 275px);
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
       border: 1px solid #FFA42D;
       border-left: 6px solid #FFA42D; }
       .order-card-item.active:before {
@@ -15946,9 +15957,6 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0 0;
             flex: 0 0;
-    position: absolute;
-    top: -1px;
-    right: -275px;
     color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -15959,11 +15967,15 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: calc(100% + 2px); }
+    margin-left: 12px; }
     .order-card-function button {
       height: 100%;
-      position: relative; }
+      position: relative;
+      width: 60px;
+      padding: 0; }
       .order-card-function button:first-child {
+        border-top-left-radius: 5px !important;
+        border-bottom-left-radius: 5px !important;
         border-radius: 5px 0 0 5px; }
       .order-card-function button:last-child {
         border-radius: 0 5px 5px 0; }

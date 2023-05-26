@@ -524,7 +524,7 @@
 		<div class="d-flex">
 			<!--主選單開始-->
 <nav class="sidebar bg-primary-color">
-	<ul class="nav d-flex flex-column justify-content-center h-100">
+	<ul class="sidebar-nav nav d-flex flex-column h-100">
 		<li class="nav-item">
 			<a class="nav-link" href="index.html">
 				<img src="./assets/images/ic-menu.svg" alt="菜單">
@@ -538,6 +538,7 @@
 			</a>
 		</li>
 	</ul>
+	<button class="sidebar-btn btn-dark-primary-dark-color"><img src="./assets/images/ic-shutdown.svg" alt="離開">離開</button>
 </nav>
 
 <!--內容區塊開始-->
@@ -1025,7 +1026,7 @@
 			</ul>
 		</div>
 		<div class="price-card">
-			<ul>
+			<ul class="mb-3">
 				<li class="price-card-item">
 					<p>品項 (5)</p>
 					<p>$1980</p>
@@ -1034,9 +1035,21 @@
 					<p>外送費</p>
 					<p>$50</p>
 				</li>
-				<li class="price-card-item primary-color">
+				<li class="price-card-item danger-color">
+					<p>折 100</p>
+					<p>-$100</p>
+				</li>
+				<li class="price-card-item primary-color" data-con="total">
 					<p class="font-sm">總金額</p>
 					<p class="font-lg font-heavy">$2,030</p>
+				</li>
+				<li class="price-card-item gray700">
+					<p>已付</p>
+					<p>$2,500</p>
+				</li>
+				<li class="price-card-item gray700">
+					<p>找零</p>
+					<p>$470</p>
 				</li>
 			</ul>
 			<div class="price-card-action mt-2">

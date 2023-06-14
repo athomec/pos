@@ -16068,6 +16068,20 @@ body {
   .order-card-title {
     font-size: 1.13rem;
     font-weight: 500; }
+  .order-card-note {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.9rem;
+    background: #ebebeb;
+    color: #525252;
+    border-radius: 5px;
+    padding: 0 12px;
+    margin-right: 12px;
+    margin-left: auto; }
   .order-card-tag {
     background: #ccc;
     border-radius: 50px;

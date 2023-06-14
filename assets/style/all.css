@@ -10361,6 +10361,14 @@ input::placeholder, textarea::placeholder {
       -webkit-filter: brightness(0.8);
               filter: brightness(0.8); }
 
+.link-primary-xlight-color {
+  color: #A1DAFF; }
+  .link-primary-xlight-color:hover {
+    color: #3bb2ff; }
+    .link-primary-xlight-color:hover img {
+      -webkit-filter: brightness(0.8);
+              filter: brightness(0.8); }
+
 .link-primary-dark-color {
   color: #1379BB; }
   .link-primary-dark-color:hover {
@@ -10616,6 +10624,9 @@ input::placeholder, textarea::placeholder {
 .primary-light-color {
   color: #1F89CD !important; }
 
+.primary-xlight-color {
+  color: #A1DAFF !important; }
+
 .primary-dark-color {
   color: #1379BB !important; }
 
@@ -10849,6 +10860,9 @@ input::placeholder, textarea::placeholder {
 .bg-primary-light-color {
   background: #1F89CD !important; }
 
+.bg-primary-xlight-color {
+  background: #A1DAFF !important; }
+
 .bg-primary-dark-color {
   background: #1379BB !important; }
 
@@ -10971,6 +10985,25 @@ input::placeholder, textarea::placeholder {
   .btn-dark-primary-light-color:hover {
     color: #fff !important;
     background: #1c7ab7 !important; }
+
+.btn-dark-primary-xlight-color {
+  color: #fff !important;
+  background: #A1DAFF !important;
+  border: 1px solid #A1DAFF;
+  padding: 4px 16px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .btn-dark-primary-xlight-color:hover {
+    color: #fff !important;
+    background: #88d0ff !important; }
 
 .btn-dark-primary-dark-color {
   color: #fff !important;
@@ -11584,6 +11617,47 @@ input::placeholder, textarea::placeholder {
     color: #fff; }
     @media (max-width: 768px) {
       .btn-border-primary-light-color .btn-id {
+        padding-top: 4px; } }
+
+.btn-border-primary-xlight-color {
+  color: #A1DAFF !important;
+  background: #fff !important;
+  border: 1px solid white;
+  padding: 4px 16px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 6px #d6d6d6;
+          box-shadow: 0 3px 6px #d6d6d6;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .btn-border-primary-xlight-color:hover {
+    color: #88d0ff !important;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .btn-border-primary-xlight-color .btn-id {
+    width: 31px;
+    height: 31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 3px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    left: 16px;
+    top: 6px;
+    border-radius: 50%;
+    color: #fff; }
+    @media (max-width: 768px) {
+      .btn-border-primary-xlight-color .btn-id {
         padding-top: 4px; } }
 
 .btn-border-primary-dark-color {
@@ -12918,6 +12992,9 @@ input::placeholder, textarea::placeholder {
 .bd-primary-light-color {
   border-color: #1F89CD !important; }
 
+.bd-primary-xlight-color {
+  border-color: #A1DAFF !important; }
+
 .bd-primary-dark-color {
   border-color: #1379BB !important; }
 
@@ -13480,6 +13557,10 @@ input::placeholder, textarea::placeholder {
 .table-bd-primary-light-color th,
 .table-bd-primary-light-color td {
   border-color: #1F89CD; }
+
+.table-bd-primary-xlight-color th,
+.table-bd-primary-xlight-color td {
+  border-color: #A1DAFF; }
 
 .table-bd-primary-dark-color th,
 .table-bd-primary-dark-color td {
@@ -14934,6 +15015,18 @@ body {
       font-size: 1.2rem;
       padding: 8px 0;
       border-radius: 5px !important; }
+  .price-card-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #1F89CD !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0;
+    border: 0 !important; }
 
 .price-card-checked {
   padding-bottom: 12px; }
@@ -14984,7 +15077,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .box-list-item:hover {
+  .box-list-item:hover, .box-list-item:focus, .box-list-item:first-child:active {
     background: #fff;
     color: #1F89CD; }
   .box-list-item.active {
@@ -15015,7 +15108,8 @@ body {
           flex: 0 0;
   padding: 0 32px; }
   .box-list-action button {
-    font-size: 1.13rem; }
+    font-size: 1.13rem;
+    border: none; }
 
 .box-list[data-con="text"] .box-list-item {
   min-height: 54px;
@@ -15046,6 +15140,52 @@ body {
     right: 0;
     top: 0; }
 
+.box-list[data-con="number"] .box-list-item {
+  min-height: 54px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+  font-size: 1.2rem; }
+  .box-list[data-con="number"] .box-list-item[data-con="clear"] {
+    background: #A1DAFF;
+    font-size: 1rem; }
+  .box-list[data-con="number"] .box-list-item.active {
+    background: #FF9130;
+    color: #fff;
+    font-weight: 400; }
+
+.box-list[data-con="number"] .box-list-form {
+  background: #1379BB;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 0;
+  height: 45px;
+  text-align: center;
+  letter-spacing: 2px;
+  caret-color: transparent; }
+  .box-list[data-con="number"] .box-list-form::-webkit-input-placeholder {
+    color: #55bcff !important;
+    font-weight: 400;
+    letter-spacing: 1px; }
+  .box-list[data-con="number"] .box-list-form::-moz-placeholder {
+    color: #55bcff !important;
+    font-weight: 400;
+    letter-spacing: 1px; }
+  .box-list[data-con="number"] .box-list-form:-ms-input-placeholder {
+    color: #55bcff !important;
+    font-weight: 400;
+    letter-spacing: 1px; }
+  .box-list[data-con="number"] .box-list-form::-ms-input-placeholder {
+    color: #55bcff !important;
+    font-weight: 400;
+    letter-spacing: 1px; }
+  .box-list[data-con="number"] .box-list-form::placeholder {
+    color: #55bcff !important;
+    font-weight: 400;
+    letter-spacing: 1px; }
+
 /*--------------------視窗開始------------------*/
 .backdrop {
   width: 100vw;
@@ -15061,8 +15201,11 @@ body {
 .offcanvas-backdrop.show {
   opacity: 0.7; }
 
-.offcanvas-header .btn:active, .offcanvas-header .btn:focus {
-  border: 0; }
+.offcanvas-header {
+  padding-left: 20px;
+  padding-right: 32px; }
+  .offcanvas-header .btn:active, .offcanvas-header .btn:focus {
+    border: 0; }
 
 .offcanvas-bottom {
   border-radius: 24px 24px 0 0;
@@ -15597,7 +15740,7 @@ body {
     background-color: #06BB64 !important; }
     .btn-dropdown[data-con="ubereat"][data-status="disabled"] {
       color: #06BB64 !important; }
-  ge .btn-dropdown[data-status="disabled"] {
+  .btn-dropdown[data-status="disabled"] {
     background: none !important;
     border: 0 !important;
     pointer-events: none !important;
@@ -15882,7 +16025,7 @@ body {
   .order-card-item {
     width: 100%;
     display: block;
-    padding: 16px 32px;
+    padding: 16px 22px;
     background: #fff;
     color: #1F89CD;
     border: 1px solid #ebebeb;
@@ -15928,7 +16071,7 @@ body {
   .order-card-tag {
     background: #ccc;
     border-radius: 50px;
-    padding: 0 24px;
+    padding: 0 16px;
     height: 27px;
     line-height: 27px;
     color: #fff;
@@ -15944,7 +16087,7 @@ body {
     font-size: 0.9rem; }
     .order-card-info li {
       border-right: 1px solid #ccc;
-      padding: 0 16px; }
+      padding: 0 8px; }
       .order-card-info li:last-child {
         border-right: 0; }
   .order-card-price {
@@ -15992,9 +16135,10 @@ body {
     .order-card-function button {
       height: 100%;
       position: relative;
-      width: 60px;
+      width: 54px;
       padding: 0;
-      border-radius: 0; }
+      border-radius: 0;
+      font-size: 0.95rem; }
       .order-card-function button:first-child {
         border-top-left-radius: 5px !important;
         border-bottom-left-radius: 5px !important;

@@ -72,21 +72,21 @@
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A02
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A03
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A04
 								</p>
@@ -101,28 +101,28 @@
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A06
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A07
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A08
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A02
 								</p>
@@ -144,77 +144,77 @@
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B02
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B03
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B04
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B05
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B06
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B07
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B08
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B09
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B10
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B11
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B12
 								</p>
@@ -273,6 +273,91 @@
 			</div>
 			<div class="box-list-action mt-3">
 				<button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas">確認</button>
+			</div>
+		</div>
+	</div>
+	<!--備註視窗開始-->
+	<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="note"
+		aria-labelledby="offcanvasRightLabel">
+		<div class="offcanvas-header">
+			<button type="button" class="btn" data-bs-dismiss="offcanvas">
+				<img src="./assets/images/ic-close.svg" alt="關閉">
+			</button>
+			<h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">備註</h4>
+		</div>
+		<div class="offcanvas-body d-flex flex-column px-0">
+			<div class="box-list-wrapper scrollx-none scrollbar-dark">
+				<div class="container px-0">
+					<ul class="row box-list g-3 mb-5" data-con="number">
+						<li class="col-12">
+							<label for="note-number" class="visually-hidden">備註號碼</label>
+							<input type="text" id="note-number" class="box-list-form form-control" placeholder="備註號碼">
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								1
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								2
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								3
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								4
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								5
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								6
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								7
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								8
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								9
+							</button>
+						</li>
+						<li class="col-4">
+							<button class="btn box-list-item" data-con="clear">
+								清除
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								0
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								<img src="./assets/images/ic-backward.svg" alt="倒退">
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box-list-action mt-3">
+				<button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas" onclick="checkInput()">確認</button>
 			</div>
 		</div>
 	</div>
@@ -978,6 +1063,15 @@
 	</div>
 	<div class="price-card">
 		<ul>
+			<li class="price-card-item">
+				<button class="btn price-card-btn py-1 js-note-btn d-none" data-bs-toggle="offcanvas" data-bs-target="#note">
+					<img src="./assets/images/ic-addnote.svg" alt="增加備註" class="me-1">增加備註
+				</button>
+			</li>
+			<li class="price-card-item justify-content-start js-note-show" data-bs-toggle="offcanvas" data-bs-target="#note">
+				<p>備註：0988888888</p>
+				<button class="btn price-card-btn ms-2"><img src="./assets/images/ic-edit-noline.svg" alt="編輯"> 編輯</button>
+			</li>
 			<li class="price-card-item">
 				<p>品項 (5)</p>
 				<p>$1980</p>

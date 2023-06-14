@@ -134,7 +134,17 @@ $(function () {//JS開頭
 	$('[data-bs-target="#checkout"]').click(function () {
 		$(".side-tab").find("li").eq(0).find(".side-tab-item").click();
 	})
-
+	//-------------------備註判斷---------------------
 	
 })//JS尾端	
-
+function checkInput() {
+	var input = document.getElementById('note-number');
+	var inputValue = input.value.trim(); // 获取输入框的值，并去除前后的空格
+	if (inputValue !== '') {
+		$(".js-note-show").removeClass("d-none");
+		$(".js-note-btn").addClass("d-none");
+	} else {
+		$(".js-note-show").addClass("d-none");
+		$(".js-note-btn").removeClass("d-none");
+	}
+}

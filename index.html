@@ -72,21 +72,21 @@
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A02
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A03
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A04
 								</p>
@@ -101,28 +101,28 @@
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A06
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A07
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A08
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									A02
 								</p>
@@ -144,77 +144,77 @@
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B02
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B03
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B04
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B05
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B06
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B07
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B08
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B09
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B10
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B11
 								</p>
 							</button>
 						</li>
 						<li class="col-4">
-							<button class="btn box-list-item">
+							<button type="button" class="btn box-list-item">
 								<p class="box-list-number">
 									B12
 								</p>
@@ -273,6 +273,91 @@
 			</div>
 			<div class="box-list-action mt-3">
 				<button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas">確認</button>
+			</div>
+		</div>
+	</div>
+	<!--備註視窗開始-->
+	<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="note"
+		aria-labelledby="offcanvasRightLabel">
+		<div class="offcanvas-header">
+			<button type="button" class="btn" data-bs-dismiss="offcanvas">
+				<img src="./assets/images/ic-close.svg" alt="關閉">
+			</button>
+			<h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">備註</h4>
+		</div>
+		<div class="offcanvas-body d-flex flex-column px-0">
+			<div class="box-list-wrapper scrollx-none scrollbar-dark">
+				<div class="container px-0">
+					<ul class="row box-list g-3 mb-5" data-con="number">
+						<li class="col-12">
+							<label for="note-number" class="visually-hidden">備註號碼</label>
+							<input type="text" id="note-number" class="box-list-form form-control" placeholder="備註號碼">
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								1
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								2
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								3
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								4
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								5
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								6
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								7
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								8
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								9
+							</button>
+						</li>
+						<li class="col-4">
+							<button class="btn box-list-item" data-con="clear">
+								清除
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								0
+							</button>
+						</li>
+						<li class="col-4">
+							<button type="button" class="btn box-list-item">
+								<img src="./assets/images/ic-backward.svg" alt="倒退">
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box-list-action mt-3">
+				<button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas" onclick="checkInput()">確認</button>
 			</div>
 		</div>
 	</div>
@@ -538,7 +623,8 @@
 			</a>
 		</li>
 	</ul>
-	<button class="sidebar-btn btn-dark-primary-dark-color"><img src="./assets/images/ic-shutdown.svg" alt="離開">離開</button>
+	<button class="sidebar-btn btn-dark-primary-dark-color"><img src="./assets/images/ic-shutdown.svg"
+			alt="離開">離開</button>
 </nav>
 
 <!--內容區塊開始-->
@@ -548,57 +634,57 @@
 			<h1 class="mb-0"><img src="./assets/images/logo.svg" alt="好點POS"></h1>
 		</a>
 	</header>
-		<ul class="nav top-nav nav-pills mb-2 scrollbar">
-			<li class="top-nav-item nav-item">
-				<button class="btn top-nav-link active" data-bs-toggle="pill">
-					<img src="./assets/images/ic-pizza.svg" alt="披薩" class="top-nav-icon">
-					<p>披薩</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-burger.svg" alt="漢堡" class="top-nav-icon">
-					<p>漢堡</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-rice.svg" alt="燉飯" class="top-nav-icon">
-					<p>燉飯</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-pasta.svg" alt="義麵" class="top-nav-icon">
-					<p>義麵</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-tableware.svg" alt="排餐" class="top-nav-icon">
-					<p>排餐</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-beverage.svg" alt="飲料" class="top-nav-icon">
-					<p>飲料</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-sandwich.svg" alt="小食" class="top-nav-icon">
-					<p>小食</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-dessert.svg" alt="甜點" class="top-nav-icon">
-					<p>甜點</p>
-				</button>
-			</li>
-		</ul>
-	
+	<ul class="nav top-nav nav-pills mb-2 scrollbar">
+		<li class="top-nav-item nav-item">
+			<button class="btn top-nav-link active" data-bs-toggle="pill">
+				<img src="./assets/images/ic-pizza.svg" alt="披薩" class="top-nav-icon">
+				<p>披薩</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-burger.svg" alt="漢堡" class="top-nav-icon">
+				<p>漢堡</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-rice.svg" alt="燉飯" class="top-nav-icon">
+				<p>燉飯</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-pasta.svg" alt="義麵" class="top-nav-icon">
+				<p>義麵</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-tableware.svg" alt="排餐" class="top-nav-icon">
+				<p>排餐</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-beverage.svg" alt="飲料" class="top-nav-icon">
+				<p>飲料</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-sandwich.svg" alt="小食" class="top-nav-icon">
+				<p>小食</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-dessert.svg" alt="甜點" class="top-nav-icon">
+				<p>甜點</p>
+			</button>
+		</li>
+	</ul>
+
 	<div class="menu-card-info d-flex justify-content-between">
 		<h2 class="font-lg font-heavy mb-3">選擇披薩</h2>
 		<div class="d-flex gray700 align-items-center">
@@ -747,15 +833,15 @@
 	<div class="sidelist-header">
 		<div class="d-flex justify-content-between align-items-center">
 			<div class="d-flex ms-auto">
-			<button class="btn btn-dropdown me-2" data-bs-toggle="offcanvas" data-bs-target="#dine">
-				<img src="./assets/images/ic-dine-in.svg" alt="內用" class="me-1">內用
-			</button>
-			<!--外帶：圖ic-takeout.svg-->
-			<!--foodpanda 外送：圖 ic-foodpanda.svg，樣式 data-con="foodpanda"-->
-			<!--ubereat 外送：圖 ic-ubereat.svg，樣式 data-con="ubereat"-->
-			<button class="btn btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#table-list">
-				<img src="./assets/images/ic-table.svg" alt="桌號" class="me-1">桌號 A01
-			</button>
+				<button class="btn btn-dropdown me-2" data-bs-toggle="offcanvas" data-bs-target="#dine">
+					<img src="./assets/images/ic-dine-in.svg" alt="內用" class="me-1">內用
+				</button>
+				<!--外帶：圖ic-takeout.svg-->
+				<!--foodpanda 外送：圖 ic-foodpanda.svg，樣式 data-con="foodpanda"-->
+				<!--ubereat 外送：圖 ic-ubereat.svg，樣式 data-con="ubereat"-->
+				<button class="btn btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#table-list">
+					<img src="./assets/images/ic-table.svg" alt="桌號" class="me-1">桌號 A01
+				</button>
 			</div>
 		</div>
 	</div>
@@ -764,7 +850,7 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-list">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
@@ -795,7 +881,7 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-list">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
@@ -826,7 +912,7 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/default-pic-small.svg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-list">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
@@ -857,7 +943,7 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-list">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
@@ -888,7 +974,7 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-list">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
@@ -919,7 +1005,7 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-list">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
@@ -950,7 +1036,7 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-list">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
@@ -983,6 +1069,15 @@
 	<div class="price-card">
 		<ul>
 			<li class="price-card-item">
+				<button class="btn price-card-btn py-1 js-note-btn" data-bs-toggle="offcanvas" data-bs-target="#note">
+					<img src="./assets/images/ic-addnote.svg" alt="增加備註" class="me-1">增加備註
+				</button>
+			</li>
+			<li class="price-card-item justify-content-start d-none js-note-show" data-bs-toggle="offcanvas" data-bs-target="#note">
+				<p>備註：0988888888</p>
+				<button class="btn price-card-btn ms-2"><img src="./assets/images/ic-edit-noline.svg" alt="編輯"> 編輯</button>
+			</li>
+			<li class="price-card-item">
 				<p>品項 (5)</p>
 				<p>$1980</p>
 			</li>
@@ -996,8 +1091,12 @@
 			</li>
 		</ul>
 		<div class="price-card-action mt-2">
-			<button class="btn btn-lg btn-dark-gray600 W-100 flex-shrink-0 me-3" style="width: 46px;" data-bs-toggle="modal"
-				data-bs-target="#message"><img src="./assets/images/ic-trash.svg" alt="清空"></button>
+			<button class="btn btn-lg btn-dark-gray600 W-100 flex-shrink-0 me-3" style="width: 46px;"
+				data-bs-toggle="modal" data-bs-target="#message">
+				<img src="./assets/images/ic-trash.svg" alt="清空">
+			</button>
+			<button class="btn btn-lg btn-dark-alert-color flex-shrink-1 me-3" data-bs-toggle="offcanvas"
+				data-bs-target="#checkout">送單</button>
 			<button class="btn btn-lg btn-dark-primary-color flex-shrink-1" data-bs-toggle="offcanvas"
 				data-bs-target="#checkout">結帳</button>
 		</div>

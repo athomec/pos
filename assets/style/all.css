@@ -15155,7 +15155,7 @@ body {
     color: #fff;
     font-weight: 400; }
 
-.box-list[data-con="number"] .box-list-form, .box-list[data-con="number"] .box-list-form:-webkit-autofill {
+.box-list[data-con="number"] .box-list-form {
   background: #1379BB !important;
   color: #fff !important;
   font-size: 1.4rem;
@@ -15165,14 +15165,31 @@ body {
   text-align: center;
   letter-spacing: 2px;
   caret-color: transparent; }
-  .box-list[data-con="number"] .box-list-form::-webkit-input-placeholder, .box-list[data-con="number"] .box-list-form:-webkit-autofill::-webkit-input-placeholder {
+  .box-list[data-con="number"] .box-list-form::-webkit-input-placeholder {
     color: #55bcff !important;
     font-weight: 400;
     letter-spacing: 1px; }
-  .box-list[data-con="number"] .box-list-form::placeholder, .box-list[data-con="number"] .box-list-form:-webkit-autofill::placeholder {
+  .box-list[data-con="number"] .box-list-form::-moz-placeholder {
     color: #55bcff !important;
     font-weight: 400;
     letter-spacing: 1px; }
+  .box-list[data-con="number"] .box-list-form:-ms-input-placeholder {
+    color: #55bcff !important;
+    font-weight: 400;
+    letter-spacing: 1px; }
+  .box-list[data-con="number"] .box-list-form::-ms-input-placeholder {
+    color: #55bcff !important;
+    font-weight: 400;
+    letter-spacing: 1px; }
+  .box-list[data-con="number"] .box-list-form::placeholder {
+    color: #55bcff !important;
+    font-weight: 400;
+    letter-spacing: 1px; }
+
+.box-list[data-con="number"] .box-list-form:-webkit-autofill, .box-list[data-con="number"] .box-list-form:-webkit-autofill:hover, .box-list[data-con="number"] .box-list-form:-webkit-autofill:focus, .box-list[data-con="number"] .box-list-form:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-out 0.5s !important;
+  transition: background-color 5000s ease-out 0.5s !important;
+  -webkit-text-fill-color: #fff !important; }
 
 /*--------------------視窗開始------------------*/
 .backdrop {

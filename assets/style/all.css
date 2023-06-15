@@ -15155,9 +15155,9 @@ body {
     color: #fff;
     font-weight: 400; }
 
-.box-list[data-con="number"] .box-list-form {
-  background: #1379BB;
-  color: #fff;
+.box-list[data-con="number"] .box-list-form, .box-list[data-con="number"] .box-list-form:-webkit-autofill {
+  background: #1379BB !important;
+  color: #fff !important;
   font-size: 1.4rem;
   font-weight: 600;
   border: 0;
@@ -15165,23 +15165,11 @@ body {
   text-align: center;
   letter-spacing: 2px;
   caret-color: transparent; }
-  .box-list[data-con="number"] .box-list-form::-webkit-input-placeholder {
+  .box-list[data-con="number"] .box-list-form::-webkit-input-placeholder, .box-list[data-con="number"] .box-list-form:-webkit-autofill::-webkit-input-placeholder {
     color: #55bcff !important;
     font-weight: 400;
     letter-spacing: 1px; }
-  .box-list[data-con="number"] .box-list-form::-moz-placeholder {
-    color: #55bcff !important;
-    font-weight: 400;
-    letter-spacing: 1px; }
-  .box-list[data-con="number"] .box-list-form:-ms-input-placeholder {
-    color: #55bcff !important;
-    font-weight: 400;
-    letter-spacing: 1px; }
-  .box-list[data-con="number"] .box-list-form::-ms-input-placeholder {
-    color: #55bcff !important;
-    font-weight: 400;
-    letter-spacing: 1px; }
-  .box-list[data-con="number"] .box-list-form::placeholder {
+  .box-list[data-con="number"] .box-list-form::placeholder, .box-list[data-con="number"] .box-list-form:-webkit-autofill::placeholder {
     color: #55bcff !important;
     font-weight: 400;
     letter-spacing: 1px; }
@@ -16071,26 +16059,12 @@ body {
   .order-card-title {
     font-size: 1.13rem;
     font-weight: 500; }
-  .order-card-note {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 0.9rem;
-    background: #ebebeb;
-    color: #525252;
-    border-radius: 5px;
-    padding: 0 12px;
-    margin-right: 12px;
-    margin-left: auto; }
   .order-card-tag {
     background: #ccc;
     border-radius: 50px;
     padding: 0 16px;
     height: 27px;
-    line-height: 27px;
+    line-height: 26px;
     color: #fff;
     font-size: 0.9rem; }
   .order-card-info {
@@ -16103,8 +16077,11 @@ body {
     color: #292929;
     font-size: 0.9rem; }
     .order-card-info li {
+      line-height: 1.2;
       border-right: 1px solid #ccc;
       padding: 0 8px; }
+      .order-card-info li:first-child {
+        padding-left: 0; }
       .order-card-info li:last-child {
         border-right: 0; }
   .order-card-price {
@@ -16152,7 +16129,7 @@ body {
     .order-card-function button {
       height: 100%;
       position: relative;
-      width: 54px;
+      width: 55px;
       padding: 0;
       border-radius: 0;
       font-size: 0.95rem; }
@@ -16165,6 +16142,11 @@ body {
 
 .popover {
   --bs-popover-border-width: 0; }
+  .popover[data-popper-placement="top"] .popover-body:before {
+    top: auto;
+    bottom: -8px;
+    border-width: 8px 8px 0 8px;
+    border-color: #FF9130 transparent transparent transparent; }
 
 .popover-body {
   border-radius: 5px;

@@ -10578,9 +10578,9 @@ input::placeholder, textarea::placeholder {
               filter: brightness(0.8); }
 
 .link-stable-color {
-  color: #95634A; }
+  color: #ac8c7c; }
   .link-stable-color:hover {
-    color: #513628; }
+    color: #775a4b; }
     .link-stable-color:hover img {
       -webkit-filter: brightness(0.8);
               filter: brightness(0.8); }
@@ -10706,7 +10706,7 @@ input::placeholder, textarea::placeholder {
   color: #B39DD9 !important; }
 
 .stable-color {
-  color: #95634A !important; }
+  color: #ac8c7c !important; }
 
 .stable-light-color {
   color: #BC8E79 !important; }
@@ -10942,7 +10942,7 @@ input::placeholder, textarea::placeholder {
   background: #B39DD9 !important; }
 
 .bg-stable-color {
-  background: #95634A !important; }
+  background: #ac8c7c !important; }
 
 .bg-stable-light-color {
   background: #BC8E79 !important; }
@@ -11501,8 +11501,8 @@ input::placeholder, textarea::placeholder {
 
 .btn-dark-stable-color {
   color: #fff !important;
-  background: #95634A !important;
-  border: 1px solid #95634A;
+  background: #ac8c7c !important;
+  border: 1px solid #ac8c7c;
   padding: 4px 16px;
   border-radius: 4px;
   display: -webkit-box;
@@ -11516,7 +11516,7 @@ input::placeholder, textarea::placeholder {
           align-items: center; }
   .btn-dark-stable-color:hover {
     color: #fff !important;
-    background: #845842 !important; }
+    background: #a27e6c !important; }
 
 .btn-dark-stable-light-color {
   color: #fff !important;
@@ -12727,9 +12727,9 @@ input::placeholder, textarea::placeholder {
         padding-top: 4px; } }
 
 .btn-border-stable-color {
-  color: #95634A !important;
+  color: #ac8c7c !important;
   background: #fff !important;
-  border: 1px solid #d3b4a5;
+  border: 1px solid #e7deda;
   padding: 4px 16px;
   border-radius: 4px;
   -webkit-box-shadow: 0 3px 6px #d6d6d6;
@@ -12745,7 +12745,7 @@ input::placeholder, textarea::placeholder {
       -ms-flex-align: center;
           align-items: center; }
   .btn-border-stable-color:hover {
-    color: #845842 !important;
+    color: #a27e6c !important;
     -webkit-box-shadow: none;
             box-shadow: none; }
   .btn-border-stable-color .btn-id {
@@ -13074,7 +13074,7 @@ input::placeholder, textarea::placeholder {
   border-color: #B39DD9 !important; }
 
 .bd-stable-color {
-  border-color: #95634A !important; }
+  border-color: #ac8c7c !important; }
 
 .bd-stable-light-color {
   border-color: #BC8E79 !important; }
@@ -13668,7 +13668,7 @@ input::placeholder, textarea::placeholder {
 
 .table-bd-stable-color th,
 .table-bd-stable-color td {
-  border-color: #95634A; }
+  border-color: #ac8c7c; }
 
 .table-bd-stable-light-color th,
 .table-bd-stable-light-color td {

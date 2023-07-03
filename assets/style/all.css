@@ -15098,7 +15098,7 @@ body {
     border: 2px solid #fff;
     color: #fff; }
     .box-list-item.active:before {
-      content: "已選擇";
+      content: "已選";
       font-size: 0.8rem;
       padding-left: 16px;
       color: #fff !important;

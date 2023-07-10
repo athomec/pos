@@ -14627,7 +14627,7 @@ input::placeholder, textarea::placeholder {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
   .img-link:hover {
-    opacity: 0.8; }
+    opacity: 0.9; }
 
 .shadow-link:hover {
   -webkit-box-shadow: none !important;

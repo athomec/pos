@@ -14686,7 +14686,8 @@ body {
     height: 24px;
     right: -24px;
     background: url("../images/fillet-dark.svg");
-    background-size: 100%; }
+    background-size: 100%;
+    z-index: 100; }
   .sidebar:before {
     top: 0; }
   .sidebar:after {

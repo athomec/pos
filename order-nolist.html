@@ -18,8 +18,8 @@
     <!--css設定-->
 </head>
 
-	<body>
-		<div id="loading" class="bg-white rounded-lg" style="display:none;">
+	<body id="all">
+		<div id="loading" class="loading bg-white rounded-lg" style="display:none;">
 			<img src="./assets/images/loading.gif" alt="loading">
 		</div>
 		<div class="backdrop js-backdrop"></div>
@@ -758,16 +758,45 @@
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
     //loading畫面
-    $(document).ajaxStop($.unblockUI);
-    function test() {
-        $.ajax({ url: 'wait.php', cache: false });
-    }
     $(document).ready(function () {
-        $('.js-done-btn').click(function () {
-            $.blockUI({ message: $('#loading') });
-            test();
+        // 為整體區塊應用加載效果
+        $('#all').block({
+            message: $('#loading'),
+            overlayCSS: {
+                opacity: 0.1
+            }
         });
+
+        // 為左側區塊應用加載效果
+        $('#content').block({
+            message: $('#loading-content'),
+            overlayCSS: {
+                'border-radius': '0 24px 24px 0',
+                opacity: 0.1
+            }
+        });
+
+        // 為右側區塊應用加載效果
+        $('#sidelist').block({
+            message: $('#loading-sidelist'),
+            overlayCSS: {
+                'border-radius': '24px 0 0 24px',
+                opacity: 0.1
+            }
+        });
+
+        // 1秒後解除整體區塊的加載效果
+        setTimeout(function () {
+            $('#all').unblock();
+        }, 1000);
+        setTimeout(function () {
+            $('#content').unblock();
+        }, 2000);
+        setTimeout(function () {
+            $('#sidelist').unblock();
+        }, 2000);
     });
+
 </script>
 
 	</body>

@@ -18,8 +18,8 @@
     <!--css設定-->
 </head>
 
-	<body>
-		<div id="loading" class="bg-white rounded-lg" style="display:none;">
+	<body id="all">
+		<div id="loading" class="loading bg-white rounded-lg" style="display:none;">
 			<img src="./assets/images/loading.gif" alt="loading">
 		</div>
 		<div class="backdrop js-backdrop"></div>
@@ -669,7 +669,10 @@
             alt="離開">離開</button>
 </nav>
 <!--主選單結束-->
-					<main class="content bg-white">
+					<main class="content bg-white" id="content">
+	<div id="loading-content" class="loading bg-white rounded-lg" style="display:none;">
+		<img src="./assets/images/loading.gif" alt="loading">
+	</div>
 	<header class="navbar p-0 mb-2">
 		<a class="navbar-brand" href="index.html">
 			<h1 class="mb-0 primary-color">訂單編號 # 907653</h1> 
@@ -869,7 +872,10 @@
 	</div>
 </main>
 <!--清單區塊開始-->
-<div class="sidelist bg-gray100">
+<div class="sidelist bg-gray100" id="sidelist">
+	<div id="loading-sidelist" class="loading bg-white rounded-lg" style="display:none;">
+		<img src="./assets/images/loading.gif" alt="loading">
+	</div>
 	<div class="sidelist-header">
 		<div class="d-flex justify-content-between align-items-center flex-wrap">
 			<div class="d-flex ms-auto">
@@ -1129,7 +1135,7 @@
 		</ul>
 		<div class="price-card-action mt-2">
 			<button class="btn btn-lg btn-dark-gray700 W-100 me-3" onclick="window.location.href='order.html'">取消</button>
-			<button class="btn btn-lg btn-dark-primary-color js-done-btn" onclick="window.location.href='order.html'">完成</button>
+			<button class="btn btn-lg btn-dark-primary-color" onclick="window.location.href='order.html'">完成</button>
 		</div>
 	</div>
 </div>
@@ -1149,16 +1155,45 @@
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
     //loading畫面
-    $(document).ajaxStop($.unblockUI);
-    function test() {
-        $.ajax({ url: 'wait.php', cache: false });
-    }
     $(document).ready(function () {
-        $('.js-done-btn').click(function () {
-            $.blockUI({ message: $('#loading') });
-            test();
+        // 為整體區塊應用加載效果
+        $('#all').block({
+            message: $('#loading'),
+            overlayCSS: {
+                opacity: 0.1
+            }
         });
+
+        // 為左側區塊應用加載效果
+        $('#content').block({
+            message: $('#loading-content'),
+            overlayCSS: {
+                'border-radius': '0 24px 24px 0',
+                opacity: 0.1
+            }
+        });
+
+        // 為右側區塊應用加載效果
+        $('#sidelist').block({
+            message: $('#loading-sidelist'),
+            overlayCSS: {
+                'border-radius': '24px 0 0 24px',
+                opacity: 0.1
+            }
+        });
+
+        // 1秒後解除整體區塊的加載效果
+        setTimeout(function () {
+            $('#all').unblock();
+        }, 1000);
+        setTimeout(function () {
+            $('#content').unblock();
+        }, 2000);
+        setTimeout(function () {
+            $('#sidelist').unblock();
+        }, 2000);
     });
+
 </script>
 
 	</body>

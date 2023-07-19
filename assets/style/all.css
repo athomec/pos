@@ -14645,9 +14645,6 @@ input::placeholder, textarea::placeholder {
 body {
   font-family: Noto Sans TC, 微軟正黑體; }
 
-.wrapper {
-  min-width: 1250px; }
-
 .blockMsg {
   border: 0 !important;
   width: 100px !important;

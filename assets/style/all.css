@@ -15879,7 +15879,10 @@ html[data-device="pad"] {
       top: 0;
       background: #fff;
       z-index: 5;
-      border-radius: 5px; }
+      border-radius: 5px;
+      -webkit-transition: all 0.1s ease;
+      -o-transition: all 0.1s ease;
+      transition: all 0.1s ease; }
     .top-nav-link:after {
       content: "";
       display: block;

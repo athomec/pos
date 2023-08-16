@@ -27,15 +27,15 @@ $(function () {//JS開頭
 	});
 	//---------------------優惠按鈕設定---------------------------
 	$('.js-checkout-coupon-toggler').click(function () {
-		if($(this).hasClass("using")){
+		if ($(this).hasClass("using")) {
 			$('.js-checkout-coupon-toggler').removeClass('using');
 			$('.js-checkout-coupon-toggler p').html('使用優惠');
-		}else{
+		} else {
 			$(this).toggleClass('active');
 			$('.js-checkout-coupon').toggleClass('active');
 			$('.js-checkout-coupon-list').toggleClass('active');
 		}
-		
+
 	})
 	$(".js-checkout-coupon-list-btn").click(function () {
 		$('.js-checkout-coupon-toggler').removeClass('active');
@@ -105,7 +105,7 @@ $(function () {//JS開頭
 			resetOtherItems(listItem);
 		});
 	});
-	
+
 	//---------------------桌號設定------------------------
 	$(".js-box-list-wrapper").find("button").click(function () {
 		$(this).toggleClass("active");
@@ -134,9 +134,20 @@ $(function () {//JS開頭
 	$('[data-bs-target="#checkout"]').click(function () {
 		$(".side-tab").find("li").eq(0).find(".side-tab-item").click();
 	})
-	//-------------------備註判斷---------------------
-	
+//----------------電子發票設定-----------------
+	$(".js-checkout-pay button").click(function () {
+		$(".js-checkout-receipt input").removeClass("active");
+		$(".js-pay-receipt").removeClass("show");
+		$(".js-checkout-coupon").removeClass("hide");
+		$(".js-checkout-keyboard").removeClass("w-100 flex-shrink-1");
+		});
+	$(".js-checkout-receipt input").click(function () {
+		$(".js-checkout-coupon").addClass("hide");
+		$(".js-checkout-keyboard").addClass("w-100 flex-shrink-1");
+	});
 })//JS尾端	
+
+//-------------------備註判斷---------------------
 function checkInput() {
 	var input = document.getElementById('note-number');
 	var inputValue = input.value.trim(); // 获取输入框的值，并去除前后的空格

@@ -15129,7 +15129,7 @@ input:focus {
           flex: 0 1 auto; }
 
 body {
-  font-family: Noto Sans TC, 微軟正黑體; }
+  font-family: Noto Sans TC, 微軟正黑體; }
 
 .blockMsg {
   border: 0 !important;
@@ -15147,6 +15147,54 @@ body {
       -ms-flex-align: center !important;
           align-items: center !important;
   border-radius: 24px !important; }
+
+/*--------------------顧客端畫面開始------------------*/
+[data-con="consumer"] .content {
+  width: calc(100% - 430px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 100vh;
+  padding: 0;
+  margin-right: -20px; }
+  [data-con="consumer"] .content-video {
+    z-index: 0; }
+  [data-con="consumer"] .content-img {
+    width: 100%;
+    height: 100%; }
+  [data-con="consumer"] .content-banner {
+    width: 100%;
+    height: 252px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+
+[data-con="consumer"] .sidelist {
+  width: 450px;
+  position: relative;
+  z-index: 10; }
+
+[data-con="consumer"] .sidebar {
+  display: none; }
+
+[data-con="consumer"] .sidelist-header {
+  background: #1F89CD;
+  margin-bottom: 16px;
+  border-radius: 24px 0 0 0;
+  padding: 8px 24px !important; }
+  [data-con="consumer"] .sidelist-header button {
+    color: #fff !important; }
+    [data-con="consumer"] .sidelist-header button img {
+      -webkit-filter: brightness(1000%);
+              filter: brightness(1000%); }
+
+[data-con="consumer"] .price-card {
+  padding: 12px 32px 16px 32px !important; }
 
 /*--------------------主選單開始------------------*/
 .sidebar {
@@ -15251,11 +15299,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-
-.navbar-brand {
-  width: 228px; }
-  .navbar-brand h1 {
-    font-size: 2.2rem; }
+  .navbar-brand {
+    width: 228px; }
+    .navbar-brand h1 {
+      font-size: 2.2rem; }
+  .navbar-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 500; }
+    .navbar-info img {
+      width: 20px; }
 
 .search-input {
   width: 280px;

@@ -743,9 +743,11 @@
 <!--主選單結束-->
 					<main class="content bg-white flex-column">
     <!--影片載入-->
-    <video class="content-video w-100 h-100" loop="loop" id="video" autoplay muted>
-        <source src="./assets/images/demo.mp4" type="video/mp4" id="source">
-    </video>
+    <div class="content-video">
+        <video loop="loop" id="video" autoplay muted>
+            <source src="./assets/images/demo.mp4" type="video/mp4" id="source">
+        </video>
+    </div>
     <script>
         document.getElementById('video').play();
     </script>
@@ -757,7 +759,7 @@
         <div class="d-flex justify-content-end align-items-center">
             <div class="d-flex">
                 <button class="btn btn-dropdown" data-status="disabled">
-                    <img src="./assets/images/ic-table.svg" alt="桌號" class="me-1">桌號 A01
+                    <img src="./assets/images/ic-takeout.svg" alt="桌號" class="me-1">外帶
                 </button>
                 <!--data-status="disabled"為不能編輯的按鈕，可與平台外送屬性合併使用-->
             </div>

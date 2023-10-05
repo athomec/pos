@@ -15169,7 +15169,9 @@ body {
         flex-shrink: 1;
     width: 100%;
     background: #000;
-    height: 100%; }
+    height: calc(100% - 240px); }
+    [data-con="consumer"] .content-video[data-con="videoonly"] {
+      height: 100%; }
     [data-con="consumer"] .content-video video {
       width: 100%;
       height: 100%; }

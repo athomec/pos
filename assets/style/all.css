@@ -15531,9 +15531,11 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .number-form input {
+  .number-form div {
+    width: 52px;
+    cursor: pointer;
     line-height: 30px;
-    padding: 0 8px; }
+    padding: 0 5px; }
 
 .price-card {
   font-weight: 500;

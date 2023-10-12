@@ -16,8 +16,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -16413,6 +16412,80 @@ html[data-device="pad"] {
   html[data-device="pad"] [data-con="carrier"]::before {
     left: 110px; }
 
+/*--------------------歡迎頁開始------------------*/
+.landing {
+  padding: 16px 32px;
+  width: calc(100% - 78px);
+  background: url("../images/landing-bg.jpg") no-repeat right bottom;
+  background-size: cover;
+  position: relative; }
+  .landing-title {
+    position: absolute;
+    left: 11%;
+    top: 4%;
+    -webkit-transform: rotate(-9deg);
+        -ms-transform: rotate(-9deg);
+            transform: rotate(-9deg);
+    padding-right: 100px;
+    line-height: 1.2; }
+    @media (max-width: 1430px) {
+      .landing-title {
+        left: 12%;
+        top: 0.2%; } }
+    .landing-title-logo {
+      width: 230px; }
+    .landing-title-txt {
+      font-size: 90px;
+      font-weight: 700;
+      color: #3E3A39;
+      padding-left: 48px;
+      letter-spacing: 3px; }
+      @media (max-width: 1430px) {
+        .landing-title-txt {
+          font-size: 80px; } }
+    .landing-title-img {
+      position: absolute;
+      right: 0;
+      bottom: 24px;
+      width: 100px; }
+  .landing-txt {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 24px;
+    background: #1F89CD;
+    color: #fff;
+    position: absolute;
+    padding: 16px 32px;
+    -webkit-transform: rotate(-8deg);
+        -ms-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+    font-weight: 500;
+    font-size: 2.2rem;
+    left: 25%;
+    top: 52%; }
+    @media (max-width: 1430px) {
+      .landing-txt {
+        font-size: 1.6rem;
+        left: 17%;
+        top: 52%; } }
+    .landing-txt:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 42px;
+      bottom: -20px;
+      width: 47px;
+      height: 30px;
+      background: url("../images/dialogue.svg") no-repeat;
+      background-size: cover; }
+    .landing-txt img {
+      width: 40px; }
+
+/*歡迎頁*/
 /*--------------------首頁開始------------------*/
 .top-nav {
   padding: 12px 0;

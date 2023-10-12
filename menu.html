@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW" data-device="pad">
+<html lang="zh-Hant-TW">
 <head>
     <title>好點POS | 就是好點</title>
     <meta charset="utf-8">
@@ -18,8 +18,8 @@
     <!--css設定-->
 </head>
 
-	<body>
-		<div id="loading" class="bg-white rounded-lg" style="display:none;">
+	<body id="all">
+		<div id="loading" class="loading bg-white rounded-lg" style="display:none;">
 			<img src="./assets/images/loading.gif" alt="loading">
 		</div>
 		<div class="backdrop js-backdrop"></div>
@@ -801,7 +801,7 @@
 </div>
 			<!--頁面開始-->
 			<div class="wrapper">
-				<div class="d-flex">
+				<div class="d-flex" data-con="">
 					<!--主選單開始-->
 <nav class="sidebar bg-primary-color">
     <a href="https://goodpos.com.tw/" target="_blank" class="img-link">
@@ -809,7 +809,7 @@
     </a>
     <ul class="sidebar-nav nav d-flex flex-column h-100">
         <li class="nav-item">
-            <a class="nav-link " href="menu.html">
+            <a class="nav-link active" href="menu.html">
                 <img src="./assets/images/ic-menu.svg" alt="菜單">
                 菜單
             </a>
@@ -832,6 +832,10 @@
 		<a class="navbar-brand" href="index.html">
 			<h1 class="mb-0"><img src="./assets/images/logo.svg" alt="好點POS"></h1>
 		</a>
+		<div class="navbar-info primary-color">
+			<img src="./assets/images/ic-clock.svg" class="me-1">
+			2023/09/20 上午 11:10
+		</div>
 	</header>
 	<ul class="nav top-nav nav-pills mb-2 scrollbar">
 		<li class="top-nav-item nav-item">
@@ -1096,7 +1100,7 @@
 							<button class="btn btn-dark-gray600" type="button">
 								<img src="./assets/images/ic-minus.svg" alt="減少">
 							</button>
-							<div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+							<div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">100</div>
 							<button class="btn btn-dark-gray600" type="button">
 								<img src="./assets/images/ic-plus.svg" alt="增加">
 							</button>

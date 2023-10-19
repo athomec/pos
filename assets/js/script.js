@@ -48,6 +48,12 @@ $(function () {//JS開頭
 	$('.js-filter input').click(function () {
 		$(this).toggleClass('active');
 	})
+	//---------------------多項目選單按鈕設定------------------------
+	$(".js-top-nav-toggle-btn").click(function () {
+		$(this).toggleClass('active');
+		$(".js-top-nav-toggle").toggleClass('active');
+		$(".js-top-nav").toggleClass('show');
+	})
 	//---------------------點餐左滑刪除設定------------------------
 	var mailList = $('.js-slidedelete').each(function () {
 		var hammer = new Hammer(this);

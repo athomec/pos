@@ -16870,8 +16870,14 @@ html[data-device="pad"] {
         flex-wrap: nowrap;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
-            align-items: stretch;
-    overflow: hidden; }
+            align-items: stretch; }
+    .order-card-wrapper:nth-last-child(1) .order-card-function-dropdown, .order-card-wrapper:nth-last-child(2) .order-card-function-dropdown {
+      top: -140px; }
+      .order-card-wrapper:nth-last-child(1) .order-card-function-dropdown:before, .order-card-wrapper:nth-last-child(2) .order-card-function-dropdown:before {
+        top: auto;
+        bottom: 0; }
+      .order-card-wrapper:nth-last-child(1) .order-card-function-dropdown.show:before, .order-card-wrapper:nth-last-child(2) .order-card-function-dropdown.show:before {
+        bottom: -6px; }
   .order-card-item {
     width: 100%;
     display: block;
@@ -16988,59 +16994,73 @@ html[data-device="pad"] {
         -ms-flex-align: center;
             align-items: center;
     margin-left: 12px; }
-    .order-card-function button {
+    .order-card-function > * {
       height: 100%;
       position: relative;
       width: 55px;
       padding: 0;
       border-radius: 0;
       font-size: 0.95rem; }
-      .order-card-function button:first-child {
+      .order-card-function > *:first-child {
         border-top-left-radius: 5px !important;
         border-bottom-left-radius: 5px !important;
         border-radius: 5px 0 0 5px; }
-      .order-card-function button:last-child {
+        .order-card-function > *:first-child button {
+          border-top-left-radius: 5px !important;
+          border-bottom-left-radius: 5px !important;
+          border-radius: 5px 0 0 5px; }
+      .order-card-function > *:last-child {
         border-radius: 0 5px 5px 0; }
-
-.popover {
-  --bs-popover-border-width: 0; }
-  .popover[data-popper-placement="top"] .popover-body:before {
-    top: auto;
-    bottom: -8px;
-    border-width: 8px 8px 0 8px;
-    border-color: #FF9130 transparent transparent transparent; }
-
-.popover-body {
-  border-radius: 5px;
-  border: 2px solid #FF9130;
-  padding: 8px 16px;
-  position: relative; }
-  .popover-body li:last-child a {
-    border-bottom: none; }
-  .popover-body a {
-    font-family: "Noto Sans TC", "Microsoft JhengHei", "sans-serif";
-    font-size: 1rem;
-    color: #525252;
-    border-bottom: 1px solid #d6d6d6;
-    padding: 5px;
-    text-align: center;
-    display: block; }
-    .popover-body a:hover {
-      color: #292929; }
-  .popover-body:before {
-    content: "";
-    position: absolute;
-    left: calc(50% - 8px);
-    top: -8px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 8px 8px 8px;
-    border-color: transparent transparent #FF9130 transparent;
-    border-radius: 5px; }
-
-.popover-arrow {
-  display: none !important; }
+        .order-card-function > *:last-child button {
+          border-radius: 0 5px 5px 0; }
+    .order-card-function-dropdown {
+      width: 140px;
+      position: absolute;
+      left: calc(50% - 70px);
+      top: 110px;
+      z-index: 100; }
+      .order-card-function-dropdown:before {
+        content: "";
+        position: absolute;
+        left: calc(50% - 8px);
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+        background: #FF9130;
+        border-radius: 3px;
+        z-index: 0;
+        -webkit-transition: all 0.1s ease;
+        -o-transition: all 0.1s ease;
+        transition: all 0.1s ease; }
+      .order-card-function-dropdown.show:before {
+        top: -6px; }
+    .order-card-function-menu button {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border-radius: 0; }
+    .order-card-function-menu ul {
+      background: #fff;
+      border-radius: 5px;
+      border: 2px solid #FF9130;
+      padding: 8px 16px;
+      position: relative;
+      z-index: 10; }
+      .order-card-function-menu ul li:last-child a {
+        border-bottom: none; }
+      .order-card-function-menu ul a {
+        font-family: "Noto Sans TC", "Microsoft JhengHei", "sans-serif";
+        font-size: 1rem;
+        color: #525252;
+        border-bottom: 1px solid #d6d6d6;
+        padding: 5px;
+        text-align: center;
+        display: block; }
+        .order-card-function-menu ul a:hover {
+          color: #292929; }
 
 .top-nav[data-con="filter"] .top-nav-item {
   display: -webkit-inline-box;

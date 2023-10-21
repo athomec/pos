@@ -25,6 +25,12 @@ $(function () {//JS開頭
 			});
 		}
 	});
+	$('.js-slidetoleft').click(function(){//關閉其他補印選單
+		$(this).parent(".js-order-card-wrapper").siblings(".js-order-card-wrapper").find(".collapse").collapse("hide");
+	})
+	$(".js-order-card-function").find("button:not(.order-card-function-menu button)").click(function () {
+		$(this).closest(".js-order-card-wrapper").find(".collapse").collapse("hide");
+	});
 	//---------------------優惠按鈕設定---------------------------
 	$('.js-checkout-coupon-toggler').click(function () {
 		if ($(this).hasClass("using")) {

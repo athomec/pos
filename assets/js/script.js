@@ -54,6 +54,8 @@ $(function () {//JS開頭
 	$('.js-filter input').click(function () {
 		$(this).toggleClass('active');
 	})
+	//
+	$('[data-status="notice"]').find("img").attr('src', './assets/images/ic-online-notice.svg')
 	//---------------------多項目選單按鈕設定------------------------
 	$(".js-top-nav-toggle-btn").click(function () {
 		$(this).toggleClass('active');

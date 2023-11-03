@@ -15519,6 +15519,17 @@ body {
     height: calc(100% - 16px); }
 
 .number-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   width: 110px; }
   .number-form button {
     border-radius: 5px !important;
@@ -15533,9 +15544,11 @@ body {
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
   .number-form div {
-    width: 52px;
+    width: 100%;
     cursor: pointer;
     line-height: 30px;
     padding: 0 5px; }

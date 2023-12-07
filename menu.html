@@ -277,6 +277,49 @@
         </div>
     </div>
 </div>
+<!--付款方式視窗開始-->
+<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="pay"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">請選擇付款方式</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0">
+        <div class="box-list-wrapper scrollx-none scrollbar-dark">
+            <div class="container px-0">
+                <ul class="row box-list g-3 mb-5 nav nav-pills" data-con="text" role="tablist">
+                    <li class="col-12">
+                        <button class="btn box-list-item active" data-bs-toggle="pill" role="tab">
+                            現金
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            信用卡
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            LinePay
+                            <img src="./assets/images/logo-linepay.svg" alt="linepay">
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            街口支付
+                            <img src="./assets/images/logo-street.png" alt="street">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-list-action mt-3">
+            <button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas">確認</button>
+        </div>
+    </div>
+</div>
 <!--備註視窗開始-->
 <div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="note"
     aria-labelledby="offcanvasRightLabel">
@@ -1049,14 +1092,14 @@
 	<div class="sidelist-header">
 		<div class="d-flex justify-content-between align-items-center">
 			<div class="d-flex ms-auto">
-				<button class="btn btn-dropdown me-2" data-bs-toggle="offcanvas" data-bs-target="#dine">
-					<img src="./assets/images/ic-dine-in.svg" alt="內用" class="me-1">內用
+				<button class="btn btn-dropdown me-2" data-bs-toggle="offcanvas" data-bs-target="#pay">
+					街口支付付
 				</button>
-				<!--外帶：圖ic-takeout.svg-->
-				<!--foodpanda 外送：圖 ic-foodpanda.svg，樣式 data-con="foodpanda"-->
-				<!--ubereat 外送：圖 ic-ubereat.svg，樣式 data-con="ubereat"-->
+				<button class="btn btn-dropdown me-2" data-bs-toggle="offcanvas" data-bs-target="#dine">
+					內用
+				</button>
 				<button class="btn btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#table-list">
-					<img src="./assets/images/ic-table.svg" alt="桌號" class="me-1">桌號 A01
+					桌號 A01
 				</button>
 			</div>
 		</div>

@@ -16316,7 +16316,6 @@ body {
 
 .btn-dropdown {
   border-radius: 80px;
-  background: #fff;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -16339,14 +16338,6 @@ body {
   /*字體縮小*/ }
   .btn-dropdown:hover, .btn-dropdown:focus {
     background-color: #fff; }
-  .btn-dropdown[data-con="linepay"] {
-    color: #fff !important;
-    font-weight: 400;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-color: #06BB64 !important; }
-    .btn-dropdown[data-con="linepay"][data-status="disabled"] {
-      color: #F72A81 !important; }
   .btn-dropdown[data-con="foodpanda"] {
     color: #fff !important;
     font-weight: 400;
@@ -16369,7 +16360,8 @@ body {
     background: none !important;
     border: 0 !important;
     pointer-events: none !important;
-    padding-right: 0 !important; }
+    padding-right: 0 !important;
+    font-size: 1rem; }
   .btn-dropdown img {
     /*width: 25px;*/
     width: 20px; }
@@ -16569,6 +16561,8 @@ html[data-device="pad"] {
           display: -ms-inline-flexbox;
           display: inline-flex;
           border-left: 1px solid #A1DAFF; }
+  html[data-device="pad"] .btn-dropdown {
+    font-size: 0.8rem; }
   html[data-device="pad"] .menu-card[data-num="plenty"] .menu-card-item {
     padding: 16px; }
     html[data-device="pad"] .menu-card[data-num="plenty"] .menu-card-item:after {

@@ -31,6 +31,16 @@ $(function () {//JS開頭
 	$(".js-order-card-function").find("button:not(.order-card-function-menu button)").click(function () {
 		$(this).closest(".js-order-card-wrapper").find(".collapse").collapse("hide");
 	});
+	//---------------------切換按鈕設定------------------------
+	$('.js-select-list-btn').click(function () {
+		if ($(this).hasClass("active")) {
+			$(this).removeClass("active");
+		} else {
+			var parentToggleBtnList = $(this).closest(".js-radio-btn-list");
+			parentToggleBtnList.find(".js-select-list-btn").removeClass('active');
+			$(this).addClass('active');
+		}
+	});
 	//---------------------優惠按鈕設定---------------------------
 	$('.js-checkout-coupon-toggler').click(function () {
 		if ($(this).hasClass("using")) {
@@ -41,7 +51,6 @@ $(function () {//JS開頭
 			$('.js-checkout-coupon').toggleClass('active');
 			$('.js-checkout-coupon-list').toggleClass('active');
 		}
-
 	})
 	$(".js-checkout-coupon-list-btn").click(function () {
 		$('.js-checkout-coupon-toggler').removeClass('active');

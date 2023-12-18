@@ -491,7 +491,7 @@
     </div>
 </div>
 <!--點餐視窗開始-->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="order-list" aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="order-list">
     <div class="offcanvas-header bg-primary-color white">
         <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
             <img src="./assets/images/ic-close.svg" alt="關閉">
@@ -509,7 +509,7 @@
                 <h6 class="d-flex justify-content-between primary-color mb-3">
                     餅皮選擇<p class="font-xxs gray600">最多選擇 1 項</p>
                 </h6>
-                <div class="select-list">
+                <div class="select-list js-radio-btn-list">
                     <div class="form-check mb-3">
                         <input class="form-check-input" type="radio" name="item1" id="item1-1" checked>
                         <label class="form-check-label" for="item1-1">
@@ -561,6 +561,145 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="price-card">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="input-group number-form">
+                    <button class="btn btn-dark-gray600" type="button">
+                        <img src="./assets/images/ic-minus.svg" alt="減少">
+                    </button>
+                    <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+                    <button class="btn btn-dark-gray600" type="button">
+                        <img src="./assets/images/ic-plus.svg" alt="增加">
+                    </button>
+                </div>
+                <div class="d-flex align-items-center primary-color mb-2">
+                    <p class="font-sm me-2">小計</p>
+                    <p class="font-lg font-heavy">$2,030</p>
+                </div>
+            </div>
+            <div class="price-card-action mt-2">
+                <button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
+                <button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas">確認</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--點餐視窗(按鈕式)開始-->
+<div class="offcanvas offcanvas-end offcanvas-end-lg" tabindex="-1" id="order-btnlist">
+    <div class="offcanvas-header bg-primary-color white">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">請選擇餐點</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
+        <div class="select-list-wrapper scrollbar">
+            <h5 class="d-flex mb-1">雙濃起司炸魚番薯披薩<span class="d-block ms-auto mb-1">NT$289</span></h5>
+            <p class="font-bold mb-3">
+                <span class="d-block gray700 font-xxs">披薩 1 份，指定副食 2 份</span>
+            </p>
+            <hr>
+                <h6 class="d-flex justify-content-between primary-color mb-3">
+                    餅皮選擇<p class="font-xxs gray600">請選擇 1 項</p>
+                </h6>
+                <!--.js-radio-btn-list為限定單選-->
+                <div class="select-list js-radio-btn-list row align-items-stretch g-2">
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn" data-status="soldout">
+                            <p>薄脆餅皮</p><span>售完</span>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn active">
+                            <p>芝心餅皮</p><span>+$30</span>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn">
+                            <p>鬆厚餅皮</p><span>免費</span>
+                        </button>
+                    </div>
+                </div>
+                <hr>
+                <h6 class="d-flex justify-content-between primary-color mb-3">
+                    副食選擇<p class="font-xxs gray600">請選擇 1 項</p>
+                </h6>
+                <div class="select-list js-radio-btn-list row align-items-stretch g-2">
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn active">
+                            <p>QQ球 (6 顆)</p><span>免費</span>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn" data-status="soldout">
+                            <p>芝心腸 (3 條)</p><span>售完</span>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn">
+                            <p>品牌聯名半熟起司塔 (1 顆)</p><span>+$30</span>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn">
+                            <p>巴斯克蛋糕 (1 塊)</p><span>+$40</span>
+                        </button>
+                    </div>
+                </div>
+                <hr>
+                <h6 class="d-flex justify-content-between primary-color mb-3">
+                    飲料選擇<p class="font-xxs gray600">請選擇 1 項</p>
+                </h6>
+                <div class="select-list js-radio-btn-list row align-items-stretch g-2">
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn active">
+                            <p>可樂</p><span>免費</span>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn">
+                            <p>奶蓋紅茶</p><span>+$30</span>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn">
+                            <p>珍珠芋奶</p><span>+$50</span>
+                        </button>
+                    </div>
+                </div>
+                <hr>
+                <h6 class="d-flex justify-content-between primary-color mb-3">
+                    加購選擇
+                </h6>
+                <div class="select-list row align-items-stretch g-2">
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn">
+                            <p>香辣雞翅</p><span>+80</span>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn">
+                            <p>炙烤雞腿</p><span>+$50</span>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn">
+                            <p>香蒜奶油脆薯</p><span>+$60</span>
+                        </button>
+                    </div>
+                </div>
+                <hr>
+                <h6 class="d-flex justify-content-between primary-color mb-3">
+                    提袋選擇
+                </h6>
+                <div class="select-list row align-items-stretch g-2">
+                    <div class="col-4">
+                        <button class="btn select-list-btn js-select-list-btn">
+                            <p>塑膠袋</p><span>+3</span>
+                        </button>
+                    </div>
+                </div>
         </div>
         <div class="price-card">
             <div class="d-flex justify-content-between align-items-center">
@@ -965,7 +1104,7 @@
 	<div class="container-fluid menu-card scrollbar scrollx-none px-0 js-menu-card">
 		<ul class="row scrollbar-content">
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/default-pic.svg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -975,7 +1114,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item soldout" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item soldout" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -985,7 +1124,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -995,7 +1134,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -1005,7 +1144,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -1015,7 +1154,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -1025,7 +1164,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -1035,7 +1174,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -1045,7 +1184,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -1055,7 +1194,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -1065,7 +1204,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -1075,7 +1214,7 @@
 				</a>
 			</li>
 			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
@@ -1110,13 +1249,13 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-						data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
 				</div>
 				<div class="order-list-info">
-					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
 						<span class="order-list-caption">NT$289</span>
 						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
@@ -1141,13 +1280,13 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-						data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
 				</div>
 				<div class="order-list-info">
-					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
 						<span class="order-list-caption">NT$289</span>
 						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
@@ -1172,13 +1311,13 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/default-pic-small.svg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-						data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
 				</div>
 				<div class="order-list-info">
-					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
 						<span class="order-list-caption">NT$289</span>
 						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
@@ -1203,13 +1342,13 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-						data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
 				</div>
 				<div class="order-list-info">
-					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
 						<span class="order-list-caption">NT$289</span>
 						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
@@ -1234,13 +1373,13 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-						data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
 				</div>
 				<div class="order-list-info">
-					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
 						<span class="order-list-caption">NT$289</span>
 						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
@@ -1265,13 +1404,13 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-						data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
 				</div>
 				<div class="order-list-info">
-					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
 						<span class="order-list-caption">NT$289</span>
 						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
@@ -1296,13 +1435,13 @@
 			<li class="order-list-item js-slidedelete">
 				<div class="order-list-start">
 					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-						data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 					<button class="btn btn-dark-gray600" type="button">
 						<img src="./assets/images/ic-trash.svg" alt="刪除">
 					</button>
 				</div>
 				<div class="order-list-info">
-					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-btnlist">
 						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
 						<span class="order-list-caption">NT$289</span>
 						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>

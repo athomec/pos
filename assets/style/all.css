@@ -16,7 +16,6 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10266,6 +10265,37 @@ textarea.form-control-lg {
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap.css.map */
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');*/
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-weight: 100;
+  src: local("Noto Sans TC Thin"), local("NotoSansTC-Thin"), url("../webfonts/NotoSansTC-Thin.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-weight: 300;
+  src: local("Noto Sans TC Light"), local("NotoSansTC-Light"), url("../webfonts/NotoSansTC-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-weight: 400;
+  src: local("Noto Sans TC Regular"), local("NotoSansTC-Regular"), url("../webfonts/NotoSansTC-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-weight: 500;
+  src: local("Noto Sans TC Medium"), local("NotoSansTC-Medium"), url("../webfonts/NotoSansTC-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-weight: 700;
+  src: local("Noto Sans TC Bold"), local("NotoSansTC-Bold"), url("../webfonts/NotoSansTC-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-weight: 900;
+  src: local("Noto Sans TC Black"), local("NotoSansTC-Black"), url("../webfonts/NotoSansTC-Black.ttf") format("truetype"); }
+
 /* --------------基本設定開始--------------- */
 *,
 *::before,

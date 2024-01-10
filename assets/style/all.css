@@ -10268,33 +10268,8 @@ textarea.form-control-lg {
 /*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');*/
 @font-face {
   font-family: 'Noto Sans TC';
-  font-weight: 100;
-  src: local("Noto Sans TC Thin"), local("NotoSansTC-Thin"), url("../webfonts/NotoSansTC-Thin.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Noto Sans TC';
-  font-weight: 300;
-  src: local("Noto Sans TC Light"), local("NotoSansTC-Light"), url("../webfonts/NotoSansTC-Light.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Noto Sans TC';
-  font-weight: 400;
-  src: local("Noto Sans TC Regular"), local("NotoSansTC-Regular"), url("../webfonts/NotoSansTC-Regular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Noto Sans TC';
-  font-weight: 500;
-  src: local("Noto Sans TC Medium"), local("NotoSansTC-Medium"), url("../webfonts/NotoSansTC-Medium.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Noto Sans TC';
-  font-weight: 700;
-  src: local("Noto Sans TC Bold"), local("NotoSansTC-Bold"), url("../webfonts/NotoSansTC-Bold.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Noto Sans TC';
-  font-weight: 900;
-  src: local("Noto Sans TC Black"), local("NotoSansTC-Black"), url("../webfonts/NotoSansTC-Black.ttf") format("truetype"); }
+  font-weight: normal;
+  src: url("../webfonts/NotoSansTC-VariableFont_wght.ttf") format("truetype"); }
 
 /* --------------基本設定開始--------------- */
 *,
@@ -10319,6 +10294,9 @@ body {
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -moz-user-select: none; }
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  font-variation-settings: "wght" 500; }
 
 .clear {
   clear: both;
@@ -10870,19 +10848,19 @@ hr {
     font-size: 3rem !important; } }
 
 .font-xlight {
-  font-weight: 100 !important; }
+  font-variation-settings: "wght" 100 !important; }
 
 .font-light {
-  font-weight: 400 !important; }
+  font-variation-settings: "wght" 400 !important; }
 
 .font-bold {
-  font-weight: 500 !important; }
+  font-variation-settings: "wght" 500 !important; }
 
 .font-heavy {
-  font-weight: 600 !important; }
+  font-variation-settings: "wght" 600 !important; }
 
 .font-xheavy {
-  font-weight: 800 !important; }
+  font-variation-settings: "wght" 800 !important; }
 
 .txt-shadow {
   text-shadow: 0 0 5px #ccc; }
@@ -13368,7 +13346,7 @@ hr {
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 1.4rem;
-    font-weight: 500;
+    font-variation-settings: "wght" 500;
     color: #8d8d8d; }
     @media (max-width: 768px) {
       .icon-toggle-menu-item {
@@ -13420,7 +13398,7 @@ hr {
 
 .mobile-menu-item {
   color: #1F89CD;
-  font-weight: 500;
+  font-variation-settings: "wght" 500;
   padding: 4px 24px;
   border-right: 1px solid #1F89CD; }
   .mobile-menu-item:last-child {
@@ -13648,7 +13626,7 @@ hr {
   padding: 12px 0;
   position: relative;
   font-size: 1.4rem;
-  font-weight: 600; }
+  font-variation-settings: "wght" 600; }
   @media (max-width: 991px) {
     .subtitle {
       font-size: 1.13rem; } }
@@ -13656,7 +13634,7 @@ hr {
 .sub-subtitle {
   color: #1F89CD;
   font-size: 1.13rem;
-  font-weight: 500;
+  font-variation-settings: "wght" 500;
   padding: 0 12px; }
   .sub-subtitle:before {
     content: " ";
@@ -13819,12 +13797,12 @@ hr {
   font-size: 2.2rem;
   opacity: 0.5;
   padding-right: 16px;
-  font-weight: 100; }
+  font-variation-settings: "wght" 100; }
   @media (max-width: 991px) {
     .card-list .card-list-number {
       font-size: 1.6rem;
       padding-right: 12px;
-      font-weight: 400; } }
+      font-variation-settings: "wght" 400; } }
   @media (max-width: 768px) {
     .card-list .card-list-number {
       font-size: 1.4rem; } }
@@ -14224,13 +14202,13 @@ hr {
         .table-rwd td.table-head:first-child {
           background: #ccc;
           color: #fff;
-          font-weight: 400; }
+          font-variation-settings: "wght" 400; }
           .table-rwd td.table-head:first-child:before {
             display: inline-block;
             color: #fff;
             background: none;
             padding: 0;
-            font-weight: 400; }
+            font-variation-settings: "wght" 400; }
         .table-rwd td:last-child:after {
           display: none; } }
     .table-rwd td:before {
@@ -14405,7 +14383,7 @@ hr {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 1px solid #292929;
-  font-weight: 500;
+  font-variation-settings: "wght" 500;
   padding-bottom: 15px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
@@ -14419,7 +14397,7 @@ hr {
   @media (max-width: 1200px) {
     .article-title {
       font-size: 1.4rem;
-      font-weight: 600;
+      font-variation-settings: "wght" 600;
       padding-bottom: 15px; } }
 
 .article-text {
@@ -14445,7 +14423,7 @@ hr {
 
 .basic-title {
   font-size: 1rem;
-  font-weight: 600; }
+  font-variation-settings: "wght" 600; }
 
 /*-----------------列表樣式---------------------*/
 .img-list-box {
@@ -14561,7 +14539,7 @@ hr {
     font-size: 1rem; }
     .mark-menu a.active {
       background: #fff;
-      font-weight: 600; }
+      font-variation-settings: "wght" 600; }
       .mark-menu a.active::after {
         content: "";
         position: absolute;
@@ -14729,7 +14707,7 @@ hr {
       left: 0;
       bottom: 25%;
       font-size: 0.9rem;
-      font-weight: 400;
+      font-variation-settings: "wght" 400;
       overflow: hidden;
       -o-text-overflow: ellipsis;
          text-overflow: ellipsis;
@@ -14769,7 +14747,7 @@ hr {
       letter-spacing: normal; } }
   .event-card .event-card-info span {
     color: #1F89CD;
-    font-weight: 500;
+    font-variation-settings: "wght" 500;
     margin-right: 10px; }
 
 .news-card {
@@ -14782,7 +14760,7 @@ hr {
     background: #fff; }
   .news-card .news-card-title {
     font-size: 1.4rem;
-    font-weight: 600;
+    font-variation-settings: "wght" 600;
     line-height: 1.4;
     overflow: hidden;
     -o-text-overflow: ellipsis;
@@ -14795,7 +14773,7 @@ hr {
         font-size: 1.2rem; } }
   .news-card .news-card-subtitle {
     font-size: 1.2rem;
-    font-weight: 600; }
+    font-variation-settings: "wght" 600; }
     @media (max-width: 768px) {
       .news-card .news-card-subtitle {
         font-size: 1rem; } }
@@ -14880,7 +14858,7 @@ hr {
     font-size: 0.8rem;
     text-align: center;
     margin-right: 1px;
-    font-weight: 400; }
+    font-variation-settings: "wght" 400; }
   .topic-card .topic-hot-tag {
     font-size: 0.9rem; }
     @media (max-width: 576px) {
@@ -14888,7 +14866,7 @@ hr {
         width: auto;
         margin: 0 2% 10px 2%; } }
   .topic-card .topic-info {
-    font-weight: 400;
+    font-variation-settings: "wght" 400;
     overflow: hidden;
     -o-text-overflow: ellipsis;
        text-overflow: ellipsis;
@@ -14950,7 +14928,7 @@ hr {
     background: #53ace5;
     color: #292929;
     border-radius: 0 5px 0 0;
-    font-weight: 500;
+    font-variation-settings: "wght" 500;
     margin-top: 4px; }
     @media (max-width: 768px) {
       .mark-box .mark-box-menu li a {
@@ -14986,7 +14964,7 @@ hr {
   padding: 40px 8%; }
 
 .mark-box label {
-  font-weight: 500; }
+  font-variation-settings: "wght" 500; }
 
 .slide-box-img {
   height: 550px;
@@ -15005,7 +14983,7 @@ hr {
 .info-form label,
 .info-form .label {
   width: 110px;
-  font-weight: bold;
+  font-variation-settings: bold;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
@@ -15032,10 +15010,10 @@ hr {
 .info-form .form-check-input,
 .info-form .form-check-label {
   width: auto !important;
-  font-weight: 500; }
+  font-variation-settings: "wght" 500; }
 
 .info-form .custom-control-label {
-  font-weight: normal; }
+  font-variation-settings: normal; }
 
 .info-form .custom-select {
   background: url(../images/icon-arrow-down-secondary.svg) no-repeat right top #fff; }
@@ -15076,23 +15054,23 @@ hr {
   border: 1px solid #A1DAFF; }
   .basic-input-group input[data-con="highlight"] {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-variation-settings: "wght" 600;
     letter-spacing: 1px; }
     .basic-input-group input[data-con="highlight"]::-webkit-input-placeholder {
       font-size: 1rem;
-      font-weight: 400; }
+      font-variation-settings: "wght" 400; }
     .basic-input-group input[data-con="highlight"]::-moz-placeholder {
       font-size: 1rem;
-      font-weight: 400; }
+      font-variation-settings: "wght" 400; }
     .basic-input-group input[data-con="highlight"]:-ms-input-placeholder {
       font-size: 1rem;
-      font-weight: 400; }
+      font-variation-settings: "wght" 400; }
     .basic-input-group input[data-con="highlight"]::-ms-input-placeholder {
       font-size: 1rem;
-      font-weight: 400; }
+      font-variation-settings: "wght" 400; }
     .basic-input-group input[data-con="highlight"]::placeholder {
       font-size: 1rem;
-      font-weight: 400; }
+      font-variation-settings: "wght" 400; }
 
 .basic-input-group button {
   background: #1F89CD;
@@ -15299,7 +15277,7 @@ body {
           align-items: center;
   color: #fff;
   padding: 24px 0;
-  font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.2; }
   .nav-link.active {
     margin-left: 8px;
@@ -15357,7 +15335,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-weight: 500; }
+    font-variation-settings: "wght" 500; }
     .navbar-info img {
       width: 20px; }
 
@@ -15530,7 +15508,7 @@ body {
     margin-bottom: 0; }
   .order-list-caption {
     font-size: 0.8rem;
-    font-weight: 500; }
+    font-variation-settings: "wght" 500; }
   .order-list-txt {
     font-size: 0.8rem;
     color: #7a7a7a; }
@@ -15588,7 +15566,7 @@ body {
     padding: 0 5px; }
 
 .price-card {
-  font-weight: 500;
+  font-variation-settings: "wght" 500;
   font-size: 0.9rem;
   padding: 16px 32px 24px 32px;
   position: relative;
@@ -15640,7 +15618,7 @@ body {
             align-items: center;
     color: #1F89CD !important;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-variation-settings: "wght" 500;
     padding: 0;
     border: 0 !important; }
 
@@ -15652,7 +15630,7 @@ body {
     .price-card-checked .price-card-item:last-child p {
       position: relative;
       z-index: 2;
-      font-weight: 400; }
+      font-variation-settings: "wght" 400; }
     .price-card-checked .price-card-item:last-child::after {
       content: "";
       display: block;
@@ -15712,11 +15690,11 @@ body {
     pointer-events: none; }
 
 .box-list-number {
-  font-weight: 600;
+  font-variation-settings: "wght" 600;
   font-size: 1.2rem; }
 
 .box-list-text {
-  font-weight: 500; }
+  font-variation-settings: "wght" 500; }
 
 .box-list-action {
   -webkit-box-flex: 0;
@@ -15737,13 +15715,13 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  font-weight: 500;
+  font-variation-settings: "wght" 500;
   position: relative;
   border: 2px solid #fff; }
   .box-list[data-con="text"] .box-list-item.active {
     background: #FF9130;
     color: #fff;
-    font-weight: 400; }
+    font-variation-settings: "wght" 400; }
     .box-list[data-con="text"] .box-list-item.active:before {
       content: "";
       width: 16px;
@@ -15761,7 +15739,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-weight: 500;
+  font-variation-settings: "wght" 500;
   font-size: 1.2rem; }
   .box-list[data-con="number"] .box-list-item[data-con="clear"] {
     background: #A1DAFF;
@@ -15769,13 +15747,13 @@ body {
   .box-list[data-con="number"] .box-list-item.active {
     background: #FF9130;
     color: #fff;
-    font-weight: 400; }
+    font-variation-settings: "wght" 400; }
 
 .box-list[data-con="number"] .box-list-form {
   background: #1379BB !important;
   color: #fff !important;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-variation-settings: "wght" 600;
   border: 0;
   height: 45px;
   text-align: center;
@@ -15783,23 +15761,23 @@ body {
   caret-color: transparent; }
   .box-list[data-con="number"] .box-list-form::-webkit-input-placeholder {
     color: #55bcff !important;
-    font-weight: 400;
+    font-variation-settings: "wght" 400;
     letter-spacing: 1px; }
   .box-list[data-con="number"] .box-list-form::-moz-placeholder {
     color: #55bcff !important;
-    font-weight: 400;
+    font-variation-settings: "wght" 400;
     letter-spacing: 1px; }
   .box-list[data-con="number"] .box-list-form:-ms-input-placeholder {
     color: #55bcff !important;
-    font-weight: 400;
+    font-variation-settings: "wght" 400;
     letter-spacing: 1px; }
   .box-list[data-con="number"] .box-list-form::-ms-input-placeholder {
     color: #55bcff !important;
-    font-weight: 400;
+    font-variation-settings: "wght" 400;
     letter-spacing: 1px; }
   .box-list[data-con="number"] .box-list-form::placeholder {
     color: #55bcff !important;
-    font-weight: 400;
+    font-variation-settings: "wght" 400;
     letter-spacing: 1px; }
 
 .box-list[data-con="number"] .box-list-form:-webkit-autofill, .box-list[data-con="number"] .box-list-form:-webkit-autofill:hover, .box-list[data-con="number"] .box-list-form:-webkit-autofill:focus, .box-list[data-con="number"] .box-list-form:-webkit-autofill:active {
@@ -15934,7 +15912,7 @@ body {
     background: #1F89CD;
     color: #fff;
     border: 1px solid #1F89CD;
-    font-weight: 400; }
+    font-variation-settings: "wght" 400; }
     .select-list-btn.active::before {
       background: #1F89CD; }
     .select-list-btn.active p {
@@ -15956,7 +15934,7 @@ body {
     position: relative;
     z-index: 10;
     color: #292929;
-    font-weight: 500; }
+    font-variation-settings: "wght" 500; }
   .select-list-btn span {
     font-size: 0.9rem;
     color: #1F89CD;
@@ -16324,7 +16302,7 @@ body {
       .checkout-keyboard-form-input {
         text-align: center;
         color: #525252;
-        font-weight: 600;
+        font-variation-settings: "wght" 600;
         font-size: 1.6rem;
         letter-spacing: 3px;
         position: relative;
@@ -16338,7 +16316,7 @@ body {
         height: 56px;
         line-height: 56px;
         font-size: 1.13rem;
-        font-weight: 500;
+        font-variation-settings: "wght" 500;
         background: none; }
   .checkout-end {
     display: -webkit-box;
@@ -16450,14 +16428,14 @@ body {
   padding-right: 10px !important;
   /*增加右側寬度*/
   border: 1px solid #fff !important;
-  font-weight: 500;
+  font-variation-settings: "wght" 500;
   font-size: 0.9rem;
   /*字體縮小*/ }
   .btn-dropdown:hover, .btn-dropdown:focus {
     background-color: #fff; }
   .btn-dropdown[data-con="foodpanda"] {
     color: #fff !important;
-    font-weight: 400;
+    font-variation-settings: "wght" 400;
     background-image: url("../images/ic-down-arrow-light.svg");
     background-repeat: no-repeat;
     background-position: right center;
@@ -16466,7 +16444,7 @@ body {
       color: #F72A81 !important; }
   .btn-dropdown[data-con="ubereat"] {
     color: #fff !important;
-    font-weight: 400;
+    font-variation-settings: "wght" 400;
     background-image: url("../images/ic-down-arrow-light.svg");
     background-repeat: no-repeat;
     background-position: right center;
@@ -16713,7 +16691,7 @@ html[data-device="pad"] {
       width: 230px; }
     .landing-title-txt {
       font-size: 90px;
-      font-weight: 700;
+      font-variation-settings: 700;
       color: #3E3A39;
       padding-left: 48px;
       letter-spacing: 3px; }
@@ -16740,7 +16718,7 @@ html[data-device="pad"] {
     -webkit-transform: rotate(-8deg);
         -ms-transform: rotate(-8deg);
             transform: rotate(-8deg);
-    font-weight: 500;
+    font-variation-settings: "wght" 500;
     font-size: 2.2rem;
     left: 25%;
     top: 52%; }
@@ -16936,7 +16914,7 @@ html[data-device="pad"] {
       background: #292929;
       color: #fff;
       padding: 5px 16px;
-      font-weight: 100;
+      font-variation-settings: "wght" 100;
       border-radius: 5px;
       top: calc(50% - 17px);
       left: calc(50% - 33px); }
@@ -17068,7 +17046,7 @@ html[data-device="pad"] {
             justify-content: space-between; }
   .order-card-title {
     font-size: 1.13rem;
-    font-weight: 500; }
+    font-variation-settings: "wght" 500; }
   .order-card-tag {
     background: #ccc;
     border-radius: 50px;
@@ -17107,10 +17085,10 @@ html[data-device="pad"] {
       font-size: 0.8rem; }
     .order-card-price p {
       font-size: 1.4rem;
-      font-weight: 600; }
+      font-variation-settings: "wght" 600; }
     .order-card-price div {
       border-radius: 3px;
-      font-weight: normal; }
+      font-variation-settings: normal; }
   .order-card-body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -17254,12 +17232,12 @@ html[data-device="pad"] {
           box-shadow: 0 0 9px #e0e0e0;
   color: #1F89CD;
   border: 1px solid #e0e0e0;
-  font-weight: 500; }
+  font-variation-settings: "wght" 500; }
 
 .top-nav[data-con="filter"] .form-check-input.active ~ .form-check-label {
   background: #1F89CD;
   color: #fff;
-  font-weight: 400; }
+  font-variation-settings: "wght" 400; }
 
 [data-con="carrier"] {
   position: relative; }
@@ -17274,7 +17252,7 @@ html[data-device="pad"] {
     color: #525252;
     z-index: 10;
     font-size: 1.2rem;
-    font-weight: 600; }
+    font-variation-settings: "wght" 600; }
   [data-con="carrier"] input {
     padding-left: 25px; }
 
@@ -17387,7 +17365,7 @@ html[data-device="pad"] {
 .bootstrap-datetimepicker-widget .timepicker-minute,
 .bootstrap-datetimepicker-widget .timepicker-second {
   width: 54px;
-  font-weight: bold;
+  font-variation-settings: bold;
   font-size: 1.2em;
   margin: 0; }
 

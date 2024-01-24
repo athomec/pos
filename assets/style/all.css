@@ -17000,6 +17000,12 @@ html[data-device="pad"] {
         bottom: 0; }
       .order-card-wrapper:nth-last-child(1) .order-card-function-dropdown.show:before, .order-card-wrapper:nth-last-child(2) .order-card-function-dropdown.show:before {
         bottom: -6px; }
+    .order-card-wrapper:nth-child(1) .order-card-function-dropdown, .order-card-wrapper:nth-child(2) .order-card-function-dropdown, .order-card-wrapper:nth-child(3) .order-card-function-dropdown {
+      top: 110px !important; }
+      .order-card-wrapper:nth-child(1) .order-card-function-dropdown:before, .order-card-wrapper:nth-child(2) .order-card-function-dropdown:before, .order-card-wrapper:nth-child(3) .order-card-function-dropdown:before {
+        top: 8px !important; }
+      .order-card-wrapper:nth-child(1) .order-card-function-dropdown.show:before, .order-card-wrapper:nth-child(2) .order-card-function-dropdown.show:before, .order-card-wrapper:nth-child(3) .order-card-function-dropdown.show:before {
+        top: -6px !important; }
   .order-card-item {
     width: 100%;
     display: block;

@@ -16992,7 +16992,7 @@ html[data-device="pad"] {
         -ms-flex-align: stretch;
             align-items: stretch; }
     .order-card-wrapper:nth-last-child(1) .order-card-function-dropdown, .order-card-wrapper:nth-last-child(2) .order-card-function-dropdown {
-      bottom: 130px;
+      bottom: 110px;
       top: auto; }
       .order-card-wrapper:nth-last-child(1) .order-card-function-dropdown:before, .order-card-wrapper:nth-last-child(2) .order-card-function-dropdown:before {
         top: auto;

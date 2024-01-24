@@ -16979,7 +16979,8 @@ html[data-device="pad"] {
 
 .order-card {
   height: calc(100vh - 232px);
-  padding-right: 8px; }
+  padding-right: 8px;
+  overflow-x: hidden; }
   .order-card-wrapper {
     width: 100%;
     margin-bottom: 16px;

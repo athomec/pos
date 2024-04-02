@@ -981,6 +981,227 @@
         </div>
     </div>
 </div>
+<!--設定視窗開始-->
+<div class="offcanvas offcanvas-end offcanvas-end-lg" tabindex="-1" id="setting">
+    <div class="offcanvas-header bg-primary-color white">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">設定視窗</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
+        <div class="setting-wrapper pt-1 scrollbar">
+            <h2 class="font-lg font-heavy mb-3">表單</h2>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                欄位
+            </h6>
+            <div class="row align-items-end">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="input" class="form-label">表單標題</label>
+                        <input type="text" class="form-control" id="input" placeholder="Input">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="input" value="filled">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="input" value="disabled" disabled>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="input" value="readonly" readonly>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="select" class="form-label">下拉表單</label>
+                        <select class="form-select" id="select">
+                            <option selected>請選擇</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="textarea" class="form-label">備註</label>
+                        <textarea class="form-control" id="textarea" rows="3" placeholder="內容"></textarea>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="input-group mb-3" type="file">
+                        <input type="file" class="form-control" id="inputGroupFile04">
+                        <button class="btn btn-dark-primary-color" type="button" id="inputGroupFileAddon04">選擇檔案</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="搜尋">
+                        <button class="btn btn-dark-primary-color" type="button"><img
+                                src="./assets/images/ic-search-white.svg"></button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" value="pos.jpg">
+                        <button class="btn btn-dark-primary-color" type="button">上傳</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                選取(水平)
+            </h6>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"
+                            disabled>
+                        <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Checked</label>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Switch</label>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                        <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                選取(垂直)
+            </h6>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="RadioOptions" value="option1" checked>
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="RadioOptions" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="RadioOptions" value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Checked</label>
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Switch</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                        <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                按鈕
+            </h6>
+            <div class="row align-items-end gy-3">
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-primary-color w-100 mb-3">按鈕</button>
+                    <button class="btn btn-dark-primary-color w-100 mb-3">按鈕</button>
+                    <button class="btn btn-sm btn-dark-primary-color w-100">按鈕</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-primary-color w-100 mb-3"><img src="./assets/images/ic-search-white.svg"
+                            class="me-1">按鈕</button>
+                    <button class="btn btn-dark-primary-color w-100 mb-3"><img src="./assets/images/ic-search-white.svg"
+                            class="me-1">按鈕</button>
+                    <button class="btn btn-sm btn-dark-primary-color w-100 "><img src="./assets/images/ic-search-white.svg"
+                            class="me-1">按鈕</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-primary-color mb-3"><img
+                            src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-dark-primary-color mb-3"><img src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-sm btn-dark-primary-color"><img src="./assets/images/ic-search-white.svg"></button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-alert-color w-100 mb-3">按鈕</button>
+                    <button class="btn btn-dark-alert-color w-100 mb-3">按鈕</button>
+                    <button class="btn btn-sm btn-dark-alert-color w-100">按鈕</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-alert-color w-100 mb-3"><img src="./assets/images/ic-search-white.svg"
+                            class="me-1">按鈕</button>
+                    <button class="btn btn-dark-alert-color w-100 mb-3"><img src="./assets/images/ic-search-white.svg"
+                            class="me-1">按鈕</button>
+                    <button class="btn btn-sm btn-dark-alert-color w-100"><img src="./assets/images/ic-search-white.svg"
+                            class="me-1">按鈕</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-alert-color mb-3"><img
+                            src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-dark-alert-color mb-3"><img src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-sm btn-dark-alert-color"><img src="./assets/images/ic-search-white.svg"></button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</div>
 			<!--頁面開始-->
 			<div class="wrapper">
 				<div class="d-flex" data-con="consumer">
@@ -1014,6 +1235,12 @@
                 線上<br>訂單
             </a>
             <!--data-status="notice"為有提醒的狀態-->
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="setting.html">
+                <img src="./assets/images/ic-setting.svg" alt="設定">
+                設定
+            </a>
         </li>
     </ul>
     <button class="sidebar-btn btn-dark-primary-dark-color"><img src="./assets/images/ic-shutdown.svg"

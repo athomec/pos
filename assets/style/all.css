@@ -17691,6 +17691,40 @@ html[data-device="pad"] {
       background-color: #1F89CD !important;
       background-position: 20px -4px; }
 
+#date-inline-picker thead th[title="Select Month"] {
+  height: 54px;
+  vertical-align: middle; }
+
+#date-inline-picker thead tr:last-child {
+  background: #1F89CD; }
+  #date-inline-picker thead tr:last-child th {
+    border-radius: 0;
+    color: #fff;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    font-weight: "wght" 400; }
+    #date-inline-picker thead tr:last-child th:first-child {
+      border-radius: 5px 0 0 5px; }
+    #date-inline-picker thead tr:last-child th:last-child {
+      border-radius: 0 5px 5px 0; }
+
+#date-inline-picker tbody tr {
+  border-bottom: 1px solid #e0e0e0; }
+  #date-inline-picker tbody tr:last-child {
+    border-bottom: none; }
+  #date-inline-picker tbody tr p {
+    position: relative;
+    z-index: 1; }
+
+.input-group-text {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important; }
+  .input-group-text:active {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    border: none !important; }
+
 /*@preserve
  * Tempus Dominus Bootstrap4 v5.1.2 (https://tempusdominus.github.io/bootstrap-4/)
  * Copyright 2016-2018 Jonathan Peterson
@@ -17883,10 +17917,15 @@ html[data-device="pad"] {
   cursor: not-allowed; }
 
 .bootstrap-datetimepicker-widget table th.prev {
-  background: url("../images/ic-prev.svg") no-repeat center; }
+  background: url("../images/ic-prev.svg") no-repeat left center; }
 
 .bootstrap-datetimepicker-widget table th.next {
-  background: url("../images/ic-next.svg") no-repeat center; }
+  background: url("../images/ic-next.svg") no-repeat right center; }
+
+.bootstrap-datetimepicker-widget table th[title="Select Month"] {
+  font-size: 1.13rem;
+  color: #1F89CD;
+  letter-spacing: 2px; }
 
 .bootstrap-datetimepicker-widget table th.prev::after {
   content: "Previous Month"; }
@@ -17910,20 +17949,35 @@ html[data-device="pad"] {
   color: #6c757d; }
 
 .bootstrap-datetimepicker-widget table td.day {
-  height: 20px;
-  line-height: 20px;
-  width: 20px; }
+  height: 43px;
+  line-height: 43px;
+  width: 20px;
+  position: relative;
+  font-size: 1rem; }
+  .bootstrap-datetimepicker-widget table td.day:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4px;
+    width: 100%;
+    height: calc(100% - 10px);
+    left: 0;
+    top: 5px; }
 
 .bootstrap-datetimepicker-widget table td.day:hover,
 .bootstrap-datetimepicker-widget table td.hour:hover,
 .bootstrap-datetimepicker-widget table td.minute:hover,
 .bootstrap-datetimepicker-widget table td.second:hover {
-  background: #e9ecef;
   cursor: pointer; }
+  .bootstrap-datetimepicker-widget table td.day:hover:after,
+  .bootstrap-datetimepicker-widget table td.hour:hover:after,
+  .bootstrap-datetimepicker-widget table td.minute:hover:after,
+  .bootstrap-datetimepicker-widget table td.second:hover:after {
+    background: #e9ecef; }
 
 .bootstrap-datetimepicker-widget table td.old,
 .bootstrap-datetimepicker-widget table td.new {
-  color: #6c757d; }
+  color: #a3a3a3; }
 
 .bootstrap-datetimepicker-widget table td.today {
   position: relative; }
@@ -17942,13 +17996,41 @@ html[data-device="pad"] {
 
 .bootstrap-datetimepicker-widget table td.active,
 .bootstrap-datetimepicker-widget table td.active:hover {
-  background-color: #007bff;
-  border-radius: 50%;
   color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+  text-shadow: none;
+  position: relative; }
+  .bootstrap-datetimepicker-widget table td.active span,
+  .bootstrap-datetimepicker-widget table td.active:hover span {
+    position: relative;
+    z-index: 2; }
+  .bootstrap-datetimepicker-widget table td.active:after,
+  .bootstrap-datetimepicker-widget table td.active:hover:after {
+    background-color: #FF9130; }
+
+.bootstrap-datetimepicker-widget table td.active:after {
+  content: "";
+  display: block;
+  background-color: #FF9130;
+  border-radius: 4px;
+  width: 100%;
+  height: calc(100% - 10px);
+  position: absolute;
+  left: 0;
+  top: 5px;
+  z-index: 0; }
 
 .bootstrap-datetimepicker-widget table td.active.today:before {
-  border-bottom-color: #fff; }
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 7px 7px;
+  border-color: transparent transparent #fff transparent;
+  z-index: 1;
+  position: absolute;
+  right: 5px;
+  bottom: 10px; }
 
 .bootstrap-datetimepicker-widget table td.disabled,
 .bootstrap-datetimepicker-widget table td.disabled:hover {
@@ -17969,9 +18051,9 @@ html[data-device="pad"] {
   background: #e9ecef; }
 
 .bootstrap-datetimepicker-widget table td span.active {
-  background-color: #007bff;
+  background-color: #FF9130;
   color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+  text-shadow: none; }
 
 .bootstrap-datetimepicker-widget table td span.old {
   color: #6c757d; }
@@ -17987,7 +18069,9 @@ html[data-device="pad"] {
   line-height: 27px; }
 
 .input-group [data-toggle="datetimepicker"] {
-  cursor: pointer; }
+  cursor: pointer;
+  border: 1px solid #1F89CD;
+  border-radius: 0.375rem; }
 
 /*
 @import "slick";

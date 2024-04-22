@@ -1208,6 +1208,26 @@
         </div>
     </div>
 </div>
+<!--日期視窗開始-->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="date-select">
+    <div class="offcanvas-header bg-primary-color white">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">選擇日期</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
+        <div class="setting-wrapper pt-1 scrollbar">
+            <div id="date-inline-picker"></div>
+        </div>
+        <div class="price-card">
+            <div class="price-card-action mt-2">
+                <button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
+                <button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas">確認</button>
+            </div>
+        </div>
+    </div>
+</div>
 			<!--頁面開始-->
 			<div class="wrapper">
 				<div class="d-flex">
@@ -1802,6 +1822,8 @@
 <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 <script src="assets/js/jquery.blockUI.js"></script>
 <script src="assets/js/hammer.min.js"></script>
+<script src="assets/js/moment-with-locales.min.js"></script><!--日期選擇-->
+<script src="assets/js/tempusdominus-bootstrap-4.js"></script><!--日期選擇-->
 <script src="assets/js/slidetounlock.js"></script>
 <script src="assets/js/bootstrap.bundle.js"></script>
 <script src="assets/js/script.js"></script>
@@ -1847,6 +1869,32 @@
         setTimeout(function () {
             $('#sidelist').unblock();
         }, 2000);
+
+        //日期表單
+        var datetimepickerOptions = {
+            locale: 'zh-tw',
+            defaultDate: new Date(),
+            format: 'L',
+            icons: {
+                time: "bi bi-clock",
+                date: "bi bi-calendar",
+                up: "bi bi-arrow-up",
+                down: "bi bi-arrow-down",
+                previous: "bi bi-chevron-left",
+                next: "bi bi-chevron-right",
+                today: "bi bi-clock",
+                clear: "bi bi-trash3"
+            }
+        };
+        $('#thedate').datetimepicker(datetimepickerOptions);
+        $('#date-inline-picker').datetimepicker({
+            inline: true,
+            locale: 'zh-tw',
+            format: 'L',
+        });
+        $('#date-inline-picker').on('change.datetimepicker', function (e) {
+        $('[data-target="#thedate"]').val(e.date.format('YYYY 年 M 月 DD 日'));
+    });
     });
 
 </script>

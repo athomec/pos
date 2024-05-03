@@ -60,7 +60,7 @@ $(function () {//JS開頭
 		$('.js-checkout-coupon-list').removeClass('active');
 	})
 	//---------------------filter按鈕設定------------------------
-	$('.js-filter input').click(function () {
+	$('.js-filter button').click(function () {
 		$(this).toggleClass('active');
 	})
 	//

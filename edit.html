@@ -22,6 +22,11 @@
 		<div id="loading" class="loading bg-white rounded-lg" style="display:none;">
 			<img src="./assets/images/loading.gif" alt="loading">
 		</div>
+		<div id="member-search" class="member-search" style="display:none;">
+			<img src="./assets/images/ic-member-search.svg" alt="searching" class="mb-3">
+			<p class="primary-light-color font-bold mb-3 ps-4">搜尋會員中<span class="dots"></span></p>
+			<button class="btn btn-dark-primary-light-color" id="cancel">取消</button>
+		</div>
 		<div class="backdrop js-backdrop"></div>
 		<!--訊息視窗開始-->
 <div class="modal fade" id="message" data-bs-keyboard="false" tabindex="-1">
@@ -600,106 +605,106 @@
                 <span class="d-block gray700 font-xxs">披薩 1 份，指定副食 2 份</span>
             </p>
             <hr>
-                <h6 class="d-flex justify-content-between primary-color mb-3">
-                    餅皮選擇<p class="font-xxs gray600">請選擇 1 項</p>
-                </h6>
-                <!--.js-radio-btn-list為限定單選-->
-                <div class="select-list js-radio-btn-list row align-items-stretch g-2">
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn" data-status="soldout">
-                            <p>薄脆餅皮</p><span>售完</span>
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn active">
-                            <p>芝心餅皮</p><span>+$30</span>
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn">
-                            <p>鬆厚餅皮</p><span>免費</span>
-                        </button>
-                    </div>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                餅皮選擇<p class="font-xxs gray600">請選擇 1 項</p>
+            </h6>
+            <!--.js-radio-btn-list為限定單選-->
+            <div class="select-list js-radio-btn-list row align-items-stretch g-2">
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn" data-status="soldout">
+                        <p>薄脆餅皮</p><span>售完</span>
+                    </button>
                 </div>
-                <hr>
-                <h6 class="d-flex justify-content-between primary-color mb-3">
-                    副食選擇<p class="font-xxs gray600">請選擇 1 項</p>
-                </h6>
-                <div class="select-list js-radio-btn-list row align-items-stretch g-2">
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn active">
-                            <p>QQ球 (6 顆)</p><span>免費</span>
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn" data-status="soldout">
-                            <p>芝心腸 (3 條)</p><span>售完</span>
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn">
-                            <p>品牌聯名半熟起司塔 (1 顆)</p><span>+$30</span>
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn">
-                            <p>巴斯克蛋糕 (1 塊)</p><span>+$40</span>
-                        </button>
-                    </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn active">
+                        <p>芝心餅皮</p><span>+$30</span>
+                    </button>
                 </div>
-                <hr>
-                <h6 class="d-flex justify-content-between primary-color mb-3">
-                    飲料選擇<p class="font-xxs gray600">請選擇 1 項</p>
-                </h6>
-                <div class="select-list js-radio-btn-list row align-items-stretch g-2">
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn active">
-                            <p>可樂</p><span>免費</span>
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn">
-                            <p>奶蓋紅茶</p><span>+$30</span>
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn">
-                            <p>珍珠芋奶</p><span>+$50</span>
-                        </button>
-                    </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>鬆厚餅皮</p><span>免費</span>
+                    </button>
                 </div>
-                <hr>
-                <h6 class="d-flex justify-content-between primary-color mb-3">
-                    加購選擇
-                </h6>
-                <div class="select-list row align-items-stretch g-2">
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn">
-                            <p>香辣雞翅</p><span>+80</span>
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn">
-                            <p>炙烤雞腿</p><span>+$50</span>
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn">
-                            <p>香蒜奶油脆薯</p><span>+$60</span>
-                        </button>
-                    </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                副食選擇<p class="font-xxs gray600">請選擇 1 項</p>
+            </h6>
+            <div class="select-list js-radio-btn-list row align-items-stretch g-2">
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn active">
+                        <p>QQ球 (6 顆)</p><span>免費</span>
+                    </button>
                 </div>
-                <hr>
-                <h6 class="d-flex justify-content-between primary-color mb-3">
-                    提袋選擇
-                </h6>
-                <div class="select-list row align-items-stretch g-2">
-                    <div class="col-4">
-                        <button class="btn select-list-btn js-select-list-btn">
-                            <p>塑膠袋</p><span>+3</span>
-                        </button>
-                    </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn" data-status="soldout">
+                        <p>芝心腸 (3 條)</p><span>售完</span>
+                    </button>
                 </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>品牌聯名半熟起司塔 (1 顆)</p><span>+$30</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>巴斯克蛋糕 (1 塊)</p><span>+$40</span>
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                飲料選擇<p class="font-xxs gray600">請選擇 1 項</p>
+            </h6>
+            <div class="select-list js-radio-btn-list row align-items-stretch g-2">
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn active">
+                        <p>可樂</p><span>免費</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>奶蓋紅茶</p><span>+$30</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>珍珠芋奶</p><span>+$50</span>
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                加購選擇
+            </h6>
+            <div class="select-list row align-items-stretch g-2">
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>香辣雞翅</p><span>+80</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>炙烤雞腿</p><span>+$50</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>香蒜奶油脆薯</p><span>+$60</span>
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                提袋選擇
+            </h6>
+            <div class="select-list row align-items-stretch g-2">
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>塑膠袋</p><span>+3</span>
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="price-card">
             <div class="d-flex justify-content-between align-items-center">
@@ -886,50 +891,115 @@
                 <div class="tab-pane fade h-100 js-pay-receipt" id="pay-receipt">
                     <div class="d-flex align-items-stretch h-100">
                         <ul class="row checkout-keyboard-list g-2 h-100 me-3" style="width: 66%;">
-                            <li class="col-2 mt-0"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">A</button></li>
-                            <li class="col-2 mt-0"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">B</button></li>
-                            <li class="col-2 mt-0"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">C</button></li>
-                            <li class="col-2 mt-0"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">D</button> </li>
-                            <li class="col-2 mt-0"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">E</button></li>
-                            <li class="col-2 mt-0"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">F</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">G</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">H</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">I</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">J</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">K</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">L</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">M</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">N</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">O</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">P</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">Q</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">R</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">S</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">T</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">U</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">V</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">W</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">X</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">Y</button></li>
-                            <li class="col-2"><button class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">Z</button></li>
-                            <li class="col-4"><button class="checkout-keyboard-list-item btn btn-light-gray200 gray700 border bd-gray400">C</button></li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">A</button>
+                            </li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">B</button>
+                            </li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">C</button>
+                            </li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">D</button>
+                            </li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">E</button>
+                            </li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">F</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">G</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">H</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">I</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">J</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">K</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">L</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">M</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">N</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">O</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">P</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">Q</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">R</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">S</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">T</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">U</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">V</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">W</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">X</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">Y</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">Z</button>
+                            </li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-light-gray200 gray700 border bd-gray400">C</button>
+                            </li>
                             <li class="col-4">
-                                <button class="checkout-keyboard-list-item btn btn-light-gray200 gray700 border bd-gray400">
-                                <img src="./assets/images/ic-backward-gray-dark.svg" alt="後退">
-                            </button>
-                        </li>
+                                <button
+                                    class="checkout-keyboard-list-item btn btn-light-gray200 gray700 border bd-gray400">
+                                    <img src="./assets/images/ic-backward-gray-dark.svg" alt="後退">
+                                </button>
+                            </li>
                         </ul>
                         <ul class="row checkout-keyboard-list g-2 h-100 flex-shrink-0" style="width: 33%;">
-                            <li class="col-4 mt-0"><button class="checkout-keyboard-list-item btn btn-dark-gray600">7</button></li>
-                            <li class="col-4 mt-0"><button class="checkout-keyboard-list-item btn btn-dark-gray600">8</button></li>
-                            <li class="col-4 mt-0"><button class="checkout-keyboard-list-item btn btn-dark-gray600">9</button></li>
-                            <li class="col-4"><button class="checkout-keyboard-list-item btn btn-dark-gray600">4</button> </li>
-                            <li class="col-4"><button class="checkout-keyboard-list-item btn btn-dark-gray600">5</button></li>
-                            <li class="col-4"><button class="checkout-keyboard-list-item btn btn-dark-gray600">6</button></li>
-                            <li class="col-4"><button class="checkout-keyboard-list-item btn btn-dark-gray600">1</button></li>
-                            <li class="col-4"><button class="checkout-keyboard-list-item btn btn-dark-gray600">2</button></li>
-                            <li class="col-4"><button class="checkout-keyboard-list-item btn btn-dark-gray600">3</button></li>
-                            <li class="col-12"><button class="checkout-keyboard-list-item btn btn-dark-gray600">0</button></li>
+                            <li class="col-4 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">7</button></li>
+                            <li class="col-4 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">8</button></li>
+                            <li class="col-4 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">9</button></li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">4</button> </li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">5</button></li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">6</button></li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">1</button></li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">2</button></li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">3</button></li>
+                            <li class="col-12"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">0</button></li>
                         </ul>
                     </div>
                 </div>
@@ -938,11 +1008,13 @@
                 <div class="checkout-receipt js-checkout-receipt">
                     <div class="input-group mb-2 shadow-sm basic-input-group" data-con="carrier">
                         <span class="input-group-text bg-primary-color white">發票載具</span>
-                        <input type="text" class="form-control" placeholder="請輸入載具號碼" data-con="highlight" data-bs-toggle="tab" data-bs-target="#pay-receipt"> 
+                        <input type="text" class="form-control" placeholder="請輸入載具號碼" data-con="highlight"
+                            data-bs-toggle="tab" data-bs-target="#pay-receipt">
                     </div>
                     <div class="input-group mb-2 shadow-sm basic-input-group">
                         <span class="input-group-text bg-primary-color white">統一編號</span>
-                        <input type="text" class="form-control" placeholder="請輸入載具號碼" value="50810791" data-con="highlight" data-bs-toggle="tab" data-bs-target="#pay-receipt">
+                        <input type="text" class="form-control" placeholder="請輸入載具號碼" value="50810791"
+                            data-con="highlight" data-bs-toggle="tab" data-bs-target="#pay-receipt">
                     </div>
                 </div>
                 <div class="checkout-sum bg-white rounded px-4 py-3">
@@ -967,7 +1039,7 @@
                     <div class="price-card-action">
                         <button class="btn btn-lg btn-dark-primary-color flex-shrink-1">付款</button>
                     </div>
-                    
+
                     <!--右滑結帳
                     <div class="checkout-sum-unlock slidetounlock">
                         <div class="slidetounlock-item">
@@ -1038,7 +1110,8 @@
                 <div class="col-12">
                     <div class="input-group mb-3" type="file">
                         <input type="file" class="form-control" id="inputGroupFile04">
-                        <button class="btn btn-dark-primary-color" type="button" id="inputGroupFileAddon04">選擇檔案</button>
+                        <button class="btn btn-dark-primary-color" type="button"
+                            id="inputGroupFileAddon04">選擇檔案</button>
                     </div>
                 </div>
                 <div class="col-6">
@@ -1076,8 +1149,8 @@
                 </div>
                 <div class="col-12 mb-4">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
-                            checked>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1" checked>
                         <label class="form-check-label" for="inlineRadio1">1</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -1086,14 +1159,15 @@
                         <label class="form-check-label" for="inlineRadio2">2</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"
-                            disabled>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                            value="option3" disabled>
                         <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-check form-check-inline form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexSwitchCheckChecked">Checked</label>
                     </div>
                     <div class="form-check form-check-inline form-switch">
@@ -1101,7 +1175,8 @@
                         <label class="form-check-label" for="flexSwitchCheckDefault">Switch</label>
                     </div>
                     <div class="form-check form-check-inline form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled"
+                            disabled>
                         <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled</label>
                     </div>
                 </div>
@@ -1141,7 +1216,8 @@
                 </div>
                 <div class="col-4">
                     <div class="form-check form-switch mb-3">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexSwitchCheckChecked">Checked</label>
                     </div>
                     <div class="form-check form-switch mb-3">
@@ -1149,7 +1225,8 @@
                         <label class="form-check-label" for="flexSwitchCheckDefault">Switch</label>
                     </div>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled"
+                            disabled>
                         <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled</label>
                     </div>
                 </div>
@@ -1165,18 +1242,20 @@
                     <button class="btn btn-sm btn-dark-primary-color w-100">按鈕</button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-lg btn-dark-primary-color w-100 mb-3"><img src="./assets/images/ic-search-white.svg"
-                            class="me-1">按鈕</button>
+                    <button class="btn btn-lg btn-dark-primary-color w-100 mb-3"><img
+                            src="./assets/images/ic-search-white.svg" class="me-1">按鈕</button>
                     <button class="btn btn-dark-primary-color w-100 mb-3"><img src="./assets/images/ic-search-white.svg"
                             class="me-1">按鈕</button>
-                    <button class="btn btn-sm btn-dark-primary-color w-100 "><img src="./assets/images/ic-search-white.svg"
-                            class="me-1">按鈕</button>
+                    <button class="btn btn-sm btn-dark-primary-color w-100 "><img
+                            src="./assets/images/ic-search-white.svg" class="me-1">按鈕</button>
                 </div>
                 <div class="col-4">
                     <button class="btn btn-lg btn-dark-primary-color mb-3"><img
                             src="./assets/images/ic-search-white.svg"></button>
-                    <button class="btn btn-dark-primary-color mb-3"><img src="./assets/images/ic-search-white.svg"></button>
-                    <button class="btn btn-sm btn-dark-primary-color"><img src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-dark-primary-color mb-3"><img
+                            src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-sm btn-dark-primary-color"><img
+                            src="./assets/images/ic-search-white.svg"></button>
                 </div>
                 <div class="col-4">
                     <button class="btn btn-lg btn-dark-alert-color w-100 mb-3">按鈕</button>
@@ -1184,8 +1263,8 @@
                     <button class="btn btn-sm btn-dark-alert-color w-100">按鈕</button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-lg btn-dark-alert-color w-100 mb-3"><img src="./assets/images/ic-search-white.svg"
-                            class="me-1">按鈕</button>
+                    <button class="btn btn-lg btn-dark-alert-color w-100 mb-3"><img
+                            src="./assets/images/ic-search-white.svg" class="me-1">按鈕</button>
                     <button class="btn btn-dark-alert-color w-100 mb-3"><img src="./assets/images/ic-search-white.svg"
                             class="me-1">按鈕</button>
                     <button class="btn btn-sm btn-dark-alert-color w-100"><img src="./assets/images/ic-search-white.svg"
@@ -1194,10 +1273,12 @@
                 <div class="col-4">
                     <button class="btn btn-lg btn-dark-alert-color mb-3"><img
                             src="./assets/images/ic-search-white.svg"></button>
-                    <button class="btn btn-dark-alert-color mb-3"><img src="./assets/images/ic-search-white.svg"></button>
-                    <button class="btn btn-sm btn-dark-alert-color"><img src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-dark-alert-color mb-3"><img
+                            src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-sm btn-dark-alert-color"><img
+                            src="./assets/images/ic-search-white.svg"></button>
                 </div>
-        
+
             </div>
         </div>
         <div class="price-card">
@@ -1225,6 +1306,192 @@
                 <button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
                 <button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas">確認</button>
             </div>
+        </div>
+    </div>
+</div>
+<!--會員視窗開始-->
+<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="member"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">選擇會員</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0">
+        <div class="box-list-wrapper">
+            <div class="container h-100 px-0 d-flex flex-column">
+                <ul class="row box-list gx-3 gy-2 mb-3" data-con="number" data-style="member">
+                    <li class="col-12">
+                        <label for="member-number" class="visually-hidden">會員資料</label>
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control box-list-form" placeholder="會員資料" id="member-number">
+                            <button class="btn bg-primary-dark-color" type="button" id="member-number-btn">
+                                <img src="./assets/images/ic-search-white.svg" alt="icon" style="width: 24px;">
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            1
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            2
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            3
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            4
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            5
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            6
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            7
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            8
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            9
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button class="btn box-list-item" data-con="clear">
+                            清除
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            0
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <img src="./assets/images/ic-backward.svg" alt="倒退">
+                        </button>
+                    </li>
+                </ul>
+                        <div class="bg-primary-dark-color rounded-1 p-3 scrollx-none scrollbar-dark">
+                            <div class="row gy-2" role="tablist">
+                                <div class="col-12">
+                                    <button class="btn member-pick active" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                        <div class="member-pick-con">
+                                            <div class="member-pick-tag">001SDRG</div>
+                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                        <div class="member-pick-con">
+                                            <div class="member-pick-tag">001SDRG</div>
+                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                        <div class="member-pick-con">
+                                            <div class="member-pick-tag">001SDRG</div>
+                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                        <div class="member-pick-con">
+                                            <div class="member-pick-tag">001SDRG</div>
+                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                        <div class="member-pick-con">
+                                            <div class="member-pick-tag">001SDRG</div>
+                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                        <div class="member-pick-con">
+                                            <div class="member-pick-tag">001SDRG</div>
+                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                        <div class="member-pick-con">
+                                            <div class="member-pick-tag">001SDRG</div>
+                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                        <div class="member-pick-con">
+                                            <div class="member-pick-tag">001SDRG</div>
+                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                        <div class="member-pick-con">
+                                            <div class="member-pick-tag">001SDRG</div>
+                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                        <div class="member-pick-con">
+                                            <div class="member-pick-tag">001SDRG</div>
+                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <div class="box-list-action d-flex mt-3">
+            <button class="btn btn-lg btn-outline-white white w-100 py-2 me-3" data-bs-dismiss="offcanvas">取消</button>
+            <button class="btn btn-lg btn-dark-gray900 w-100 py-2 js-confirm-member" data-bs-dismiss="offcanvas"
+                onclick="checkInput()">確認</button>
         </div>
     </div>
 </div>
@@ -1768,6 +2035,26 @@
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
     //loading畫面
     $(document).ready(function () {
+        // 為會員搜尋應用整體加載效果
+        $('.js-searching-demo').on('click', function () {
+            $('#all').block({
+                message: $('#member-search'),
+                overlayCSS: {
+                    opacity: 0.1
+                }
+            });
+        });
+        $('#member-search').on('click', '#cancel', function () {
+            $.unblockUI();
+        });
+        //移除會員資料
+        $('.js-remove-member').on('click', function () {
+           $('.js-member-info').css('display', 'none');
+        });
+        //載入會員資料
+        $('.js-confirm-member').on('click', function () {
+            $('.js-member-info').css('display', 'flex');
+        });
         // 為整體區塊應用加載效果
         $('#all').block({
             message: $('#loading'),
@@ -1775,6 +2062,7 @@
                 opacity: 0.1
             }
         });
+        
 
         // 為左側區塊應用加載效果
         $('#content').block({

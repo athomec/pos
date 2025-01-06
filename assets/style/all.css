@@ -19044,6 +19044,14 @@ html[data-device="pad"] {
     display: flex; }
     .poker-table-member:last-child {
       padding: 0 61px; }
+      .poker-table-member:last-child .poker-table-seat-num {
+        background-image: url("../images/poker-seat-bg-up.svg"); }
+    .poker-table-member:nth-child(4) .poker-table-seat:first-child .poker-table-seat-num, .poker-table-member:nth-child(5) .poker-table-seat:first-child .poker-table-seat-num {
+      background-image: url("../images/poker-seat-bg-right.svg");
+      padding-left: 4px; }
+    .poker-table-member:nth-child(4) .poker-table-seat:last-child .poker-table-seat-num, .poker-table-member:nth-child(5) .poker-table-seat:last-child .poker-table-seat-num {
+      background-image: url("../images/poker-seat-bg-left.svg");
+      padding-right: 4px; }
   .poker-table-seat {
     display: -webkit-box;
     display: -ms-flexbox;

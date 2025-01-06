@@ -10619,6 +10619,14 @@ hr {
       -webkit-filter: brightness(0.8);
               filter: brightness(0.8); }
 
+.link-shine-color {
+  color: #FFEE00; }
+  .link-shine-color:hover {
+    color: #998f00; }
+    .link-shine-color:hover img {
+      -webkit-filter: brightness(0.8);
+              filter: brightness(0.8); }
+
 .link-img:hover {
   opacity: 0.8; }
 
@@ -10739,6 +10747,9 @@ hr {
 
 .stable-light-color {
   color: #BC8E79 !important; }
+
+.shine-color {
+  color: #FFEE00 !important; }
 
 .font-xxxs {
   font-size: 0.7rem !important; }
@@ -10978,6 +10989,9 @@ hr {
 
 .bg-stable-light-color {
   background: #BC8E79 !important; }
+
+.bg-shine-color {
+  background: #FFEE00 !important; }
 
 /*-----------------按鈕樣式---------------------*/
 .btn-dark-primary-color {
@@ -11972,6 +11986,37 @@ hr {
     .btn-dark-stable-light-color.btn-sm img {
       width: 12px; }
 
+.btn-dark-shine-color {
+  color: #fff !important;
+  background: #FFEE00 !important;
+  border: 1px solid #FFEE00;
+  padding: 4px 16px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .btn-dark-shine-color:hover {
+    color: #fff !important;
+    background: #e6d600 !important; }
+  .btn-dark-shine-color img {
+    margin: 4px 0; }
+  .btn-dark-shine-color.btn-lg {
+    padding: 8px 16px;
+    font-size: 1.2em; }
+    .btn-dark-shine-color.btn-lg img {
+      width: 18px;
+      margin: 5px 0; }
+  .btn-dark-shine-color.btn-sm {
+    padding: 3px 14px; }
+    .btn-dark-shine-color.btn-sm img {
+      width: 12px; }
+
 .btn-light-primary-color {
   background: #1F89CD !important;
   border: 1px solid #1F89CD;
@@ -12440,6 +12485,21 @@ hr {
 .btn-light-stable-light-color {
   background: #BC8E79 !important;
   border: 1px solid #BC8E79;
+  padding: 4px 16px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.btn-light-shine-color {
+  background: #FFEE00 !important;
+  border: 1px solid #FFEE00;
   padding: 4px 16px;
   border-radius: 4px;
   display: -webkit-box;
@@ -13764,6 +13824,47 @@ hr {
       .btn-border-stable-light-color .btn-id {
         padding-top: 4px; } }
 
+.btn-border-shine-color {
+  color: #FFEE00 !important;
+  background: #fff !important;
+  border: 1px solid #fff899;
+  padding: 4px 16px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 6px #d6d6d6;
+          box-shadow: 0 3px 6px #d6d6d6;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .btn-border-shine-color:hover {
+    color: #e6d600 !important;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .btn-border-shine-color .btn-id {
+    width: 31px;
+    height: 31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 3px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    left: 16px;
+    top: 6px;
+    border-radius: 50%;
+    color: #fff; }
+    @media (max-width: 768px) {
+      .btn-border-shine-color .btn-id {
+        padding-top: 4px; } }
+
 .btn-outline-primary-color {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14180,6 +14281,19 @@ hr {
   background: none;
   border: 1px solid #BC8E79 !important; }
 
+.btn-outline-shine-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: 1px solid #FFEE00 !important; }
+
 .toggle-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14453,6 +14567,9 @@ hr {
 
 .bd-stable-light-color {
   border-color: #BC8E79 !important; }
+
+.bd-shine-color {
+  border-color: #FFEE00 !important; }
 
 /*-----------------標題樣式---------------------*/
 .title {
@@ -15053,6 +15170,10 @@ hr {
 .table-bd-stable-light-color td {
   border-color: #BC8E79; }
 
+.table-bd-shine-color th,
+.table-bd-shine-color td {
+  border-color: #FFEE00; }
+
 .modal .table-wrapper {
   padding: 0;
   height: 530px; }
@@ -15452,6 +15573,34 @@ hr {
   padding-left: 25px; }
   .text-list li {
     list-style-type: decimal; }
+
+.text-splist[data-style="no-line"] .text-splist-item span {
+  width: 67px;
+  text-align: right; }
+
+.text-splist[data-style="no-line"] .text-splist-item p {
+  border-bottom: none; }
+
+.text-splist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold; }
+  .text-splist-item:last-child p {
+    border-bottom: none; }
+  .text-splist-item span {
+    color: #1F89CD;
+    margin-right: 12px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+  .text-splist-item p {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 4px 0; }
 
 .step-list {
   display: -webkit-box;
@@ -16163,6 +16312,9 @@ body {
     width: 65%;
     margin: 0 auto; }
 
+.nav[data-style="poker"] .nav-link {
+  padding: 16px 0; }
+
 .nav-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16833,7 +16985,7 @@ body {
       color: #fff;
       opacity: 0.7; }
       .select-list-btn.active span.soldout {
-        color: #FFDF00;
+        color: #FFEE00;
         opacity: 1; }
   .select-list-btn[data-status="soldout"] {
     pointer-events: none;
@@ -18717,6 +18869,78 @@ html[data-device="pad"] {
   cursor: pointer;
   border: 1px solid #1F89CD;
   border-radius: 0.375rem; }
+
+.poker-table {
+  background: url("../images/poker-table-bg.svg") no-repeat top;
+  color: #fff;
+  width: 420px;
+  height: 250px;
+  position: relative; }
+  .poker-table-info {
+    position: absolute;
+    text-align: center;
+    width: 84px;
+    height: 67px;
+    left: calc(50% - 42px);
+    top: 68px; }
+  .poker-table-member {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .poker-table-seat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    pointer-events: none; }
+    .poker-table-seat[data-status="taken"] {
+      pointer-events: initial; }
+      .poker-table-seat[data-status="taken"] .poker-table-seat-num {
+        background-position: center; }
+      .poker-table-seat[data-status="taken"] .poker-table-seat-info p {
+        display: block; }
+      .poker-table-seat[data-status="taken"] .poker-table-seat-info span {
+        display: inline; }
+    .poker-table-seat.active {
+      pointer-events: initial; }
+      .poker-table-seat.active .poker-table-seat-num {
+        background-position: bottom; }
+      .poker-table-seat.active .poker-table-seat-info {
+        color: #1379BB; }
+        .poker-table-seat.active .poker-table-seat-info p {
+          display: block; }
+        .poker-table-seat.active .poker-table-seat-info span {
+          display: inline; }
+    .poker-table-seat-num {
+      width: 38px;
+      height: 38px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background: url("../images/poker-seat-bg.svg") no-repeat top; }
+    .poker-table-seat-info {
+      width: 67px;
+      height: 44px;
+      color: #292929;
+      font-weight: bold; }
+      .poker-table-seat-info p {
+        margin-bottom: -4px;
+        display: none; }
+      .poker-table-seat-info span {
+        opacity: 0.45;
+        font-size: 0.9rem;
+        display: none; }
+
+.poker-member {
+  display: none; }
 
 /*
 @import "slick";

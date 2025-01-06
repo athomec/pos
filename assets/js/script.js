@@ -168,6 +168,11 @@ $(function () {//JS開頭
 		$(".js-checkout-coupon").addClass("hide");
 		$(".js-checkout-keyboard").addClass("w-100 flex-shrink-1");
 	});
+	//德州樸克會員
+	$('.js-poker-seat').click(function () {
+;		$('.js-poker-default').hide();
+		$('.js-poker-member').fadeIn();
+	});
 })//JS尾端	
 
 //-------------------備註判斷---------------------

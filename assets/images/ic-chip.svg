@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.004" height="21.004" viewBox="0 0 21.004 21.004">
+  <g id="ic-chip" transform="translate(-1668 2469)">
+    <g id="poker" transform="translate(1668 -2469)">
+      <g id="_76_Chip" transform="translate(0 0)">
+        <path id="Path_357" data-name="Path 357" d="M199.7,190.734l-.457-.455L197,188.041a.576.576,0,0,0-.815,0l-2.239,2.232-.46.458a1.871,1.871,0,0,0,2.325,2.9l-.254,1.372a.447.447,0,0,0,.44.529h1.193a.447.447,0,0,0,.44-.529l-.257-1.38a1.868,1.868,0,0,0,2.334-2.887Z" transform="translate(-186.092 -181.202)" fill="#fff"/>
+        <path id="Path_358" data-name="Path 358" d="M3,98.728A7.477,7.477,0,0,1,5.02,93.866l0,0L2.894,91.74A10.468,10.468,0,0,0,0,98.728H3Z" transform="translate(0 -88.483)" fill="#fff"/>
+        <path id="Path_359" data-name="Path 359" d="M93.89,5.02A7.477,7.477,0,0,1,98.751,3a.014.014,0,0,1,0,0V0a10.467,10.467,0,0,0-6.987,2.894l2.122,2.123Z" transform="translate(-88.506 0)" fill="#fff"/>
+        <path id="Path_360" data-name="Path 360" d="M307.908,450.185a7.476,7.476,0,0,1-4.862,2.018.017.017,0,0,1,0,0v3a10.466,10.466,0,0,0,6.989-2.894l-2.123-2.123Z" transform="translate(-292.287 -434.201)" fill="#fff"/>
+        <path id="Path_361" data-name="Path 361" d="M98.728,452.2a7.477,7.477,0,0,1-4.862-2.018l0,0-2.123,2.123a10.466,10.466,0,0,0,6.989,2.894v-3Z" transform="translate(-88.483 -434.201)" fill="#fff"/>
+        <path id="Path_362" data-name="Path 362" d="M5.055,307.907a7.477,7.477,0,0,1-2.018-4.861h-3a10.466,10.466,0,0,0,2.893,6.989l2.123-2.123,0-.005Z" transform="translate(-0.035 -292.287)" fill="#fff"/>
+        <path id="Path_363" data-name="Path 363" d="M452.214,303.046a7.476,7.476,0,0,1-2.017,4.862l0,0,2.123,2.125a10.466,10.466,0,0,0,2.894-6.989h-3Z" transform="translate(-434.213 -292.287)" fill="#fff"/>
+        <path id="Path_364" data-name="Path 364" d="M450.2,93.878a7.477,7.477,0,0,1,2.017,4.861h3a10.468,10.468,0,0,0-2.893-6.987L450.2,93.875Z" transform="translate(-434.213 -88.494)" fill="#fff"/>
+        <path id="Path_365" data-name="Path 365" d="M303.046,3a7.477,7.477,0,0,1,4.862,2.017l0,0,2.122-2.123A10.467,10.467,0,0,0,303.046,0V3a.015.015,0,0,1,0,0Z" transform="translate(-292.286 0)" fill="#fff"/>
+      </g>
+    </g>
+    <rect id="Rectangle_403" data-name="Rectangle 403" width="21" height="21" transform="translate(1668 -2469)" fill="none"/>
+  </g>
+</svg>

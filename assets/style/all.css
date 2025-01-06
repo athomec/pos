@@ -18992,7 +18992,7 @@ html[data-device="pad"] {
   border-radius: 0.375rem; }
 
 .poker-table {
-  background: url("../images/poker-table-bg.svg") no-repeat center 80px;
+  background: url("../images/poker-table-bg.svg") no-repeat center 90px;
   color: #fff;
   width: 420px;
   height: 250px;
@@ -19004,7 +19004,7 @@ html[data-device="pad"] {
     height: 100px;
     color: #428D78;
     left: calc(50% - 33px);
-    top: 0;
+    top: 10px;
     font-weight: bold;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -19037,7 +19037,7 @@ html[data-device="pad"] {
     width: 84px;
     height: 67px;
     left: calc(50% - 42px);
-    top: 105px; }
+    top: 115px; }
   .poker-table-member {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -19045,7 +19045,8 @@ html[data-device="pad"] {
     .poker-table-member:last-child {
       padding: 0 61px; }
       .poker-table-member:last-child .poker-table-seat-num {
-        background-image: url("../images/poker-seat-bg-up.svg"); }
+        background-image: url("../images/poker-seat-bg-up.svg");
+        padding-bottom: 4px; }
     .poker-table-member:nth-child(4) .poker-table-seat:first-child .poker-table-seat-num, .poker-table-member:nth-child(5) .poker-table-seat:first-child .poker-table-seat-num {
       background-image: url("../images/poker-seat-bg-right.svg");
       padding-left: 4px; }

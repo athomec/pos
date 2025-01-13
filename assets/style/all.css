@@ -15706,17 +15706,19 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   font-weight: bold; }
   .text-splist-item:last-child p {
     border-bottom: none; }
-  .text-splist-item span {
+  .text-splist-item > span {
     color: #1F89CD;
     margin-right: 12px;
     -ms-flex-negative: 0;
-        flex-shrink: 0; }
+        flex-shrink: 0;
+    margin-top: 4px; }
   .text-splist-item p {
     display: block;
     width: 100%;
@@ -19017,7 +19019,8 @@ html[data-device="pad"] {
         -ms-flex-align: center;
             align-items: center;
     padding-top: 46px; }
-    .poker-table-counter p, .poker-table-counter span {
+    .poker-table-counter p,
+    .poker-table-counter span {
       display: none; }
     .poker-table-counter p {
       margin-bottom: -4px; }
@@ -19029,7 +19032,8 @@ html[data-device="pad"] {
       .poker-table-counter.active img {
         -webkit-filter: invert(51%) sepia(21%) saturate(869%) hue-rotate(112deg) brightness(90%) contrast(86%);
                 filter: invert(51%) sepia(21%) saturate(869%) hue-rotate(112deg) brightness(90%) contrast(86%); }
-      .poker-table-counter.active p, .poker-table-counter.active span {
+      .poker-table-counter.active p,
+      .poker-table-counter.active span {
         display: block; }
   .poker-table-info {
     position: absolute;
@@ -19106,7 +19110,118 @@ html[data-device="pad"] {
         display: none; }
 
 .poker-member {
-  display: none; }
+  display: none;
+  height: 100vh; }
+  .poker-member.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+.poker-screen {
+  background: url("../images/poker-screen-bg.jpg") no-repeat center #000;
+  background-size: 1920px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .poker-screen-num {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 1100px;
+    height: 276px;
+    background: url("../images/poker-num-bg.png");
+    background-size: 100%;
+    margin-top: 72px;
+    border-radius: 200px;
+    -webkit-box-shadow: 0 0 36px #000;
+            box-shadow: 0 0 36px #000;
+    position: relative; }
+    .poker-screen-num:before {
+      content: "";
+      display: inline-block;
+      width: 66px;
+      height: 135px;
+      background: url("../images/poker-money-icon.png") no-repeat;
+      margin-top: 12px;
+      margin-right: 12px; }
+    .poker-screen-num-star1, .poker-screen-num-star2 {
+      width: 123px;
+      height: 145px;
+      position: absolute; }
+    .poker-screen-num-star1 {
+      left: -20px;
+      top: -20px; }
+    .poker-screen-num-star2 {
+      right: 97px;
+      bottom: -60px; }
+  .poker-screen-font {
+    margin-bottom: 12px;
+    position: relative;
+    font-size: 10.5rem;
+    width: 872px; }
+    .poker-screen-font-shadow {
+      content: " ";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #fff;
+      text-shadow: 0 0 36px #000;
+      z-index: 3; }
+    .poker-screen-font-star1, .poker-screen-font-star2, .poker-screen-font-star3, .poker-screen-font-star4, .poker-screen-font-star5, .poker-screen-font-star6, .poker-screen-font-star7 {
+      width: 50px;
+      height: 50px;
+      position: absolute; }
+    .poker-screen-font-star1 {
+      left: -90px;
+      top: 80px; }
+    .poker-screen-font-star2 {
+      left: 130px;
+      bottom: 60px; }
+    .poker-screen-font-star3 {
+      left: 270px;
+      top: 55px; }
+    .poker-screen-font-star4 {
+      right: 320px;
+      top: 60px; }
+    .poker-screen-font-star5 {
+      right: 340px;
+      bottom: 70px; }
+    .poker-screen-font-star6 {
+      right: 130px;
+      bottom: 70px; }
+    .poker-screen-font-star7 {
+      right: 30px;
+      bottom: 40px; }
+    .poker-screen-font p {
+      position: relative;
+      z-index: 10;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffc720+0,fde092+44,a82d00+50,ffbd0d+100 */
+      background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(48%, #ffe9ac), color-stop(50%, #ffd13a), color-stop(60%, #fffdb7), color-stop(90%, #ffffff));
+      background: -o-linear-gradient(top, #ffffff 0%, #ffe9ac 48%, #ffd13a 50%, #fffdb7 60%, #ffffff 90%);
+      background: linear-gradient(to bottom, #ffffff 0%, #ffe9ac 48%, #ffd13a 50%, #fffdb7 60%, #ffffff 90%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      -webkit-background-clip: text;
+              background-clip: text;
+      color: transparent;
+      font-weight: 800; }
 
 /*
 @import "slick";

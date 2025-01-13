@@ -25,7 +25,7 @@ $(function () {//JS開頭
 			});
 		}
 	});
-	$('.js-slidetoleft').click(function(){//關閉其他補印選單
+	$('.js-slidetoleft').click(function () {//關閉其他補印選單
 		$(this).parent(".js-order-card-wrapper").siblings(".js-order-card-wrapper").find(".collapse").collapse("hide");
 	})
 	$(".js-order-card-function").find("button:not(.order-card-function-menu button)").click(function () {
@@ -157,22 +157,49 @@ $(function () {//JS開頭
 	$('[data-bs-target="#checkout"]').click(function () {
 		$(".side-tab").find("li").eq(0).find(".side-tab-item").click();
 	})
-//----------------電子發票設定-----------------
+	//----------------電子發票設定-----------------
 	$(".js-checkout-pay button").click(function () {
 		$(".js-checkout-receipt input").removeClass("active");
 		$(".js-pay-receipt").removeClass("show");
 		$(".js-checkout-coupon").removeClass("hide");
 		$(".js-checkout-keyboard").removeClass("w-100 flex-shrink-1");
-		});
+	});
 	$(".js-checkout-receipt input").click(function () {
 		$(".js-checkout-coupon").addClass("hide");
 		$(".js-checkout-keyboard").addClass("w-100 flex-shrink-1");
 	});
-	//德州樸克會員
+	//德州樸克設定
 	$('.js-poker-seat').click(function () {
-;		$('.js-poker-default').hide();
-		$('.js-poker-member').fadeIn();
+		; $('.js-poker-default').hide();
+		$('.js-poker-member').addClass("active");
 	});
+	const $stars = $(".js-star");
+
+	$stars.each(function () {
+		const $star = $(this);
+
+		// 啟動隨機閃爍
+		twinkle($star);
+	});
+
+	function twinkle($star) {
+		const duration = 200 + Math.random() * 2000; // 2~5秒之間隨機閃爍時間
+		const delay = Math.random() * 1000; // 隨機延遲時間
+
+		// 設定初始延遲時間，避免星星同步
+		setTimeout(function () {
+			animateStar($star, duration);
+		}, delay);
+	}
+
+	function animateStar($star, duration) {
+		$star
+			.fadeTo(duration / 2, 1) // 漸亮
+			.fadeTo(duration / 2, 0, function () {
+				const newDuration = 200 + Math.random() * 2000; // 隨機新閃爍時間
+				twinkle($star); // 再次執行閃爍
+			});
+	}
 })//JS尾端	
 
 //-------------------備註判斷---------------------

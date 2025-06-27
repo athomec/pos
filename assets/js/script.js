@@ -202,6 +202,13 @@ $(function () {//JS開頭
 		$(".js-checkout-coupon").addClass("hide");
 		$(".js-checkout-keyboard").addClass("w-100 flex-shrink-1");
 	});
+
+	$(".js-checkout-receipt input").focus(function (){
+		$(this).closest(".input-group").addClass("focus");
+	})
+	$(".js-checkout-receipt input").blur(function () {
+		$(this).closest(".input-group").removeClass("focus");
+	})
 })//JS尾端	
 
 //-------------------備註判斷---------------------

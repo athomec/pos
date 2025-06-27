@@ -17425,6 +17425,14 @@ body {
     display: none;
     -ms-flex-negative: 0;
         flex-shrink: 0; }
+    .checkout-receipt input {
+      pointer-events: none; }
+    .checkout-receipt .basic-input-group {
+      cursor: pointer; }
+    .checkout-receipt .basic-input-group.active span {
+      background: #F26C30 !important; }
+    .checkout-receipt .basic-input-group.active input {
+      border-color: #F26C30 !important; }
   .checkout-sum {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -18550,12 +18558,6 @@ html[data-device="pad"] {
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
     border: none !important; }
-
-.input-group.focus span {
-  background: #F26C30 !important; }
-
-.input-group.focus .form-control {
-  border-color: #F26C30; }
 
 /*@preserve
  * Tempus Dominus Bootstrap4 v5.1.2 (https://tempusdominus.github.io/bootstrap-4/)

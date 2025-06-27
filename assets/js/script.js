@@ -192,23 +192,18 @@ $(function () {//JS開頭
 		$(".side-tab").find("li").eq(0).find(".side-tab-item").click();
 	})
 	//----------------電子發票設定-----------------
-	$(".js-checkout-pay button").click(function () {
-		$(".js-checkout-receipt input").removeClass("active");
-		$(".js-pay-receipt").removeClass("show");
-		$(".js-checkout-coupon").removeClass("hide");
-		$(".js-checkout-keyboard").removeClass("w-100 flex-shrink-1");
+	$('[data-bs-toggle="tab"]').click(function () {
+		var target = $(this).data('bs-target'); // 取得要顯示的 tab-pane id
+		// 1. 移除所有 tablist 裡的 active
+		$('[role="tablist"] .active').removeClass('active');
+		// 2. 給當前點擊的按鈕加上 active
+		$(this).addClass('active');
+		// 3. 隱藏所有 tab-pane（可跨容器）
+		$('.tab-content .tab-pane').removeClass('show active');
+		// 4. 顯示對應的 tab-pane
+		$(target).addClass('show active');
 	});
-	$(".js-checkout-receipt input").click(function () {
-		$(".js-checkout-coupon").addClass("hide");
-		$(".js-checkout-keyboard").addClass("w-100 flex-shrink-1");
-	});
-
-	$(".js-checkout-receipt input").focus(function (){
-		$(this).closest(".input-group").addClass("focus");
-	})
-	$(".js-checkout-receipt input").blur(function () {
-		$(this).closest(".input-group").removeClass("focus");
-	})
+	
 })//JS尾端	
 
 //-------------------備註判斷---------------------

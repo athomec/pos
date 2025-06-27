@@ -735,8 +735,8 @@
         <img src="./assets/images/ic-close-dark.svg" alt="關閉">
     </button>
     <div class="offcanvas-body small h-100">
-        <div class="checkout" role="tablist" data-con="has-receipt"><!--data-con="has-receipt"開啟電子發票功能-->
-            <ul class="checkout-pay js-checkout-pay">
+        <div class="checkout" data-con="has-receipt"><!--data-con="has-receipt"開啟電子發票功能-->
+            <ul class="checkout-pay js-checkout-pay" role="tablist">
                 <li>
                     <button class="checkout-pay-item active w-100" data-bs-toggle="tab" data-bs-target="#pay-cash">
                         <img src="./assets/images/ic-cash.svg" alt="現金" class="me-2">現金
@@ -785,7 +785,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="checkout-keyboard tab-content js-checkout-keyboard">
+            <div class="checkout-keyboard js-checkout-keyboard tab-content">
                 <!--現金內容-->
                 <div class="tab-pane fade show active h-100" id="pay-cash">
                     <ul class="row checkout-keyboard-list g-2 h-100">
@@ -888,7 +888,7 @@
                     </ul>
                 </div>
                 <!--電子發票內容-->
-                <div class="tab-pane fade h-100 js-pay-receipt" id="pay-receipt">
+                <div class="tab-pane fade h-100" id="pay-receipt">
                     <div class="d-flex align-items-stretch h-100">
                         <ul class="row checkout-keyboard-list g-2 h-100 me-3" style="width: 66%;">
                             <li class="col-2 mt-0"><button
@@ -1005,16 +1005,14 @@
                 </div>
             </div>
             <div class="checkout-end">
-                <div class="checkout-receipt js-checkout-receipt">
-                    <div class="input-group mb-2 shadow-sm basic-input-group" data-con="carrier">
+                <div class="checkout-receipt" role="tablist">
+                    <div class="input-group mb-2 shadow-sm basic-input-group" data-bs-toggle="tab" data-bs-target="#pay-receipt">
                         <span class="input-group-text bg-primary-color white">發票載具</span>
-                        <input type="text" class="form-control" placeholder="請輸入載具號碼" data-con="highlight"
-                            data-bs-toggle="tab" data-bs-target="#pay-receipt">
+                        <input type="text" class="form-control" placeholder="請輸入載具號碼" data-con="highlight">
                     </div>
-                    <div class="input-group mb-2 shadow-sm basic-input-group">
+                    <div class="input-group mb-2 shadow-sm basic-input-group" data-bs-toggle="tab" data-bs-target="#pay-receipt">
                         <span class="input-group-text bg-primary-color white">統一編號</span>
-                        <input type="text" class="form-control" placeholder="請輸入載具號碼" value="50810791"
-                            data-con="highlight" data-bs-toggle="tab" data-bs-target="#pay-receipt">
+                        <input type="text" class="form-control" placeholder="請輸入編號" value="50810791" data-con="highlight">
                     </div>
                 </div>
                 <div class="checkout-sum bg-white rounded px-4 py-3">
@@ -1039,15 +1037,6 @@
                     <div class="price-card-action">
                         <button class="btn btn-lg btn-dark-primary-color flex-shrink-1">付款</button>
                     </div>
-
-                    <!--右滑結帳
-                    <div class="checkout-sum-unlock slidetounlock">
-                        <div class="slidetounlock-item">
-                            <img src="./assets/images/btn-unlock.svg" class="slidetounlock-slider js-slidetounlock-slider">
-                            <span class="slidetounlock-txt js-slidetounlock-txt">右滑以結帳</span>
-                        </div>
-                    </div>
-                    -->
                 </div>
             </div>
         </div>
@@ -1392,100 +1381,101 @@
                         </button>
                     </li>
                 </ul>
-                        <div class="bg-primary-dark-color rounded-1 p-3 scrollx-none scrollbar-dark">
-                            <div class="row gy-2" role="tablist">
-                                <div class="col-12">
-                                    <button class="btn member-pick active" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                        <div class="member-pick-con">
-                                            <div class="member-pick-tag">001SDRG</div>
-                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                        </div>
-                                    </button>
+                <div class="bg-primary-dark-color rounded-1 p-3 scrollx-none scrollbar-dark">
+                    <div class="row gy-2" role="tablist">
+                        <div class="col-12">
+                            <button class="btn member-pick active" data-bs-toggle="pill" aria-selected="true"
+                                role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
                                 </div>
-                                <div class="col-12">
-                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                        <div class="member-pick-con">
-                                            <div class="member-pick-tag">001SDRG</div>
-                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                        <div class="member-pick-con">
-                                            <div class="member-pick-tag">001SDRG</div>
-                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                        <div class="member-pick-con">
-                                            <div class="member-pick-tag">001SDRG</div>
-                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                        <div class="member-pick-con">
-                                            <div class="member-pick-tag">001SDRG</div>
-                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                        <div class="member-pick-con">
-                                            <div class="member-pick-tag">001SDRG</div>
-                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                        <div class="member-pick-con">
-                                            <div class="member-pick-tag">001SDRG</div>
-                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                        <div class="member-pick-con">
-                                            <div class="member-pick-tag">001SDRG</div>
-                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                        <div class="member-pick-con">
-                                            <div class="member-pick-tag">001SDRG</div>
-                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                        <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                        <div class="member-pick-con">
-                                            <div class="member-pick-tag">001SDRG</div>
-                                            <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
+                            </button>
                         </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="box-list-action d-flex mt-3">
